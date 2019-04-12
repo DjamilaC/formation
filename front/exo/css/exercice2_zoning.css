@@ -1,0 +1,18 @@
+#container{
+    width: 960px;
+    height: 1100px;
+    background: bisque;
+    margin: auto;
+}
+h1{
+    text-align: center;
+    text-shadow: 1px 1px green;
+    color: rgb(124, 209, 124);
+}
+#haut{
+    width: 90%;
+
+}
+.texte{
+    width: 
+}

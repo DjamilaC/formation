@@ -1,0 +1,181 @@
+.container{
+    width: 80%;
+    margin:0 auto;
+    background: #fff;
+    border: 0.3vh solid;
+}
+header{
+    height: 6vh;
+    background: blue;
+    padding: 1vh;
+    /* vh pour gérer la responsivité des elements en hauteur(viewport height)*/
+    /* vw pour gérer la responsivité des elements en largeur(viewport width)*/
+}
+nav{
+    height: 3vh;
+    background: red;
+    text-align: center;
+    font-size: 2vw;
+    color: white;
+    /* "NAV A" cible les liens du menu, ils n'ont pas de taille donc ils occupent la place de leur contenu*/
+}
+nav a:hover{
+    background: #73cec8;
+    text-decoration: none;
+    /* efface le soulighnement des liens <a></a> */
+    padding: 0.5% 0.8%;
+}
+.m1, .m2, .m3, .m4{
+    height: 20vh;
+    width: 38%;
+    padding: 5%;
+    margin: 1%;
+    float: left;
+}
+.m1{
+    background: orange;
+}
+.m2{
+    background: green;
+}
+.m3{
+    background: yellow;
+}
+.m4{
+    background: pink;
+}
+footer{
+    height: 6vh;
+    background: blue;
+}
+/* *************************************************************RESPONSIVE***************************************************** */
+@media(max-width: 500px){
+    header{
+        height: 6vh;
+        background: purple;
+    }
+    nav{
+        height: 3vh;
+        background: #046380;
+    }
+    .m1, .m2, .m3, .m4{
+        height: 20vh;
+        width: 86%;
+        margin: 0 auto;
+    }
+    .m1{
+        background: #B4AF91;
+    }
+    .m2{
+        background: #046380;
+    }
+    .m3{
+        background: #F6E497;
+    }
+    .m4{
+        background: #B5E655;
+    }
+    footer{
+        height: 6vh;
+        background: maroon;
+    }
+}
+@media(max-width: 768px){
+    header{
+        height: 7vh;
+        background: purple;
+    }
+    nav{
+        height: 3.5vh;
+        background: #046380;
+    }
+    .m1, .m2, .m3, .m4{
+        height: 20vh;
+        float: left;
+    }
+    .m1{
+        background: #B4AF91;
+    }
+    .m2{
+        background: #046380;
+    }
+    .m3{
+        background: #F6E497;
+    }
+    .m4{
+        background: #B5E655;
+    }
+    footer{
+        height: 7vh;
+        background: maroon;
+    }
+}
+@media(max-width: 992px){
+    header{
+        height: 8vh;
+        background: purple;
+    }
+    nav{
+        height: 4vh;
+        background: #046380;
+    }
+    .m1, .m2, .m3, .m4{
+        height: 30vh;
+       float: left;
+       
+    }
+    .m1{
+        background: url(../images/image.jpg);
+        background-size: cover;
+    }
+    .m2{
+        background: #046380;
+    }
+    .m3{
+        background: #F6E497;
+    }
+    .m4{
+        background: #B5E655;
+    }
+    footer{
+        height: 6vh;
+        background: maroon;
+    }
+}
+@media(max-width: 1200px){
+    header{
+        height: 9vh;
+        background: purple;
+    }
+    nav{
+        height: 3vh;
+        background: #046380;
+    }
+    .m1, .m2, .m3, .m4{
+        height: 40vh;
+        float: left;
+    }
+    .m1{
+        background:linear-gradient( to left, rgb(211, 136, 38), rgb(50, 175, 175) );
+    }
+    .m2{
+        background: #046380;
+    }
+    .m3{
+        background: #F6E497;
+    }
+    .m4{
+        background:linear-gradient(to left, rgb(123, 58, 207), rgb(50, 175, 175) );
+    }
+    footer{
+        height: 9vh;
+        background: maroon;
+    }
+}
+section{
+    margin: 1.5vh;
+}
+clear{
+    clear: both;
+}
+

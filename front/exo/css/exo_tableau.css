@@ -1,0 +1,44 @@
+*{
+    font-family: fantasy; 
+ }
+ body{
+    
+ }
+ table{
+    border-top: 1px solid #53525c;
+    border-collapse: collapse;
+    width: 50%;
+    margin: 25px;
+ }
+ thead{
+     
+    border-top: 1px solid #28282c;
+ }
+ th{
+    border: 1px dotted #252430;
+    padding: 4px;
+    background-color:white;
+    width: 25%;
+ }
+ td{
+    font-size: 100%;
+    border-right: 1px dotted #212125;
+    text-align: center;
+    padding: 5px;
+ }
+ tr:first-child{
+     background-color: rgb(216, 230, 245);
+ }
+
+ tr:nth-child(odd){
+     background-color:  rgb(216, 230, 245);
+
+ }
+ td:nth-child(8){
+     background-color: lightgreen;
+ }
+ td:nth-child(9){
+     background-color: lightgreen;
+ }
+
+ 

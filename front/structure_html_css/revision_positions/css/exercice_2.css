@@ -1,0 +1,29 @@
+
+body{
+    width: 90%;
+}
+
+.container{
+    background-color: lightblue;
+    width: 960px;   
+    /* valeurs habituelles pour les sites car facilement divisible pour organiser les blocs */
+    margin: 0 auto;
+    /* centrage automatique pas de marge en haut et en bas mais une marge à gauche et à droitesera la même quelque soit la taille de l'ecran */
+     padding: 30px;
+    /* marge interieur */
+    box-sizing: border-box;
+    /* permet de verouiller le conteneur sur 960px sans que le padding vienne agrandir le bloc */
+    
+}
+.Z1, .Z2{
+    border: 2px solid black;
+    width: 450px;
+    height: 150px;
+    margin: 10px 10px;
+    background: lightblue;
+    display: inline-block;
+    /* affichage de deux blocs alignés, INLINE seul cree 2 cadres qui entourent uniquement le contenu comme le surlignage, Block seul affiche 2 blocks l'un sur l'autre */
+    vertical-align: middle;
+    /* centrer verticalement les deux blocs Z1 et Z2=> Z1 et Z2 ayant les memes proprietés on les rassemble */
+}  
+ 

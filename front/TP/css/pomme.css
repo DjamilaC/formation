@@ -1,0 +1,64 @@
+header{
+    height: 258px;
+    width: 900px;
+    margin:0;
+    padding-right: 1;  
+}
+#conteneur{ 
+    width: 900px;
+    background: white;
+    color:rgb(149, 192, 84);
+    border: 2px solid;
+    height: 950px;
+    margin: 0 auto;
+
+}
+.etape{
+    width: 148px;
+    height: 25px;
+    background: rgb(149, 192, 84);
+    border: 1px solid;
+    text-align: center;
+    color: white;
+    float: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.menu{
+    width: 900px;
+    height: 25px;
+    margin:0; 
+    background: greenyellow;
+    padding-left: 1;
+    padding-right: 1;
+} 
+.zone1{
+    height: 700px;
+    width: 80px;
+    float: left;
+    padding-left: 1;
+    
+   
+}
+.zone2{
+    width: 840px;
+    height: 398;
+}
+.image{
+    width: 22px;
+    height: 22px;
+    float: left; 
+}
+p{
+    line-height: 1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: justify;
+} 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+}
+p{
+    line-height: 1.5;
+}
+.milieu{
+    width: 900px;
+
+}

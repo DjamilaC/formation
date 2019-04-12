@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ANGULAR</h1>
+
+    <p> 
+
+        1. C'est quoi Angular ? : Angular est un framework (cadre de travail) front-back coté client,
+        il est utilisé pour créer des applications web, il
+        fait partie de la technologie 'mean'; (Mongo DB, Expresse js, AgularJS, NodeJS),
+        il a etait créer par google.
+        
+        2. Pourquoi l'utiliser ? : Le developpement ess plus rapide, nous pouvons l'utiliser sur toute les plateformes
+        (Windows) (Mac OS) (linux) de plus Angular utilise aussi le language Typescript.
+        
+        3. COMPOSANTS : sont des blocks qui repr�sente la base d'une applications Angular = un arbre de composants
+        qui va utiliser des decorateur pour tranformer nos classes en composants.
+        
+        4. SERVICES : importer a l'aide d'un composants nommé 'injectable',
+        permet de transmettre des données entre nos différents composants, permet de ne pas r�peter 
+        une ligne de code plusieurs fois (gain de temps).
+        
+        5. Pr�requis pour utiliser Angular : de bonne notion en html et en Javascript (fonctions, boucles, objects etc.)
+        il faut également installé Nodejs, Git, Vscode.
+        
+        6. Installer le framework : Il y a 2 manière de l'installer  (le framework) la première est de le faire avec Git bach
+        la 2 eme manière est de l'installer avec le terminal de Vs code 
+        
+        1. créer un dossier, clique droit sur git bach Here cela va ourire la console il suffira de tappez la commande 
+        a l'interieur : npm install -g @Angular/cli (cette commande permet d'installer Angular) une fois
+        cela fait il faudra tappe une autre commande qui permmetra de cr�er notre premi�re applicaitons,
+        : ng new (puis le nom de votre project) Ex : ng new FirstAngular, lorsque l'installation
+        est terminé vous pourrez voir a quoi ressemble votre fichier il suffira de l'ouvrir avec Vs code
+        clique droit dessus open wich Vs code.
+        
+        
+        Typescript
+        
+        1. Typescript est un language créer par microsoft Ressemblent plus a du Java qu'a du Javascript,
+        c'est un language orienté ojet (-> classes) en claire c'est du Javascript en mieux (plus de fonctionnalit�s).
+        C'est un language statique.
+        il y a deux angular: angular JS et angular.
+        
+        le Typescript est la meme famille que javascript. le code source donné par le navigateur a été traduit,on doit introduire un script.
+        
+        JavaScript est un langage permissif. Or dans une application, on ne peut pas se permettre la moindre erreur, sinon l’app plante. Un typage statique des données devient donc indispensable, vous évitant tout problème.
+        TypeScript ajoute toutes ces fonctionnalités manquantes d’une façon très intelligente. Du JavaScrit natif est déjà du TypeScript valide (il ne s’amuse pas à récrire le langage comme le font par exemple CoffeeScript ou Dart, qui en conséquence sont des échecs). Les nouveautés sont complètement optionnelles, et vous pouvez revenir à du JS pur à tout moment.
+        
+        Il n’y a donc aucun frein à utiliser TypeScript. Si dans deux ans vous n’en voulez plus ou si ce n’est plus pertinent par rapport à l’évolution des usages, cela prend moins de 30 secondes de débarrasser un projet de TypeScript.
+        TypeScript est soutenu par Microsoft, Google et d’autres grands acteurs du web. Facebook utilise aussi un outil de typage statique.
+        De plus en plus d’outils JavaScript utilisent TypeScript, et des frameworks majeurs comme Angular sont intégralement en TypeScript.
+        
+        sur invite de commande,on écrit npm -v pour afficher la version de npm de node Js.
+        
+        
+        
+        Ionic est un framework (outil d’aide au développement) de développement d’application mobile hybride en HTML5. Ilmélange différents outils et technologies pour permettre le développement d’applications mobiles hybrides rapidement et facilement à partir du moment où l’utilisateur est rompu à ce type de développement. Il s’appuie sur Angular JS pour la partie application web et sur Cordova pour la partie construction des applications natives.
+        
+        Ce framework est open source et il permet le déploiement sur plusieurs environnements différents : web, Android, iOS ou Windows Phone.
+        
+        Les concepteurs de Ionic ont cherché à rendre la vie des développeurs d’application plus simple en se basant aussi sur les principaux SDK et les règles de design et d’ergonomie.
+        
+        
+        NPM c'est node package manager est  sorti en 2008 qui permet de faire tourner javascript coté serveur.  c'est un outil indispensable qui vous permet de télécharger facilement tous les modules de la communauté Node.js 
+        npm est le gestionnaire de paquets officiel de Node.js. Depuis la version 0.6.3 de Node.js, npm fait partie de l'environnement et est donc automatiquement installé par défaut3. npm fonctionne avec un terminal et gère les dépendances pour une application. Il permet également d'installer des applications Node.js disponibles sur le dépôt npm.
+        le APi sera installé via npm.
+        
+        Qd on fait angular,il y a 3 composants : html, css et script,ils permettent de donner du sens à notre contenu(balises).un composant c'est une classe.
+        
+        qd on crée un composant,on fait avec angular serie,qui va créer nos différents fichiers(au moins 3...html css et ts) qui a une nomenclature très précis, il nous générent la structure de base de notre code.
+        
+        
+        En typescript,pour importer la librairies, on utilisera la fonction "import" mais auparavant,il y a nodeJs 10.15.3 a installer (voir fonctionnement sur https://angular.io/guide/quickstart)
+        
+        './' désigne le dossier courant,le dossier que l'on utilise.
+        sous angular,c'est le script qui est piloté en premier
+        
+        app.components.ts est notre script
+        component sert à définir des composants
+        en typescript, on crée des class : des champs(une ligne de code) et des méthodes (fonctions)
+        chaque  class définit un type, sous angular.
+        la class est un plan de construction, qui est appelé lorsque l'objet est crée entre accolades()=fonctions classiques)
+        
+        
+        
+        il peut etre modifié(configuré,décoré) de façon à avoir des composants( selector(balise),templateUrl('./app.component.html') et styleCss[ './app.component.css'] dans un tableau définit par '[]'
+        
+        Le HTML d'angular est un html ou il y a d'autres balises supplémentaires non vu : ex' {{ title }}!' ou '<router-outlet></router-outlet>'
+        
+        le fichier app.component.spec.ts est un fichier de TypeScript
+         
+        Un module est un regroupement de plusieurs composants de code.
+        leur notation est "@NgModule"
+        
+        
+        pour appeler les élements de mon tableau on doit faire des boucles.
+        
+        *ngFor est un attribut sous angular suivi de "..intitulé de ma boucle" comme sous javascript aec if ou for....
+        
+        pour déclarer une fonction en typescript on fait "addHero(){}
+        <code>
+        <li class="selected btn"></li>
+        class Li{ <!--on a un objet qui crée des champs class -->
+          class :{
+            selected: true, <!-- pourqu'un élement de mon dom ait une class,il faut que le champs existe dans la class selected et soit vrai,ce qui explique que class.selected doit être vrai si c vrai elle apparait-->
+            btn : true;
+            btn-success :  <!-- true ici on rajoute des champs -->
+          }
+        }
+        </code>
+        
+        Une root fait un lien entre un url et un code. en Angular on lit un url avec un composant.
+        
+        On crée un composant app(par angular),composant principal et on creer 2 composants(hero-edit et hero-details).
+        
+        Un nom de variable est différent qu'un type de variable.
+        
+            Qu’est ce que les Observables?
+        
+        Un Observable est un objet permettant de faire le “lien” entre des publishers et des subscribers.
+        
+        La plupart du temps, vous utiliserez les Observables (et les Promises aussi d’ailleurs) dans le cas d’appel à une API. Notez que j’ai dis la plupart du temps :).
+        
+        
+        Les Observables vont être principalement utilisés dans votre Service Angular. Quand vous effectuez un appel à une API, vous devez attendre la réponse de cette derniere.
+        Angular fonctionne gràce à des Api qui travail pour lui.
+        
+        Le json est un format qui sert à stocker des données (avant c't xml). c'est un format plus léger et plus facile à lire.
+        Une requête http est une demande(serveur). on a l'habitude qu'ils nous répondent en html.
+        ici on demande(à nos serveurs) des données via angular.
+        Angular va le faire en mode asynchrone(requête ajax,on  utilisera htpp qualient)
+        get et post sont les 2 methodes en ajax pour le formulaires.
+        Un callback est ce qu’on peut traduire par « fonction de retour ». C’est une fonction comme une autre sauf qu’elle est placée en paramètre d’une autre fonction pour être exécutée à un moment précis. Les callback sont généralement utilisés lors d’opérations asynchrone (angular).
+        
+        Il est possible de cancel un Observable qui est en cours d’execution. Avec une Promise, c’est impossible. Une fois que la Promise est lancée, soit elle renvoie un success (then), soit elle renvoie une erreur (catch).
+        
+        On peut gérer un cancel d’un Observable avec la function de callback onCancel().
+        
+        Les Observables sont appelés au moment ou quelqu’un subscribe à ce dernier. Contrairement à cela, les Promises sont appelées directement à leur création. On gâche en quelque sorte des ressources en utilisant des Promises.
+        
+        npoint est ce qui désigne une localisation de ressources(donnée) d'api.
+        ressource qui est accessible en lecture et eventuellement en écriture.
+        </p>
+<p>un framework est un espace de travail "fournir un cadre de travail pour rendre le travail plus productif"</p>
+    <p>Il esxiste deux types de Angular: angular et algular js </p>
+    <p>Angular est un framework js de google</p>
+    <p> <strong> Angular</strong> js est un frame work de facebook</p>
+    <p>tous les framework javascript sont orienté AJAX "asynchron"</p>
+    <p> <strong>JSON est un format de données</strong> </p>
+    <p>le javascript n'est pas recommandé en cas de gros projets"c'est dérivé de l'Ecmascript, alors que angular travaille sur le typescript</p>
+    <P> <strong>la transpilation c'est de traduire de typescript en javascript</strong></P>
+    <p><strong>IONIC CORDOVA</strong>permet de créer des application mobiles</p>
+    <p> <strong> npm</strong> est un gestionnaire de paquets . <strong>un paquet</strong>  est un bloc de code source</p>
+    <p>on cloque sur la barre de recherche et on tape <strong>mcd</strong>pour afficher l'invite de commande </p>
+    <p>angular possede des classes qui elle meme composées de champs: <br> qui sont des variables et des methodes qui sont décoré par une annotation @Component <br> 
+        <code>@Component({ <br>
+                selector: 'app-root', <br>
+                templateUrl: './app.component.html', <br>
+                styleUrls: ['./app.component.css'] <br>
+              })</code> </p>
+              <p>Un module est un regroupement de plusieurs composants</p>
+    <p>constructeur est une fonction qui permet de batir l'objet ( le projet) à partir de la classe</p>
+</body>
+</html>

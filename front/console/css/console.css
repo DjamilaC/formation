@@ -1,0 +1,30 @@
+.container{
+    background-color: purple;
+    height: 99vh;
+    width: 52vw;
+    margin: 0 auto;
+}
+nav{
+    background: chocolate;
+    height: 15vh;
+}
+header{
+    background-color: blue;
+    height: 20vh;
+    width: 20vw;
+    margin: 0 auto;
+}
+main{
+    background-color: coral;
+    height: 45vh;
+    width: 45vw;
+    margin: 0 auto;
+
+}
+footer{
+    background-color: greenyellow;
+    height: 15vh;
+    width: 45vw;
+    margin: 0 auto;
+}
+}

@@ -1,0 +1,39 @@
+table{
+    border: 4px solid #483d8b;
+    border-collapse: collapse;
+    width: 2em;
+    height: 2em;
+    margin: auto;
+   
+}
+td{
+    
+    padding: 25px;
+    background-color: yellow;
+    border-collapse: collapse;
+    border-width:1px;
+    border-style:solid; 
+    border-color: white;
+   
+
+   }
+   .caseJ{
+    background-color: yellow;
+   }
+   .caseB{
+    background-color:blue;
+   }
+   .caseN{
+    background-color: black;
+   }
+   .caseG{
+    background-color: rgb(145, 139, 139);
+
+   }
+   .caseW{
+    background-color:rgb(250, 243, 243);
+   }
+   .caseg{
+    background-color:rgb(219, 226, 248);
+       
+   }

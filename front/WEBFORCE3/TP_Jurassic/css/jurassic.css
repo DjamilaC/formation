@@ -1,0 +1,70 @@
+body{
+    box-sizing: border-box;
+}
+.container{
+    width: 1320px;
+    margin: 0 auto;
+
+}
+.header{
+    background-image: url("../img/dinosaure.jpg");
+    background-size: cover; 
+    height: 770px;
+    position: relative;
+    width: 100%
+
+}
+img{
+    /* margin-left: 280px;
+     */
+    /* position: absolute;
+    left: 25%;
+    width: 50%; */
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+ 
+}
+.header nav{
+    background-color: rgba(0, 0, 0, .25);
+    height: 50px;
+    opacity: 70%;
+    position: fixed;
+    width: 1320px;
+}
+nav span{
+    color:  rgba(211, 207, 207, 0.25);
+}
+.image{
+    position: absolute;
+    left: 75%;
+    bottom: 0;
+    width: 25%;
+}
+nav ul li{
+    color: white;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+nav ul li a{
+    text-decoration:none;
+    color: white;
+    margin-left: 50px; 
+}
+h1{
+    text-align: center;
+    font-size: 2rem;
+}
+.container main{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+.contenu .entree{
+    width: 30%;
+    margin-left: 100px;
+    height: 550px;
+}

@@ -1,0 +1,52 @@
+table{
+    border: 1px solid rgb(68, 53, 53);
+    border-collapse: collapse;
+    width: 2em;
+    height: 2em;
+    margin: auto;
+}
+td{
+    
+    padding: 25px;
+    background-color: white;
+    border-collapse: collapse;
+    border-width:1px;
+    border-style:solid; 
+    border-color: rgb(17, 16, 16);
+    }
+    .caseN{
+        background-color: black;
+    }
+    .caseM{
+        background-color: rgb(48, 43, 43);
+    }
+    .caseM1{
+        background-color: rgb(80, 70, 70);
+    }
+    .caseV{
+        background-color: rgb(41, 73, 48);
+    }
+    .caseV1{
+        background-color: rgb(69, 109, 69);
+    }
+    .caseV2{
+        background-color: rgb(27, 97, 39);
+    }
+    .caseV3{
+        background-color: rgb(104, 228, 104);
+    }
+    .caseC{
+        background-color: rgb(245, 178, 178);
+    }
+    .caseC1{
+        background-color: rgb(229, 149, 149)
+    }
+    .caseW{
+        background-color: white;
+    }
+    .caseW1{
+        background-color: wheat;
+    }
+    .caseJ{
+        background-color: rgb(241, 238, 59);
+    }

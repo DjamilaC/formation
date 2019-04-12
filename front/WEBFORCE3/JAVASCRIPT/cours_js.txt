@@ -1,0 +1,17 @@
+---------------------
+Les variables:
+une variable est un contener, une boite permettant de stocker des valeurs
+pour commencer, il faut déclarer une variable avec le mot clé "var" en le faisant suivre de le nom de la variable.
+on déclare une variable en lui donnant un nom et on lui assigne une valeur avec l'opérateur d'assignetion signe égal "=".
+exemple
+a=4;
+ou var a = 4;
+(le mot var indiqie ici une variable globale)
+let a = 4; c'est une déclaration de variables en ES6 (ne pas utiliser aujourd'hui dans du ES5)
+
+d = 10;
+plus tard dans le script
+d = 8;
+ici je vient de réassigner ma variable d. j'ai vidé la boite pour remplacer la variable d.
+
+l'algorithmie c'est la logique

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Events mouse</title>
+</head>
+<body>
+    <img class="cible" src="images/image4.jpg" alt="">
+    <p class="info"></p>
+
+
+
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+
+    $(function(){
+        console.log('jQuery chargé');
+        $('.cible').mousedown(function(ev){
+            // Etape1 : lors du clic sur l'image on va d'abord afficher la chaine coucou dans le paragraphe.info
+            //$('.info').html('coucou!');
+
+            // Etape2: affiche dans .info le type d'evenements 
+            // Préalable : ajouter un paramètre ev dans les parenthèses de la déclaration de la fonction
+            $('.info').html(ev.type);// affiche le type d'evenement, ici le mousedown
+            $('.info').html(ev.which);// affiche le numéro du boutton de la souris
+            /*
+            boutton gauche de la souris: 1
+            boutton central de la souris: 2
+            boutton droit de la souris: 3
+            */
+
+            // Au final on va afficher
+            $('.info').html("Evenement: " + ev.type+ "<br>"  + "boutton pressé " + ev.which);
+           
+
+        })// fin du mousedown
+
+
+
+    })//Fin du scope
+
+
+
+
+</script>
+
+
+</body>
+</html>

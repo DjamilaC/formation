@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=dic, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        } 
+        body{
+            margin: 0;
+        }
+        .container{
+            width: 80%;
+            border: 2px solid brown;
+            margin: 122px auto 0;
+            position: relative;
+        }
+       
+        .badge{
+            width: 80px;
+            border-radius: 50%;
+            text-align: center;
+            background: crimson;
+            line-height: 80px;
+            position: absolute;
+            left: -40px;
+            top: 20px;
+        }
+        nav{
+            border-bottom: navy solid 3px;
+            padding: 1rem;
+            background: rgba(0,0,0,.5);
+            color: white; 
+            position: fixed;
+            width: 100%;
+        }
+        nav ul{
+            /* reset du padding existant */
+            padding-left: 0;
+            display: flex;
+            /* contexte flex permet d'alligner les enfants */
+            justify-content: space-around;
+           
+        }
+        nav li{
+            border: 2px solid pink;
+            padding: 1rem;
+            list-style: none;
+        }
+        .container p:nth-of-type(1){
+            /* on cible le premier p descendant du container */
+            color: orange;
+            position: relative;
+        }
+        .carre{
+            /* border: 2px solid red; */
+            background: pink;
+            width: 80px;
+            line-height: 80px;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            position: absolute;
+            left: 85%;
+            top: 35%;
+            z-index: 3;
+
+        }
+        .rond {
+            /* border: 2px solid red; */
+            background: rgb(108, 147, 230);
+            width: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            position: absolute;
+            left: 82%;
+            top: 47%;
+            z-index: 2;
+            
+
+        }
+        /* .triangle{
+            
+            background: rgb(110, 209, 140);
+            width: 50px;
+            line-height: 50px;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            position: absolute;
+            left: 85%;
+            top: 55%;
+        } */
+        .triangle{
+            height : 0;
+            width : 0;
+            border-right : 43px solid transparent;
+            border-bottom : 100px solid rgb(134, 226, 141);
+            border-left : 57px solid transparent;
+            display: inline-block;
+            left: 86%;
+            top: 47%;
+            text-decoration: none;
+            line-height: 50px;
+            position: absolute;
+            z-index: 1; 
+        
+        }
+        
+        
+
+
+
+
+        /* 
+         1-un element positionné en absolute est placé par rapport a son premier encetre positionné, s'il n'a pas d'ancetre positionné il sera positionné par rapport a body
+        - valeurs pour la propriete position:
+        2-static
+        par defaut toutes les balises sont en position : static; (elle ne sont pas positionnées et restent dans le flux) 
+        3- relative: sera positionné par rapport à son emplacement naturel  dans le flux ( comme si il avait une marge)
+        son emplacement est reservé .un element relatif devient cadre de positionnement pour ses enfants absolute, par exemple dans ce contexte on va donner une position relative au premier p pour que le badge en absolute soit calé par rapport à  ce p
+        4- fixed: un elemeent un élement qui a une position fixed sera calé par rapport au viewport(fenetre du navigateur), meme si la page scroll; l'objet fixed reste calé sur la fenetre*/
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Galerie</li>
+            <li>Contacts</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque animi facere ex possimus, voluptate neque quae ipsa quia numquam et rem, asperiores aliquid nisi quos magni deserunt. Eius, illum aliquid? lo
+        <span class="badge">New</span>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit optio iusto fugit hic a praesentium, eligendi architecto at illum veritatis sunt cum accusantium, aliquam blanditiis facilis obcaecati quaerat aspernatur nemo.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laborum sit voluptatum impedit excepturi aperiam soluta corporis facilis doloremque officia incidunt similique numquam ducimus voluptas, voluptates quod ad quia alias?
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, fugit blanditiis aliquam quaerat commodi nesciunt accusantium repellendus. Ipsum quisquam ratione, alias quod, dolores a eum ex doloribus sapiente, exercitationem eius.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, commodi blanditiis. Impedit, accusantium? Autem quas non nemo illo esse corporis iusto tenetur sequi. Rem ad eveniet, iste asperiores excepturi recusandae?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aperiam ipsam quas sed sequi sint maxime molestiae cupiditate? Quod illum quam porro esse qui quae ipsa accusamus, dolores pariatur ex.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi hic tempora quas similique sapiente, quidem voluptate, iure iusto ipsam incidunt neque veritatis quam quaerat cumque modi, ipsum libero. Facilis, voluptatem.</p>
+        <a href="#" class="carre">carré</a>
+        <a href="#" class="rond">rond</a>
+        <a href="#" class="triangle">triangle</a>
+    </div>
+</body>
+</html>

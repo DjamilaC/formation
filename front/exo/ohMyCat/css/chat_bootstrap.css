@@ -1,0 +1,100 @@
+.container-fluid{
+    padding: 0;
+}
+header{
+
+}
+#tropBon{ /*header*/
+    background-image: url(../img/background.jpg);
+    height: 10rem; 
+}
+.ohMyCat{
+    background: darkblue;
+    color: white;
+    height: 2rem;
+    padding-top: 1vh;
+     
+}
+#txt{
+    background: rosybrown;
+    
+}
+#cat{
+    background: bisque;
+    /* height: 5rem; */
+}
+footer{
+    background-color: darkblue;
+    height: 2rem;
+}
+#cat img{
+    width: 100%;
+
+}
+footer span{
+    color: white;
+    display: flex;
+    justify-content: end;
+}
+#logo{
+    background-color: rgb(216, 217, 219);
+    padding-top: 4vh;
+
+}
+#slider{
+    padding: 1rem;
+}
+#formSlide{
+    background-color: 
+}
+
+
+
+
+/* .container-fluid{
+    padding: 0;
+}
+
+header .col{
+    background-image: url(../img/background.jpg);
+    height: 15vh;
+}
+#header p{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px black;
+    font-style: italic;
+    margin-top: 5vh; 
+    font-size: 20px;
+     
+}
+.nav{
+    background-color: rgb(3, 3, 48);
+    height: 4vh;
+    color: white;
+    
+}
+.nav p{
+    font-style: italic;
+    margin-left: 12vh;
+}
+#slide{
+    background: #000;
+    height: 10vh;
+}
+.form{
+    background: bisque;
+    height: 10vh;
+}
+.txt{
+    background: orange;
+    height: 10vh;
+}
+.chat{
+    background: khaki;
+    height: 10vh;
+}
+.footer{
+    background: navajowhite;
+    height: 10vh;
+} */

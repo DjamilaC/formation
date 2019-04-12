@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html{
+            /*modifier la taille de type pour avoir une taille de 10px*/
+            font-size: 62.5%;/* =10px en % à cause de bugs sssssssur IE*/
+        }
+        body{
+            margin: 0;
+            font-size: 1.4rem; /*=14px*/
+            font-family: arial
+        }
+        h1{
+            border: 2px solid crimson;
+            margin-bottom: 0;
+            padding: 1rem; /*10px*/
+            width: 300px; /*la taille calculée de la boite de h1:
+             width 300px + padding right  de 10 px + padding left 10px + border-right de 2px 
+             total = 324*/
+        }
+        p{
+            border: 2px solid gold;
+            font-size: 1.3rem;
+            width: 300px; /* la taille calculée est de 304px*/
+        }
+        article{
+            border: 2px silver solid;
+            width: 50%;
+            padding: 1rem; /*largeur calculée: 324px*/
+            box-sizing: border-box; /* avec le box-sizing border box la largeur calculée sera de 300px quels que soit les border ou les paddings*/
+            margin: 0 auto; 
+        }
+        h2{
+            background: coral;
+            width: 57.9710%; /* à convertir en %
+            (cible 160px divisé par contexte 276px)x100 =57.9710 resuiltat*/
+            /*276px=300px - padding 20px - border 4px*/
+            
+        }
+/* 
+        feuille de style du navigateur par defaut
+        body            { margin: 8px }
+        h1              { font-size: 2em; margin: .67em 0 }
+        h2              { font-size: 1.5em; margin: .75em 0 }
+        h3              { font-size: 1.17em; margin: .83em 0 }
+        h4, p,
+        blockquote, ul,
+        fieldset, form,
+        ol, dl, dir,
+        menu            { margin: 1.12em 0 }
+        h5              { font-size: .83em; margin: 1.5em 0 }
+        h6              { font-size: .75em; margin: 1.67em 0 }
+        h1, h2, h3, h4,
+        h5, h6, b,
+        strong          { font-weight: bolder }
+        blockquote      { margin-left: 40px; margin-right: 40px }
+        ol, ul, dir,
+        menu, dd        { margin-left: 40px }
+        ol              { list-style-type: decimal }
+        ol ul, ul ol,
+        ul ul, ol ol    { margin-top: 0; margin-bottom: 0 }
+        Résumé 
+        body a margin 8px;
+        tous les h1 à h6 et p ont aussi des marges top et bottom
+        les ul et les ol ont des marges et un padding left de 40 px
+        on utilise un reset pour élaguer les differences d'affichage sur les vieux navigateurs */
+
+    </style>
+</head>
+<body>
+ <!-- liste des balises display:block;
+    body,div,p,h1,h2,h3,h4,h5,h6,ol,ul,li,dl,dt,dd,
+    new html5: section, article, aside, nav, header, footer,
+    les balises block sont des boites qui font 100% de largeur par defaut et qui sont affichée les uns en dessous des autres verticalement.
+    lrespace vertical separe les boites c'est de la marge
+    liste des balises display:inline:
+    a strong, em, span, label,adress,
+    liste des balises inline-block: img, audio, vidéo, canvas,input, select, textarea,
+    liste des balises display table: table,
+    liste des balises display table-row: tr,
+    liste des balises display table-cell: td, -->
+
+    <h1>HTML</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis laboriosam, debitis, hic reprehenderit molestias error laborum dolores aliquid quibusdam, alias optio. Veniam voluptatum odit, pariatur nesciunt saepe expedita. Animi, id!</p>
+    <h1>CSS</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis laboriosam, debitis, hic reprehenderit molestias error laborum dolores aliquid quibusdam, alias optio. Veniam voluptatum odit, pariatur nesciunt saepe expedita. Animi, id!</p>
+    <article>
+        <h2>histoire du web</h2>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, voluptates eius adipisci dignissimos fuga voluptatem! Modi labore optio quos excepturi quibusdam, et amet rerum fuga illo, mollitia, doloremque velit dolorum?
+    </article>
+    
+    
+
+    
+
+    
+</body>
+</html>

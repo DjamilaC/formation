@@ -1,0 +1,41 @@
+*{
+    /* letoile selectionne tous les elements du tableau */
+    font-family: fantasy; 
+    /* coix d'une police */
+}
+body{
+    width: 50%;
+    /* largeur de ma page 50% de l'ecran */
+    margin: auto;
+    /* gestion automatique des marges poue que mon tableau soit centré */
+}
+table{
+    border: 4px solid #483d8b;
+    /* bordure3 valeurs epaisseur du trait, type de trait, couleur */
+    border-collapse: collapse;
+    /* par defaut la bordure contient 2 traits, pour que le trait soit unique on utilise la propriete "collapse" */
+    width: 90%;
+    margin: 25px;
+}
+thead, tfoot{
+    background-color: #e6e6fa;
+    border: 2px solid #6a5acd
+}
+th{
+    border: 1px dotted #6a5acd;
+    /* dotted pointillées */
+    padding: 4px;
+    /* padding est une marge interieur */
+    background-color: #e6e6fa;
+    width: 25%;
+}
+td{
+    font-size: 100%;
+    border: 1px dotted #6a5acd;
+    text-align: center;
+    padding: 5px;
+}
+td:first-child{
+    text-align: left;
+    background-color: #e6e6fa;
+}

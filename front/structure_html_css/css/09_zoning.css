@@ -1,0 +1,41 @@
+body{
+    width: 80%;
+    margin: 10px auto ;
+    font-family: cursive;
+    background: #e49fb9;
+}
+#contenu{
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid darkslategray;
+}
+header{
+    height: 100px;
+    background-color: #8e3557;
+    height: 100px;
+     }
+nav{
+    background-color: darkmagenta;
+    height: 100px;
+    }
+.A, .B, .C, .D{
+    width: 50%;
+    height: 250px;
+    float:left;
+}
+.A{
+    background-color: peru;
+}
+.B{
+    background-color:royalblue;
+
+}
+.C{
+    background-color: red
+}
+.D{
+        background-color: green;
+}
+.clear{
+    clear: both
+}

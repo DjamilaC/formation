@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"> <!--les meta doivent etre mis en premier apreshead-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--contrçoler la mise en page sur les navigateurs mobiles ici le 1.0 signifie qu'il n'a pas de zoom-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><!-- compatibilité avec le navigateur Edge-->
+    <title>Ma première page en HTML</title>
+    <meta name="description" content="ma première page en HTML">
+    <!--description sous le titre dans la recherche de google-->
+    <meta name="author" content="Sandra"><!-- nom de l'auteur du site-->
+    <link rel="stylesheet" href="css/01_index.css">
+    <!--relie le fichier HTML au fichier de mise en forme CSS( feuille de style) CSS (cascading style sheet)-->
+    <!--racourci = "link" + tab sans la balise ouvrante-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower">
+    <!--lien pour les polices utilisées ici via "google-Font-->
+</head>
+<body>
+    <!--Corps (contenu) de la pag-->
+    c'est ma première page web! Le navigateur affiche le texte, les images...contenus dans le bloc de ma balise body &lt;body>.
+    <!--&lt; permet d'afficher ma balise html dans le navigateur, si je mets un chevron normalement ma balise sera interpretée par le navigateur-->
+
+    <!--les titres-->
+    <h1>Titre h1</h1>
+    <h2>Titre h2</h2>
+    <h3>Titre h3</h3>
+    <h4>Titre h4</h4>
+    <h5>Titre h5</h5>
+    <h6>Titre h6</h6>
+
+    <p>Ceci est un paragraphe.</p>
+    <p> Les paragraphes sont délimitées par la balise &lt;p>.</p>
+
+    <!--paragraphe pré-formaté-->
+    <pre>Les Numériques de Vitry 2018/2019</pre>
+    <p>Les Numériques de Vitry 2018/2019 </p>
+
+    <!-- les retours à la ligne -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem inventore dolor doloribus non molestiae ab, doloremque veritatis aliquam explicabo tempora labore molestias blanditiis vero quisquam aut, ipsum perspiciatis, rerum earum?</p> 
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /> Quia saepe dolor temporibus doloribus voluptatum officiis officia, porro consequuntur? <br /> Aut quaerat eum quibusdam, qui praesentium ipsam magnam quis obcaecati odit veniam.</p>
+    
+    <!-- La disposition-->
+    <p style="text-align:right">Ce paragraphe sur deux <br /> lignes est disposé à droite.</p>
+    <p style="text-align:center">Ce paragraphe sur deux <br /> lignes est disposé au centre.</p>
+    <p style="text-align:left">Ce paragraphe sur deux <br /> lignes est disposé à gauche.</p>
+
+    <p style="text-align:justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, amet facilis? Iure, voluptatum. Odit perspiciatis voluptates magni cumque aliquid necessitatibus porro, incidunt, neque repellat laudantium amet, illum minus inventore eum.Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /> Sit, amet facilis? Iure, voluptatum. Odit perspiciatis voluptates magni cumque aliquid necessitatibus porro, incidunt, neque repellat laudantium amet, illum minus inventore eum.</p>
+    <p>
+
+    <p>
+    voici la structure de base d'une page HTML:<br />
+    &lt;!DOCTYPE html><br/>
+    &lt;html><br/>
+    &lt;title>&lt;/title><br/>
+    &lt;/head><br/>
+    &lt;body><br/><br/>
+    &lt;/body><br/>
+    &lt;/html><br/>
+   </p>
+   <p>quel est le role de la balise &lt;hr/>?
+
+   </p>
+   <br>
+   <p>elle insère une ligne séparatrice en html.<br/> elle est auto-fermante (ou orpheline)...à ne pas confondre avec la balise &lt;br/> et effectue un retour à la ligne</p>
+   <p><!--la mise en valeur -->
+<!--strong-->
+<p>
+    bonjour, ceci est mon premierv fichier en html alors <strong>soyez indulgents</strong> SVP!
+</p>
+<!--EM petite mise en valeur-->
+<p>
+    bonjour, ceci est mon premier fichier en html alors <em> soyez indulgents</em>em> SVP!
+</p>
+<p>
+    <!--MARK -->
+    bonjour, ceci est mon premier fichier en html, alors <mark>soyez indulgents</mark> SVP!
+</p>
+
+<!--les listes-->
+<!--non ordonée ( à puce)-->
+<ul>
+    <li>Chat</li>
+    <li>Chien</li>
+    <li>Cheval</li>
+    <li>Lapin</li>
+
+</ul>
+
+<!--ordonée à numéro-->
+<ol>
+    <li>Chat</li>
+    <li>Chien</li>
+    <li>Cheval</li>
+    <li>Lapin</li>
+
+</ol>
+<!--Les couleurs-->
+<p style="color:crimson">H</p>
+       <p style="color:lightseagreen">T</p><!--color pour un element-->
+       <p style="color:darkgreen">M</p>
+       <p style="color:navy">L</p>
+       <br />
+       <p style="color:#dc143c">H</p>
+       <p style="color:#20b2aa">T</p>
+       <p style="color:#006400">M</p>
+       <p style="color:#000080">L</p>
+
+       <p style="background-color:cyan">Bonjour</p> <!--bachground pour le fond-->
+       <p style="background-color:pink">Hello</p>
+       <p style="background-color:black; color:yellow">Bongiorno</p>
+
+       <!-- Les liens-->
+       <link rel="stylesheet" href="css/reset.css" type="text/css" />
+           <link rel="stylesheet" href="css/nav_footer.css" type="text/css" />
+           <link rel="stylesheet" href="css/style_content.css" type="text/css" />
+           <!-- Pour accéder à une URL (site web) -->
+           <a href="http://colorhunt.co/">Site web color hunt</a>
+
+           <!--les images-->
+           <img src="images/bengal.jpg">
+           <img src="images/image.jpg"> 
+
+
+
+  
+    
+</body>
+</html>

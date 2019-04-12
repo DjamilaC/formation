@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=a, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    a:link{
+        color: rgb(107, 72, 6);
+        text-decoration: none;
+    }
+    a:visited{
+        color: teal;
+    }
+    a:hover, a:focus{
+        text-decoration: underline;
+        outline: thin solid gold;
+    }
+    a:active{
+        color: crimson;
+    }
+    :target{
+        background: lightseagreen;
+    }
+    div{
+        padding: 1rem; 
+    }
+    #chap1:target{
+        background: pink;
+    }
+    #chap2:target{
+        background: lightseagreen;
+    }
+    #chap3:target{
+        background: coral;
+    }
+    [title]{ /*selecteur d'attribue se lie tous les elements qui ont un meme attribut*/
+        font-weight: bold;
+    }
+    [href^=http]{ /*selectionne tous les liens dont l'attribut href qui commence par http, */
+        border-bottom: 3px dotted purple;
+        background-color: rgb(240, 216, 84);
+        display: inline-block;
+        margin-bottom: 2rem; /*32px les margins et les paddings ne fonctionnet pas avec les display inline, si je veux mettre un margin ou un padding pour un lien il faudra le transformer en illine bloc ou bloc*/ 
+        padding: .5rem 2rem .5rem .5rem;
+        background-image: url(images/lien_externe.svg);
+        background-repeat: no-repeat;
+        /* background-position: 0 0;  en haut à gauche par defaut*/
+        /* background-position: 100% 50%;  */
+        background-position: right .5rem; 
+        background-size: 1.5rem auto; /*largeur de 1.5rem et hauteur homotétique= la hauteur est automatiquement calcul"e en fonction de la largeur*/
+        /*la meme chose en ecriture plus courte*/
+        background: silver url(images/lien_externe.svg) no-repeat right .5rem;
+    }
+    </style>
+</head>
+<body>
+    <!-- lien absolu : vers une page exterieure à mon site, l'attribut href contient TOUJOURS une adresse web complete avec le protocole http -->
+    <a href="https://www.apple.com">lien vers apple </a>
+    <a href="https://www.transavia.com">lien vers transavia</a>
+    <a href="#">Faux lien</a>
+    <nav>
+        <a href="#chap1">chapitre1</a>
+        <a href="#chap2">chapitre2</a>
+        <a href="#chap3">chapitre3</a>
+    </nav>
+    <section>
+    <div id="chap1"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod recusandae repellendus adipisci sit eaque error blanditiis molestias, quis laudantium delectus! Sint velit doloribus neque, aperiam deleniti natus fugit repellat eveniet? </div>
+    <div id="chap2"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quod nihil quo facere officia perferendis, accusamus, consequatur assumenda aliquam quisquam, obcaecati pariatur tempora optio officiis explicabo architecto cum exercitationem neque!</div>
+    <div id="chap3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ipsa cumque officia consequatur cum sapiente id obcaecati. Ullam quas, incidunt eos quo voluptatem odio, molestias, officiis placeat ad deserunt soluta.</div>
+</section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- introduction à javascript.
+le javascript sert pour l'interactivité 
+le develpppement concerne le calcul le traitement de données
+le navigateur est un client, le browser, l'agent utilisateur, le user agent.
+le moteur d'affichage (layout engine) exemple: 
+-webkit moteur de rendu de goolg chrome et safari,
+moteur d'affichage de firefox, -moz est son moteur de rendu
+moteur de rendu de microsoft est -ms.
+implementation: construction des navigateurs par des implementeurs
+ul lien absolu est un lien vers le meme site
+un lien relatif dans un autre site -->

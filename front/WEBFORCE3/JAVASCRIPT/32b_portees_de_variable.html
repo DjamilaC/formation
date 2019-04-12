@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>que se passe t'il si les variables sont apellées d'une autre  </p>
+       <p>on aura une 3ème fonction qu'on apellera sortie, qui prend un seul paramètre qui le renvoie dans un paragraphe de la page </p>  
+
+
+<script>
+// ETAPE A
+
+// la variable x est la portée globale
+var x = 1;
+
+// les variables x et z sont dans les portées locales car elles sont dans la fonction
+
+function a(){
+    var y = 2;
+    sortie(y);
+}
+function b(){
+    var z = 3;
+    sortie(z);
+}
+function sortie(valeur){
+    // on crée un node (noeud) p qui est un objet du document
+    var para = document.createElement("p");
+    // Ajoute ce node comme enfant de la balise body
+    document.body.appendChild(para);
+   
+    para.textContent = 'la valeur est: ' + valeur;
+}
+
+sortie(x);
+a();
+b();
+// tout notre code fonctionne bien, car la fonction sortie est apellé à l'interieur des autres fonctions- autrement dit dans la portée(scope, enclos) dans laquelle les variables qu'elles renvoient sont définies
+// La fonction sortie() est elle meme disponible n'importe où dans le code, car elle est définie dans la portée globale
+
+</script>
+
+
+</body>
+</html>

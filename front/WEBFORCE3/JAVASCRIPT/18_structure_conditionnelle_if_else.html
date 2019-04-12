@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>condition if else</title>
+</head>
+<body>
+    <script>
+        
+        // si le parfum de la glace c'est chocolat 
+        //alors
+        // affiche une alert qui contient 'super', j'adore la glace au chocolat
+        // sinon
+        // affiche une alert qui contient 'oh j'aurai préféré du chocolat
+
+        /* Structure conditionnelle SI SINON:
+        if(condition){
+            alors
+            instruction1
+        }else{
+            instruction2
+        }
+        */
+
+       /* Structure conditionnelle remplie en français:
+        if(prfum est du chocolat){
+            alors
+            instruction1
+        }else{
+            instruction2
+            affiche une alert qui contient 'oh j'aurai préféré du chocolat'
+        }
+        */
+
+        /* Structure conditionnelle remplie en js:*/
+
+        parfumGlace = 'chocolat';
+        if(parfumGlace == 'chocolat'){
+            alert("super, j'adore la glace au chocolat");
+        }else{
+            alert("oh j'aurai préféré du chocolat");
+        }
+
+        porteFermee = true;
+
+        if(porteFermee){
+            alert('ouvre la porte');
+        }
+        
+        melon = false;
+        if(melon){
+            alert('je mange du melon');
+        }else{
+            alert('je mange des chips');
+        }
+
+        // Structures conditionnelle SI SINON SI
+        // Si j'ai du melon alors je mange du melon, sinon si j'ai des chips alors je mange des chips, sinon je ne mange rien
+
+        var melon = false, chips = true;
+        if(melon){
+            alert('je mange le melon');
+        }else if(chips){
+            alert('je mange des chips');
+        }else{
+            alert('je ne mange rien');
+        }
+
+        var frigo = {
+            melon : 0,
+            pasteque : 0,
+            parme : 1,
+            papaye : 0,
+            fromage : 0 
+        };
+         // Si j'ai du melon et du jambon parme
+
+         if(frigo.melon && frigo.parme){
+            alert('je mange du melon au jambon de parme ');
+         }else if(frigo.fromage){
+             alert('je mange du fromage');
+         }else{
+             if(frigo.pasteque || frigo.papaye){
+                 alert('je mange la pasteque ou de la papaye');
+             }else{
+                 alert('je ne mange rien');
+             }
+         }
+
+
+
+
+
+
+
+
+
+        
+    </script>
+</body>
+</html>

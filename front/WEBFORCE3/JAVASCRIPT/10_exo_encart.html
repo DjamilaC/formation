@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .encart{
+            width: 250px;
+            height: 260px;
+            border: 1px silver solid;
+            background: url(images/mimi.jpg) no-repeat; 
+            background-size: auto 100%;
+            background-position: center top;
+            position: relative;
+        }
+        .encart .desc{
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            bottom: 0;
+            background-color: rgba(0, 0, 0,.2); 
+            color: white;
+            text-align: center;
+            
+        }
+        .rs{
+            position: absolute;
+            background: rgba(255, 255, 255,.2);
+            top: 4px;
+            left: 5%;
+            width: 90%;
+            display: none;
+        }
+        .encart:hover .rs{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="encart">
+        <div class="desc">
+            <strong>Art de vivre</strong>
+            <h2>mini carrof</h2>
+            <p>Portrait de mimi caroff, céramiste et </p>
+
+        </div>
+        <div class="rs"> f - t - rss</div>
+    </div>
+</body>
+</html>

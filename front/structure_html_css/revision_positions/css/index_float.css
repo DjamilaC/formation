@@ -1,0 +1,23 @@
+body{
+    background-image: url(https://images.designtrends.com/wp-content/uploads/2015/12/09123542/Pink-Rose-Design.jpg);
+}
+
+.clear{
+    clear: both;
+} 
+.boite{
+    height: 150px;
+    width:150px;
+    padding: 10px;
+    border: 5px solid rgb(236, 117, 117);
+    margin: 10px;
+    float: left;
+    background: rgb(128, 78, 163);
+     
+}
+.boite:hover{
+    transform: rotate(20deg);
+    border-radius: 50%;
+    transition: 2s;
+
+}

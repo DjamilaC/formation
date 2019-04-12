@@ -1,0 +1,92 @@
+body{
+    margin: 0 auto;
+    background-color: lightgray
+}
+div{
+    width: 90%;
+    margin: 0 auto;
+    background-color: mistyrose;
+
+}
+.boite{
+    height: 11vh;
+    width: 18vh;
+    padding: 5vh;
+    background: url(" https://i.unimedias.fr/2012/06/06/Bebe-a-2-mois1_0.jpg?auto=format%2Ccompress&crop=faces&cs=tinysrgb&fit=crop&h=227&w=405") ;
+    background-repeat: no-repeat;
+    border: 5px double orchid;
+    margin: 2vh;
+    float: left;
+    /* effet flottant, permet de placer des balises cote à côte alors que selon le flux du web standard les éléments se placent les uns au dessous des autres */
+    transition: margin 0.5s;
+
+}
+.boite:hover{
+    margin-top: 10vh;
+}
+.clear{
+     clear: both; 
+}
+p{
+    background-color:lightblue;
+}
+p span{
+    background-color: yellow;
+}
+.box{
+    height: 11vh;
+    width: 18vh;
+    padding: 5vh;
+    background: url("https://i.unimedias.fr/2007/07/16/Quels-produits-pour-la-toilette-de-bebe1_0.jpg?auto=format%2Ccompress&crop=faces&cs=tinysrgb&fit=crop&h=227&w=405");
+    background-repeat: no-repeat;
+    border-radius: 50%; 
+    border: 5px double orchid;
+    margin: 2vh;
+    float: left;
+    transition: margin 0.5s;
+}
+.box:hover{
+    margin-top: 10vh;
+}
+#bas{
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgb(100, 170, 104);
+
+}
+.bulle{
+    height: 11vh;
+    width: 18vh;
+    padding: 5vh;
+    background: url("https://i-sam.unimedias.fr/2015/10/02/istock_000021543317_medium.jpg?auto=format%2Ccompress&crop=faces&cs=tinysrgb&fit=crop&h=227&w=405");
+    background-repeat: no-repeat;
+    border-radius: 50%; 
+    border: 5px double orchid;
+    margin: 2vh;
+    float: left;
+    transition: margin 0.5s;
+}
+.bulle:hover{
+    margin-top: 10vh;
+}
+.bulleD{
+    height: 11vh;
+    width: 18vh;
+    padding: 5vh;
+    background: url("https://i-sam.unimedias.fr/2015/10/02/istock_000021543317_medium.jpg?auto=format%2Ccompress&crop=faces&cs=tinysrgb&fit=crop&h=227&w=405");
+    background-repeat: no-repeat;
+    border-radius: 60%; 
+    border: 5px double orchid;
+    margin: 2vh;
+    float: right;
+    transition: margin 0.5s;
+}
+.bulleD:hover{
+    margin-top: 10vh;
+}
+.suivant{
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgb(141, 92, 126);
+}
+

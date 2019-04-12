@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Affiche / Masque avec transition</title>
+    <style>
+    .listeFruits{
+        transform: scale(0);/*ici on cache la liste au chargement de la page*/
+        transform-origin: 50% 50% ;
+        background-color: brown;
+        transition: .5s;
+        /* pour placer la liste AU DESSUS de la boite */
+         position: absolute;  
+         width: 50%;  
+    }
+    .affiche{        
+        transform: scale(1);
+        /*quand on fait les transform le point de transformation est au centre par defaut, transform-origin: 50% 50%;*/        
+    }
+    .boite{
+        width: 500px;
+        height: 500px;        
+        background-color: palevioletred;   
+    }
+    
+    </style>
+</head>
+<body>
+
+    <h1>Afficher / Masquer</h1>
+    <button class="btn"> Affiche / Masque</button>
+    <ul class="listeFruits">
+        <li>Pommes</li>
+        <li>Bananes</li>
+        <li>Poires</li>
+        <li>Mangues</li>
+    </ul>
+   <div class="boite"> </div>
+    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <script>  
+
+    $(function(){ 
+    var ajouteListe = function(){
+    
+         $('.listeFruits').toggleClass('affiche');
+     }
+         $('.btn').on('click', ajouteListe )
+   
+
+    //**********CORRECTION************
+
+    // $('.btn').on('click', function(){
+    //     $('.listeFruits').toggleClass('affiche');
+    // })
+    
+    })//FIN DE SCOPE JQUERRY
+     </script>
+
+
+
+
+
+</body>
+</html>

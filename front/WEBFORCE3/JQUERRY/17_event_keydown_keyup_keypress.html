@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="#">
+        <label for="cible">votre message</label> <br>
+    <textarea name="" id="cible" cols="30" rows="10">
+
+    </textarea>
+    <p class="info"></p>
+    
+
+    </form>
+    
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+    
+        $(function(){
+            console.log('jQuery chargé'); 
+            // lorsqu'une touche est appuyée dans le textarea.cible on change la couleur de fond de testkey pour mettre du vert 
+
+            $('#cible').keydown(function(){
+                $(this).css('background-color', 'green');
+
+            })  // fin de keydown 
+            $('#cible').keyup(function(){
+                $(this).css('background-color', 'gold');
+
+            })  // fin de keyup 
+
+            // lors du keypress (touche pressées, analyse du caractère saisi) on va afficher le keycode de la touche dans le paragraphe
+
+            $('#cible').keypress(function(ev){
+                // attention : ajouter le paramètre ev dans les parenthèses de la fonction
+                $('.info').text(ev.which);
+            })
+    
+        })//Fin du scope
+    
+    
+    
+    
+    </script>
+
+</body>
+</html>

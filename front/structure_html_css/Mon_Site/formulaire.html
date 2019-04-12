@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--permet de définir le langage utilisé-->
+<html lang="fr">
+    <!-- permet de définir la langue de la page -->
+<head>
+    <!-- tete du document, non visible sur le site -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ma page structure</title>
+    <!-- titre du site apparaissant sur l'onglet -->
+    <meta name="description" content="Ma première page en HTML/CSS">
+    <!-- description sous le titre dans la recherche google, les moteurs de recherches s'en servent un peu comme des mots cléfs pour les recherches -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- relie le fichier html à mon fichier css (Casscading Style Sheets) -->
+    <link href="https://fonts.googleapis.com/css?family=Anton%7CLemonada%7COswald" rel="stylesheet">
+    <!-- lien pour les polices via google- front -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- lien pour le "font-awesome" recupère la font sur le site dans GET STARTED -->
+    
+</head>
+<header> <!--zone du haut, exp: bannière, logo, slogan......-->
+    <div id="logo">
+        <a href="index.html" target="_blank"> <img src="img/logo.png" alt=""></a>
+    </div>
+    <div id="slogan">
+        <h1>Mon premier site en HTML/CSS</h1> <!--H1 titre de premier rang un seul dans une page html-->
+    </div>
+    <div id="rs">
+        <a href="https://twitter.com/" target="_blank"> <i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"> <i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"> <i class="fab fa-instagram"></i></a>
+    </div>
+    <div  class="clear"></div>
+</header>
+<nav>
+    <a href=" index.html" >Structure</a>
+    <a href="texte.html">Textes</a>
+    <a href="selecteur.html">Selecteurs</a>
+    <a href="image.html">Images</a>
+    <a href="position.html">Positions</a>
+    <a href="zoning.html">Zoning</a>
+    <a href="liste.html">Liste</a>
+    <a href="lien_menu.html">Liens & menu</a>
+    <a href="tableau.html"> Tableau</a>
+    <a href="formulaire.html"class="activ">Formulaire</a>
+    <a href="multimedia.html">Multimedia</a>
+    <a href="animation.html">Animation</a>
+    <a href="explication_flexbox.html">Flexbox</a>
+    <a href="explication.html">Figure/Figcaption</a>
+    <a href="pattern.html">Pattern</a>
+    
+</nav>
+
+<body>
+        <main> 
+                
+                <h2> Le formulaire</h2> 
+                <section class="formulaire"> 
+                   
+                    <form method="post" action="url de destination"enctype="multipart/form-data">
+                        <label for="Pseudo">Pseudo*</label> 
+                        <input id="Pseudo" type="text" name="pseudo" required> <br/>
+                        <label for="Prénom">Prénom</label> 
+                        <input id="Prénom" type="text" name="Prénom" placeholder="votre prénom" > <br/>
+                        <label for="Mot de passe"> Mot de passe</label> 
+                        <input id="Mot de passe" type="text" name="mot de passe"> <br/>
+                        <label for="E-mail">email</label> 
+                        <input id="E-mail" type="text" name="email"  > <br/>
+                        <label for="cv">CV</label> 
+                        <input id="cv" type="file" name="choisir un fichier"  > <br/>
+                        <p>quels sont vos fruits préféres?</p>
+                        <label for="orange" >Orange</label> 
+                        <input type="checkbox" id="orange" value="orange" chacked> <br>
+                        <label for="fraise" >Fraise</label> 
+                        <input type="checkbox" id="fraise" value="fraise"> <br>
+                        <label for="mangue" >Mangue</label> 
+                        <input type="checkbox" id="mangue" value="mangue"> <br>
+                       
+                        <label for="code postal">Code Postal</label>
+                        <input id="code postal" type="text" name="code postal" maxlength="5" pattern=" [0-9]{5} "> <br/>
+
+                        <label for="message">message</label> 
+                        <textarea name="message" cols="30" rows="5"></textarea> <br>          
+                        <input type="submit" name="envoyer" value="Envoyer">
+                        <input type="reset" name="annuler" value="Annuler">             
+                        
+                        
+
+                                          
+
+                    </form>
+
+                </section>
+            </main>
+            <a href="#logo"> <button type="button"> <i class="fas fa-arrow-circle-up" aria-hidden="true"></i></button></a>
+            <!-- aria accés de contenus web plus faciles pour les handicapés => https://developer.mozilla -->
+        <footer>
+</html>

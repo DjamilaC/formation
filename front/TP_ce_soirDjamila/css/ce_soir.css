@@ -1,0 +1,68 @@
+
+
+body{
+    width: 50%;
+    background: rgb(158, 192, 158);
+    margin: auto;
+}
+#container{
+    background: rgb(208, 229, 230);
+    width: 1000px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+   
+
+}
+.haut{
+    width: 100%;
+    height: 300px;
+    background-image: url("../img/woodPlank.jpg");
+    
+}
+
+h1{
+    text-align: left;
+}
+
+.logo{
+    text-align: center;
+    object-position: right;
+
+}
+
+.menu{
+    text-align: left;
+    
+}
+
+p{
+    text-align: center;
+    font-size: 14px;
+    
+}
+
+
+#section1, #section2, #section3{
+    width: 100%;
+    background-image: url("../img/pattern.jpg");
+    
+}
+.texte{
+    height:200px ;
+    width: 450px;
+    display: inline-block;
+}
+.photo{
+    height: 200px;
+    width: 450px;
+    display: inline-block;
+}
+/* h2{
+    border-bottom: 2px solid brown;
+    
+} */
+span{
+    border-bottom: 2px solid brown;
+}
+

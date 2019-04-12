@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .container{
+        width: 80%;
+        border: 2px solid olivedrab;
+        margin: 0 auto;
+     }
+     .container p{
+         border: 2px solid purple;
+     }
+     .flt_l{
+        width: 30%;
+         float: left;
+     }
+    .clear{
+        clear: both;
+        display: table;
+    }
+    .clearfix:after{
+        content: 'faux footer';
+        clear: both;
+        display: table;
+    }
+    </style>
+</head>
+<body>
+    <div class="container clearfix">
+        <img src="images/fete-montagne2017.jpg" alt="" class="flt_l">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus temporibus dicta sed magnam obcaecati voluptatem reiciendis quia commodi minus rerum necessitatibus quisquam eaque voluptatum est, nobis mollitia suscipit consectetur! Incidunt.</p>
+        <strong class="clear">Le cervin</strong>
+        <img src="images/fete-montagne2017.jpg" alt="" class="flt_l">
+        <!-- <footer class="clear"> copy to design</footer> -->
+    </div>
+</body>
+</html>

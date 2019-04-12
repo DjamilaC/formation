@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    margin: 0 auto;
+    background: url(https://i.pinimg.com/originals/66/af/c6/66afc67b85508f7c11c24c2c881a5168.jpg);
+  }
+  ul#navigation{
+    width: 91em;
+    height: 6em;
+    margin: 0 auto;
+    background-color: white;
+    list-style: none;
+    /* pour cacher les puces */
+  }
+  ul#navigation li{
+    float: left;
+    /* on rend les li flottants pour leur permettre d' aller a l' horizontale */
+    text-align: center;
+  }
+  ul#navigation li a{
+    width: 9em;
+    line-height: 75px;
+    font-size: 1.4em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: brown;
+    display: block;
+    /* pour pouvoir dimensionner les "a"*/
+    text-decoration: none;
+    /* va enlever le underline du lien */
+  }
+  .LV{
+    width: 91em;
+    height: 3em;
+    margin: 0 auto;
+  }
+  .VC{
+    width: 11em;
+    height: 3em;
+    background-color: rgb(1, 83, 1);
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+  }
+  .VF{
+    width: 80em;
+    height: 3em;
+    background-color: rgb(0, 48, 0);
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+  }
+  .ZC{
+    width: 90em;
+    margin: 0 auto;
+    padding-left: 1em;
+    background-color: white;
+  }
+  .BB{
+    width: 90em;
+    height: 3em;
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: brown;
+  }
+  .Carte{
+    width: 60%;
+    height: 40em;
+    background-color: aqua;
+  }
+  .texte{
+    width: 40%;
+    height: 40em;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+  }
+  .BB2{
+    width: 90em;
+    height: 3em;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: gray;
+  }
+  footer{
+    width: 91em;
+    height: 9em;
+    margin: 0 auto;
+    background-color: rgb(1, 83, 1);
+  }
+  .bleu{
+    width: 30em;
+    height: 2em;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+  }
+  p{
+    text-align: justify;
+  }

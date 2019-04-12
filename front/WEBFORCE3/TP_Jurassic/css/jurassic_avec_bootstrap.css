@@ -1,0 +1,88 @@
+/* RESET */
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 65.5%; /* base 10px */
+}
+body{
+    font-size: 1.4rem/1.5 arial, helvetica, sans-serif;
+    margin: 0;
+    background: pink;
+}
+/* LAYOUT */
+header{
+     height: 600px;   
+    background: url(../img/dinosaure.jpg) no-repeat 50% -100px;
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+
+.wrapper{
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 2px solid darkred;
+    /* padding: 1px; remplace les order */
+}
+nav{
+    border: green 2px solid;
+    background-color: rgba(0, 0, 0, .5);
+    line-height: 5;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    border:  2px solid orchid;
+}
+nav li{
+    border: 2px solid white;
+}
+/* logo et bandeau */
+.logo{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 75px;
+    margin-bottom: 25px;
+}
+.bandeau{
+    position: absolute;
+    right: 0;
+    bottom: 0; 
+}
+/* CONTENU MAIN */
+main section{
+    padding-top:  5rem;
+    border: 2px solid pink;
+    margin: 0 auto;
+}
+section.presentation{
+    width: 70%;
+}
+.titre_n2{
+   text-transform: capitalize;
+   text-align: center;
+}
+img.entree_parc{
+    width: 100%;
+}
+iframe{
+    width: 100%;
+    display: block;
+}
+.partenaire img{
+    width: 75%;
+    display: block;
+    margin: auto;
+}
+footer{
+    width: 100%;   
+    background: black;
+    color: white;
+}

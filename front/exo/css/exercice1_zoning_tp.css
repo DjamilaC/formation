@@ -1,0 +1,51 @@
+
+#container{
+    width: 800px;
+    margin: auto;
+    text-align: center; 
+    border: 3px solid rgb(124, 42, 42);
+    background: pink;
+    height: 840px;
+    border-radius: 5%;
+    
+}
+.zone1{
+    width: 250px;
+    height: 730px;
+    border: 3px solid purple;
+    border-radius: 10%;
+    float: left;  
+    margin-left: 30px; 
+    margin-right: 20px;
+    box-shadow: 1px 1px 1px 1px purple;
+    background: url(https://www.adelineklam.com/pub/Produits/Papiers_Japonais/M433.jpg);
+     
+}
+.zone2{
+    width: 190px;
+    height: 300px;
+    border: 3px solid purple;
+    border-radius: 10%;
+    float: left;
+    margin-left: 20px;
+    box-shadow: 1px 1px 1px 1px purple;
+    margin-bottom: 10px;
+    background: url(https://www.adelineklam.com/pub/Produits/Papiers_Japonais/M433.jpg);
+}
+.zone3{
+    width: 400px;
+    height: 100px;
+    border-radius: 10%;
+    border: 3px solid purple;
+    float: left;
+    margin-left: 20px;
+    box-shadow: 1px 1px 1px 1px purple;
+    background: url(https://www.adelineklam.com/pub/Produits/Papiers_Japonais/M433.jpg);
+    
+}
+h1{
+    text-shadow: 2px 2px purple;
+}
+h2{
+    font-size: 50px;
+}

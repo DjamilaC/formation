@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/formulaire.css">
+    <title>Mon formulaire</title>
+</head>
+<body>
+    <div class="container">
+        <!-- je déclare mon formulaire avec la balise form -->
+    <form method="POST" action="#" enctype="" >
+            <label for="pseudo">Pseudo*</label> <!-- for est l'identifiant de l'élement du formunaire-->
+            <input type="text" name="pseudo" placeholder="rentrer son pseudo" required> <br/>
+            <!-- input est l'entrée de données dans une base de données et required indique sue le champs doit etre renseigné-->
+            <!--METHOD=>comment circule les données en php, ENCTYPE=> concerne la récupération-->
+            
+            <!-- le mot de passe-->
+            <label for="mdp">Mot de passe*</label>
+            <input type="password" id="#" name="#" placeholder="password"> <br>
+            
+            <!--Email-->
+            <label for="email">Email</label>
+            <input type="email"name="email"placeholder="Email" required><br>
+
+            <!--le fichier-->
+            <!--placeholder est le text explicatif en grisé dans le champs non encore rempli-->
+            <label for="file">Fichier</label>
+            <input type="file" id="file" name="file" required><br>
+            <!--type FILE cree un bouton "parcourir" pour aller chercher le fichier-->
+    
+                    <label for="file">fichier</label>
+                    <select name="#" id="##">
+                    <!--liste déroulante avec SELECT et non INPUT-->
+                    <optgroup>
+                        <!--option groupe=>sous catégorie dans la liste-->
+                        <option value=""></option>
+                        <option value=""></option>
+                    </optgroup>
+                    <optgroup>
+                         <!--option groupe=>sous catégorie dans la liste-->
+                         <option value=""></option>
+                         <option value=""></option>
+                    </optgroup>
+                    </select>
+                    <br>
+                    <label for="choix">choisir</label>
+                    <p>
+                        <!--case à cocher carrée-->
+                        <input type="checkbox" name="choix 1" checked> choix 1
+                        <input type="checkbox" name="choix" checked> choix 2
+                        <input type="checkbox" name="choix" checked> choix 3
+                    </p>
+                    <label for="civilité">Civilité</label>
+                    <p>
+                        <!--case à cocher rondes CHECKED en coche une par default-->
+                        <input type="radio" name="civilite" value="m" checked>Monsieur
+                        <input type="radio" name="civilite" value="f">Femme
+                    </p>
+                    <label for="ville">Ville</label>
+                    <input type="text" id="ville" list="france">
+                    <datalist id="france">
+                        <!-- la dataliste permet de sugerer lorsque l'utilisateur tape, couplé avec du php pour aller faire un lien avec une base de données -->
+                        <option value="#">Paris</option>
+                        <option value="#">Lyon</option>
+                        <option value="#">Nantes</option>
+                    </datalist>
+                    <br>
+                    <label for="cp">code postal</label>
+                    <input type="text" id="id" name=" id" maxlength="5" pattern="[0-9] {5}"> <br>
+                    <!-- MAXLENGTH impose un max de caractères et PATTERN permet d'imposer le type de caractère numérique et comme PATTERN permet de préciser le nombre de caractères max on peut enlever MAXLENGTH ici (on le garde pour les connaissances) -->
+                    <label for="adresse">adresse</label>
+                    <textarea type="range" name="adresse" id="adresse" cols="25" rows="10"></textarea>
+                    <!-- zone de texte avec les reglages de sa taille ROW et COLS -->
+                    <br>
+                    <label for="jauge">jauge</label>
+                    <input type="range" min="0" max="50" value="25" id="jauge">
+                    <!-- MIN et MAX correspondent à l'echelle et VALUE à la place du curseur par défaut ici au milieu -->
+                    <br>
+                    <label for="couleur">Couleur</label>
+                    <input type="color">
+                    <br>
+                    <input type="submit" name="inscription" value="s'inscrire">
+                    <input type="reset" name="effacer" value="Recommencer">
+                    <br>
+                    <br>
+                    <!-- bouton d'envoi du formulaire -->
+                    <input type="submit" name="inscription" value="Envoyer">
+                    <input type="reset" name="annuler" value="Annuler">
+                   
+
+    </form>
+    </div>
+</body>
+</html>

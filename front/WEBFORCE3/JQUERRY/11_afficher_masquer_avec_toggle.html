@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .container{
+        width: 80%;
+        margin: 0 auto;
+        border: 2px solid red;
+        height: 800px;
+        position: relative;
+    }
+    .popup{
+        border-radius: 10px;
+        width: 80px;
+        line-height: 60px;
+        background: silver;
+        border: 1px black solid;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        text-align: center;
+        
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <button class="btn">clique</button>
+    <div class="popup">Ma pop-up</div>  
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+    $(function(){
+        console.log('jQuerry chargé');
+        $('.btn').click(function(){
+            // $('.popup').toggle("slow");
+            //$('.popup').fadeToggle("slow");
+             $('.popup').slideToggle("slow");
+        })
+    })
+    </script>
+</body>
+</html>

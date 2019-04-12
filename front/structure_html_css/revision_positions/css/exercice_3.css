@@ -1,0 +1,13 @@
+
+nav{
+    width: 1900px;
+    height: 25px;
+    background-color: indigo;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+}
+.contenu{
+    margin: 10px 10px;
+    border: 2px solid pink;
+}

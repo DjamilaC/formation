@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .container{
+        border: 2px solid darkred;
+        margin: 0 auto;
+        width: 70%;
+        padding: 2rem;
+    }
+    .lienActif{
+        color: red;
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="colLeft">
+                <h2 class="titleSite">
+                    <a href="#"> WF3 / Pole S</a>
+                </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vitae iure voluptas nesciunt consequatur dolore, veritatis sint voluptates totam, et, velit reprehenderit culpa itaque officiis autem temporibus quam optio delectus!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni nisi fugit illo quos dolor laudantium maiores laboriosam vitae sequi possimus? Dolorum ex rerum in, at quo reiciendis quasi consectetur ratione.</p>
+            </div>
+            <a href="ressources.pdf">Les ressources du cours</a>
+        <div class="colRight">
+             <h2 class="titleChapter">Cours jQuerry</h2>
+             <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, quasi animi delectus non vero, voluptates quod accusantium possimus ex voluptatem reiciendis eveniet error voluptatibus, minus suscipit tempore qui optio mollitia.</p>
+                <form action="">
+                    <input type="date">
+                    <input type="submit">
+                </form>
+        </div>
+
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+    $(function(){
+        console.log('jQuerry chargé');
+    //Selectionne avec jQuerry la div qui a la class=container $('div.container')
+    //selectionne avec jQuerry le ou les elements qui ont la class=container $('.container)
+    //mettre dans une variable monElement les élements qui ont la classe= container
+
+    var monElement = $('.container');
+    console.log(monElement.children());//Sélectionne tous les enfants direct de .container, renvoie dans la console les 2 divs colLeft et colRight
+
+    console.log(monElement.children(('colLeft')));//selectionne parmi les enfants de .container, celui qui a la class= colLeft
+
+    console.log(monElement.children().eq(1));// selectionne, dans la liste des elements enfant de container, le deuxième de la liste(on commence toujours par zero quand on compte dans une liste)
+
+    console.log(monElement.children().find('h2'));//selectionne tous les h2 descendants
+
+    var monPara = $('p.para');
+    console.log(monPara.next());
+    console.log(monPara.prev());
+    console.log(monPara.parent());
+    console.log(monPara.next().next());//renvoie un objet vide car il n ya rien après le formulaire
+
+    // chercher combien il ya de liens dans la page
+    console.log($('a').length);
+    // chercher combien d'objets h2 qui ont la class titleChapter
+    console.log($('h2.titleChapter').length);
+
+    // chercher combien d'objets a dont l'attribut href est egal à #
+    console.log($('a[href = "#"]').length);
+
+    // chercher combien d'objets a (combien de liens) dont l'attribut href se termine par .pdf
+    console.log($('a[href $=".pdf"]').length);
+
+    $('a[href $=".pdf"]').css("color", "red");
+    /*au clic sur ce lien, faire un toggleClass pour changer sa couleur*/
+
+    // autre racourci pour le on cnick
+    /*$('a[href $=".pdf"]').click(function(){
+        $(this).toggleClass("lienActif");
+    })*/
+    
+    $('a[href $=".pdf"]').on('click',function(){
+        $('a[href $=".pdf"]').toggleClass("lienActif");
+    })
+    // au survol de la souris on change la couleur du texte
+
+    $('a[href $=".pdf"]').hover(function(){
+        $(this).toggleClass('lienActif');
+    })
+
+
+    
+
+
+
+
+
+
+    })//FIN DE SCOPE JQUERRY
+    </script>
+</body>
+</html>

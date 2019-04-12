@@ -1,0 +1,26 @@
+#container{
+    background: rgb(238, 221, 198);
+    margin:0 auto;
+    width: 900px;
+    height: 900px;
+    text-align:center;
+}
+section{
+    background: white;
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    height: 840px;
+    width: 880px;
+    text-align: center;
+}
+.zone gauche{
+   
+ 
+    margin-left: 20px;
+    margin-top: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background: red;
+
+}

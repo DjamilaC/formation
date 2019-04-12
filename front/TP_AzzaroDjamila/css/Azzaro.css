@@ -1,0 +1,143 @@
+body{
+    
+    background: #ccc;
+}
+#container{
+    width: 1000px;
+    background-image: url(../img/fond.png);
+    box-shadow: 10px rgb(136, 132, 132);
+    margin: auto;
+    text-align: center;
+    height: 1500px;
+}
+
+header{
+    height: 200px;
+    
+}
+
+
+.logo{
+    width: 250px;
+    float: left;
+   
+}
+.logo img{
+    float: left;
+    padding: 5px;
+    
+
+}
+h1{
+    padding: 5px;
+    width: 250px;
+}
+.aide{
+    width: 350px;
+    float: left; 
+   
+}
+.article{
+    width: 350px;
+    float: left;
+   
+}
+.clear{
+    clear: both;
+}
+ul {
+    padding: 0;
+      text-decoration: none;
+}
+a {
+    
+    text-decoration: none;
+ }
+
+ ul li {
+    float:left;
+    margin: 2em 2em;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    width: 150;
+     } 
+
+
+ #menu{
+    height: 60px; 
+     width: 1000px;
+     background: rgb(84, 84, 253);
+     padding: 0 ;
+     margin: 0 ;
+
+ }
+ .milieu1{
+    height: 380px;
+     width: 1000px,
+ }
+ .milieu2{
+     height: 300px;
+     width: 1000px;
+ }
+ .paiement{
+     width: 250px;
+     float: left;
+ }
+ .nous{
+     width: 350px;
+     float: left;
+ }
+ .service{
+     width: 250px;
+     /* float: right; */
+     display: inline-block;
+ }
+ 
+
+ .bonP{
+    height: 300px;
+    width: 300px;
+    float: left;
+    border: 1px solid;
+    
+    margin-right: 10px;
+ }
+
+.CoupDC{
+    height: 300px;
+    width: 350px;
+    float: left;
+    border: 1px solid;
+    
+    margin-right: 10px;
+
+}
+
+.objectif{
+    height: 300px;
+    width: 300px;
+    float: left;
+    border: 1px solid;
+   
+    margin-right: 10px;
+}
+h4{
+    color: rgb(53, 56, 247);
+    text-align: right;
+}
+.milieu3{
+    height: 350px;
+    width: 1000px;
+    margin-left: 10px;
+    margin-right: 20px
+}
+
+
+footer{
+    text-align: center;
+    border: 1px solid rgb(16, 138, 238) ;
+    background: rgb(16, 138, 238);
+    margin-left: 446px;
+    margin-right: 444px;
+}

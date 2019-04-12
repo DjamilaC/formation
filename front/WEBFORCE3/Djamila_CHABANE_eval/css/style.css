@@ -1,0 +1,80 @@
+/* RESET */
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 65.5%; /* base 10px */
+ } 
+
+header{
+    background: url(../images/background.jpg) ;
+    border: 2px solid black;
+    height: 390px; 
+    background-size: cover; 
+   
+    /* position: relative; */
+}
+header .navbar{
+    /* background-color: transparent;
+    width: 1rem; */
+    /* position: absolute; */
+    width: 100%;
+
+}
+header a .navbar{
+    margin-top: 20px;
+    
+}
+nav ul li{
+    list-style: none;
+    font-size: 1.5rem;    
+}
+ul li a{
+    color: grey;
+}
+ header p{
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}
+header h1{
+    text-align: center;
+    color: white;
+}
+main{
+    width: 75%;
+    margin: 0 auto;
+}
+.section1{
+    margin-left: 6rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info{
+    margin-top: 10%;
+    color: rgb(46, 44, 44);
+    
+}
+
+.btn{
+    background: green;
+}
+.imageAgence{
+    width: 60%;
+    height: 60%;   
+    
+}
+footer{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-right: 30rem;
+    margin-left: 30rem;
+    height: 200px;
+
+}
+
+
+

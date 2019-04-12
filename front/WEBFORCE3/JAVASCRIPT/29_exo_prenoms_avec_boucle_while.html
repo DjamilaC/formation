@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Exo avec while</h1>
+    <p>Ici on va demander à l'internaute son prénom, ainsi que les prenoms de ses frères et soeurs. On va afficher une boite de dialogue avec la méthode prompt(( pour chaque prénom. Comment savoir à l'avance combien il yaura de frères et soeurs?</p>
+    <p>Nous Allons utiliser une boucle while qui va demander à chaque passage dans la boucle, un prenom suplementaire <br> La boucle ne s'arretera que lorsque l'utilisateur choisira de ne plus entrer de prénom</p>
+
+
+    <script>
+    var prenoms = "",
+        prenom,
+        proceed = true;
+    
+    // ICI ATTENTION ON A UNE BOUCLR INFINIE: puisque la condition proceed= true est toujours vraie, la boucle contine de s'executer et le navigateur affiche prompt et la boucle  ne s'arrete jamais 
+
+    /* LA BOUCLE INFINIE
+    while(proceed){
+        prenom = prompt("entrer un prenom");
+    }
+    alert(prenom);
+    */
+
+    while(proceed){
+        prenom = prompt("entrez un prenom");
+        /* ici on va tester
+        SI (l'utilisateur entre un prénom dans le prompt alors on ajoute ce prénom dans la liste du tableau prénoms)
+        SINON 
+        on sort de la boucle en mettant la variable proceed à false.        
+        */ 
+        if(prenom){
+            prenoms += prenom + "<br> "; // ici on ajoute le nouveau prenom au tableau prenoms suivi d'un espace
+
+        }// Fin de if
+        else{
+            proceed = false; // puisque aucun prénom n'a été entré , on fait en sorte d'invalider la condition en mettant la variable proceed à false
+
+        }// fin de la boucle else
+    } //fin de la boucle while
+    document.write(prenoms); // afficher les prenoms les uns à la suite des autres
+
+    </script>
+</body>
+</html>

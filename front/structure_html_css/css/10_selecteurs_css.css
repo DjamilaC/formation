@@ -1,0 +1,53 @@
+body{
+    margin: 10px;     
+    background:  url("https://villeneuve01.fr/wp-content/uploads/sites/57/2017/12/paysage1540.jpg")no-repeat ;
+    font-family: 'PT Sans', sans-serif;
+  
+}
+
+nav a{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: rgb(194, 62, 106);
+}
+.container{
+    background:rgb(110, 161, 112) ;
+    border: 2px solid;
+    color: rgb(122, 22, 119);
+    margin-bottom: 8px;
+   
+}
+.container2{
+    background: rgb(110, 161, 112);
+    border: 2px solid;
+    color: rgb(122, 22, 119);
+    margin-bottom: 3px;
+    width: 930px;
+    float: left;
+    margin-right: 10px;
+    
+}
+.container3{
+    background:rgb(110, 161, 112);
+    border: 2px solid;
+    color:  rgb(122, 22, 119);
+    width: 930px;
+    float: left;
+    margin-left: 5px;
+    
+        
+}
+h2, h3, h4{
+    color: rgb(54, 18, 54);
+    text-decoration: underline;
+    text-indent: 2em;
+}
+.menu{
+    width: 700px;
+    height: 25px;
+    background: rgb(149, 192, 84);
+    border: 2px solid;
+    text-align: center;
+    color:  rgb(122, 22, 119);
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}

@@ -1,0 +1,58 @@
+body{
+    font-size: 25px; 
+}
+h1{
+    background-color: yellow;
+    color: black;
+}
+section p {
+    color: red;
+}
+section p:first-child {
+    color: blue;
+}
+section p:last-child{
+    color: lightgreen;
+}
+section p:nth-child(even){
+    color: purple;
+}
+section p:nth-child(odd){
+    color: rgb(240, 149, 179)
+}
+section p:nth-child(3), section p:nth-child(10){
+    color: rgb(106, 192, 8);
+}
+.zone1{
+    /* pour cibler une classe en css on met un point */
+    color: rgb(36, 15, 224);
+}
+.zone2{
+    color: lightblue;
+}
+.lime{
+    color: brown;
+    font-size: 45px;
+}
+#zone3{
+    background-color: #f5deb3;
+}
+#zone3:after{
+    /* rajouter du contenu aprés l'id zone 3 */
+    content: " rajouté après";
+}
+#zone3:before{
+    content:" Djamila CHABANE ";
+    background-color: blueviolet;
+}
+li{
+    background-color: rgb(204, 230, 166);
+    color: palevioletred;
+}
+li:nth-child(2){
+    background-color: rgb(78, 72, 72);
+    color: white;
+}
+/* li:first-child{ */
+    /* background-color: tomato; */
+    /* color: white; */

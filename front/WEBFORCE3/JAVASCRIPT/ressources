@@ -1,0 +1,21 @@
+https://fr.wikipedia.org/wiki/Navigateur_web
+https://quirksmode.org/css/selectors/
+taille et police par defaut d'une page HTML:
+times, times new roman, serif;
+ 1rem=16px.
+nound project
+https://thenounproject.com/
+[href^=http] selectionne tous les liens dont l'attribut href qui commence par http,
+le svg: est uen partie du HTML5 le svg c'est des point mathématiques contrairement à bitmap est une grille de pixel(plus complique pour le responsive)
+https://www.w3.org/TR/CSS2/sample.html
+les unités de valeur en css:
+le rem: 1rem est égal à 1x la valeur de font-size defini pour la balise HTML
+si on ne change pas de font-size pour la balise html valeurc'est 16px.
+le em: 1em est égal à 1 x la valeur de font-size de sa balise parente.
+par exemple: le h1 fait 2em par defaut. si le h1 est enfant de la balise body et qu'on a donné 
+une font size  de 14px a ce body le h1 aura une taille de 2 x 14 donc 28px.
+ flexbox :https://flexboxfroggy.com/#fr
+https://www.w3.org/TR/css-2010/
+https://fr.wikipedia.org/wiki/Document_Object_Model
+https://developer.mozilla.org/fr/docs/Using_geolocation
+http://www.workwithcolor.com/hsl-color-picker-01.htm

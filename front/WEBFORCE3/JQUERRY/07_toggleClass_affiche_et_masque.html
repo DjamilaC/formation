@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .listeFruits{
+        display: none; /*ICI ON CACHE LA LISTE AU CHATGEMENT DE LA PAGE,on va l'afficher et la cacher en cliquant sur le boutton*/
+        background-color: brown;
+    }
+    .affiche{
+        display: block;
+    }
+    
+    </style>
+</head>
+<body>
+
+    <h1>Afficher / Masquer</h1>
+    <ul class="listeFruits">
+        <li>Pommes</li>
+        <li>Bananes</li>
+        <li>Poires</li>
+        <li>Mangues</li>
+    </ul>    
+    <button class="btn"> Affiche / Masque</button>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <script>  
+
+    $(function(){ 
+    // var ajouteListe = function(){
+    
+    //     $('.listeFruits').toggleClass('affiche');
+    // }
+    //     $('.btn').on('click', ajouteListe )
+   
+
+    //**********CORRECTION************
+
+    $('.btn').on('click', function(){
+        $('.listeFruits').toggleClass('affiche');
+    })
+    
+    })//FIN DE SCOPE JQUERRY
+     </script>
+
+
+
+
+
+</body>
+</html>

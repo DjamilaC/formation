@@ -1,0 +1,20 @@
+body{
+    margin: 10px 0;
+    padding: 0;
+    text-align: center;
+    background: white;
+    font-family: 'PT Sans', sans-serif;
+
+}
+div#conteneur{
+    width: 770px;
+    margin: 0 auto;
+    text-align: left;
+    border:2px solid #AABB44;
+    background: white;
+}
+h1#header{
+    height: 258px;
+    background: url('../apple.jpg');
+    margin: 0:
+}

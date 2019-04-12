@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Types de variables</title>
+</head>
+<body>
+    <script>
+        var maVariable = 10;
+        console.log(typeof maVariable);
+
+        // isNaN: is not a number
+        console.log(isNaN(100)); // renvoie false
+        console.log(isNaN("100")); // Ici la chaine 100 est convertie en Number par le navigateur avant d'etre testée, renvoie FALSE
+        console.log(isNaN("abc100")); // renvoie true
+
+        var monText = 'Solei';
+        console.log(typeof monText);
+
+        var monBooleen = true;
+        console.log(typeof monBooleen);
+
+        var maListe = ['pommes', 'bananes', 20];
+        console.log(typeof maListe);
+
+        // Structure du test if
+        /*SI(une condition est vraie ou fausse){
+            FAIS UNE CHOSE;
+            FAITS UNE AUTRE CHOSE;
+        }
+
+        SI(condition){
+            ALORS
+            instruction 1;
+            instruction 2;
+        } */ 
+
+
+        // En javascript
+        // SI (le nom du constructeur est égal à Array)
+        // Alors
+        //Affiche en console la chaine de caractère 'Array'
+
+        if(maListe.constructor.name == 'Array'){
+            console.log('Array');
+        // Array veut dire tableau de données en français.
+        }
+
+        
+
+    </script>
+</body>
+</html>

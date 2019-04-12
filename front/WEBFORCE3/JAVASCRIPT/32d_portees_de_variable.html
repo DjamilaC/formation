@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>que se passe t'il si les variables sont apellées de l'interieur d'une autre  </p>
+       <p>on aura une 3ème fonction qu'on apellera sortie, qui prend un seul paramètre qui le renvoie dans un paragraphe de la page </p>  
+
+
+<script>
+// ETAPE A
+
+// la variable x est la portée globale
+var x = 1;
+
+// les variables x et z sont dans les portées locales car elles sont dans la fonction
+
+function a(){
+    var y = 2;
+    sortie(z);
+}
+function b(){
+    var z = 3;
+    sortie(y);
+}
+function sortie(valeur){
+    // on crée un node (noeud) p qui est un objet du document
+    var para = document.createElement("p");
+    // Ajoute ce node comme enfant de la balise body
+    document.body.appendChild(para);
+   
+    para.textContent = 'la valeur est: ' + valeur;
+}
+
+sortie(x);
+a();
+b();
+// cette fois l'appel de a() et b() renverra l'erreur ReferenceError: z in not defined parceque l'appel de la fonction sortie() et les variables qu'elle essaye d'afficher ne sont pas définies dans les même portées- les variables sont en effet invisibles pour ces appels de fonctions.
+
+// le message d'erreur "l'erreur ReferenceError: z in not defined" est l'un des plus courrants que vous pourrez rencontrer. S'il s'affiche et que vous etes sûrs d'avoir défini la variable en question, verifiez quelle est sa portée.
+// les règles de portées ne s'appliquent, ni aux boucles ni aux instructions conditionnelles (if etc)
+</script>
+
+
+</body>
+</html>

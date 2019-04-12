@@ -1,0 +1,206 @@
+body{
+    
+    margin: 0;
+    padding: 0;
+}
+#container{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    background-color:rgba(245, 243, 247, 0.849);
+    
+}
+header{
+    width: 100%;
+    margin: 0 auto;
+    background: rgb(212, 212, 212);
+}
+.entete{
+    width: 1000px;
+    height: 25px;
+    background: black;
+    color: white;
+   
+    text-align: center;
+    margin-top:5px;
+ 
+    
+}
+.clear{
+    clear: both;
+}
+.entete p{
+    display: inline; 
+    margin: 50px;
+    
+}
+                         /**********Milieu du header************  */
+
+
+.logo{
+    width: 599px;
+    height: 200px;
+    margin: 0;
+    float: left;
+    border: 1px solid black;
+    text-align: center;
+    margin-top: 30;
+}
+                                
+
+.partieD{
+    width: 397px;
+    height: 200px;
+    float: right;
+    border: 1px solid black;
+    margin: 0; 
+}
+.devis{
+    width: 50%;
+    height: 100;
+    float: left;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.imageDevis{
+    float: left;
+    margin-top: 15px
+}
+
+.imageCompte{
+    float: left;
+    margin-top: 10px;
+    
+}
+.MonCompte .texte{
+    float: left;
+}
+.MonCompte{
+    float: left;
+    margin-left: 5px;
+    font-size: 10px; 
+    font-weight: bold;
+    
+ }
+ span{
+     font-style: italic; 
+ }
+.conseil{
+    width: 50%;
+    float: left;
+    font-size: 10px; 
+    font-weight: bold;
+
+}
+.imageConseil{
+    float: left;
+}
+.MonPanier{
+    float: left;
+    font-size: 10px;
+    font-weight: bold;
+    width: 50%
+}
+.MonPanier .texte{
+    float: left;
+    width: 50%;
+}
+.imagePanier{
+    float: right;
+    width: 50%;
+    margin-top: 10px;
+}
+
+                               /*****la barre de navigation*************  */
+    nav{
+    margin-top: 2px;
+    text-align: center;
+    margin-left: 1px;
+}
+nav ul{
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 30px;    
+    list-style: none;
+    background:rgb(196, 195, 195); 
+    border-radius: 10px; 
+    border-right: 1px solid rgb(61, 55, 55); 
+}
+nav  li{    
+    float: left;    
+    border-radius: 10px;
+}
+nav ul li a{
+    text-decoration: none; 
+    display: block;
+    background: rgb(196, 195, 195);
+    font-size: 1em;
+    width: 80px;
+    height: 25px;
+    color: black;
+    
+    
+}
+nav ul li a:hover{
+    background: rgb(236, 233, 233);
+    border-radius: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+/* ******************************Le contenu**************************** */
+#partieDroite{
+    height: 400px;
+    width: 390px;
+    float: right;
+    margin-right: 10px;
+    
+    
+}
+#caroussel{
+    height: 400px;
+    width: 580px;
+    float: left;
+    margin-top: 10px;
+    border: 1px solid grey;
+}
+.carrelage{
+    float: left;
+    height: 180px;
+    width: 390px;
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 0;
+}
+.carrelage .text{
+    width: 300px;
+    height: 20px;
+    margin-bottom: 40px;
+    background: red;
+    color: white;
+    margin-left: 45px;
+}
+.parquet{
+    float: right;
+    height: 180px;
+    width: 390px;
+    margin-top: 40px;
+    text-align: center
+}
+
+.parquet .text{
+    width:  300px;
+    height: 20px;
+    background: red;
+    color: white;
+    margin-left: 45px; 
+}
+.carreau1{
+    width: 25%;
+    height: 50px;
+    float: left;
+
+}
+

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        box-sizing: border-box;
+    }
+    html, body{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    html{
+        font-size: 62.5% /*base 10px */
+    }
+    body, input, textarea{
+        font: 1.3rem/1.5 arial, helvetica, sans-serif;
+    }
+    #monForm{
+        width: 60%;
+        background-color: blanchedalmond;
+        padding: 2rem;
+        margin: 0 auto;
+    }
+    #monForm fieldset{
+        border: 1px dashed silver;
+        border-radius: 1rem;
+        box-shadow: 0 0 3px rgba(0, 0, 0,.25);
+
+    }
+    #monForm fieldset legend{
+        background: blanchedalmond;
+        padding: 1rem;
+    }
+    #monForm input, #monForm textarea{
+        width: 100%;
+        margin: 5px 0;
+    }
+    #monForm p{
+        margin: .5rem 0;/* 1em = 1rem * font-size du parent*/  
+    }
+    .feedback{
+        width: 70%;
+        border: 1px silver solid;
+        padding: 2rem;
+        border-radius: 1rem;
+        margin: 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0,.25);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    </style>
+</head>
+<body>
+    <form action="traitement.php" method= "GET" id="monForm">
+
+        <fieldset>
+            <legend>Mes infos Persos</legend>
+            <p> 
+                <label for="nomComplet">Nom et Prenom</label>
+                <input type="text" id="nomComplet" placeholder="Nom et Prenom">
+            </p>
+            <!-- 
+                1/ créer un input de type email avec l'id email
+                2/ créer un input de type tel avec l'id tel
+                3/ créer un input de type text avec l'id sujet
+                4/ créer un textarea de type submit avec la valeur 'envoyer mon message'
+                5/ 
+                
+             -->
+             <label for="email">Email</label>
+             <input type="email" id="email" placeholder="Ton e-mail">
+             <label for="tel">Telephone</label>
+             <input type="tel" id="tel" placeholder="Ton n° de telephone">
+             <label for="text">Sujet</label>
+             <input type="text" id="sujet" placeholder="Sujet">
+             <textarea name="" id="message" cols="30" rows="10"></textarea>
+             <input type="submit" id="envoyer" value="Envoyer Mon message">
+
+
+
+        </fieldset>
+        <!-- <div class="recap"></div> -->
+    </form>
+    
+
+
+
+
+
+
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+    
+        $(function(){
+            console.log('jQuery chargé');
+
+            
+        $('#monForm').on('submit', function(ev){// ecouter l'evenement submit du formulaire
+        ev.preventDefault();// stopper la redirection du formulaire
+
+            // recuperer les infos dans des variables
+
+            var nomComplet = $('#nomComplet').val();
+            var email = $('#email').val();
+            var tel = $('#tel').val();
+            var sujet = $('#sujet').val();
+            var message = $('#message').val();
+            
+            $(this).replaceWith(
+            `
+            <p class= "feedback">
+                bonjour <strong> ${nomComplet} </strong> <br>
+                <em>ICI l'email:</em> ${email}<br>                 
+                <strong> Nous vous contacterons prochainement au :  ${tel}</strong> 
+                <br> <strong>Voici votre sujet :  <strong> ${sujet} <br>
+                ICI LE MESSAGE:  ${message}
+                </p>                 
+            
+            `)
+            // $('<p>').append('Nom et Prenom:  ' + $('#nomComplet').val()).appendTo('body'); 
+            // $('<p>').append('Ton email est:  ' + $('#email').val()).appendTo('body');      
+            // $('<p>').append('Telephone:  ' + $('#tel').val()).appendTo('body'); 
+            // $('<p>').append('Le sujet:  ' + $('#sujet').val()).appendTo('body');
+            // $('<p>').append('ici le message:  ' + $('#message').val()).appendTo('body');  
+        })
+            
+    
+        })//Fin du scope
+    
+    
+    
+    
+    </script>
+
+</body>
+</html>

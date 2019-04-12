@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    article{
+        width: 200px;
+        
+        background-color: rgb(241, 208, 21);
+        padding: 20px;
+    }
+    </style>
+</head>
+<body>
+    
+    <article>
+        Contenu de l'article
+    </article>
+    
+    <p class="resultat">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque suscipit placeat, voluptatem consequatur quae ipsa facere inventore, aliquam animi recusandae eum aspernatur nisi omnis quidem sunt repudiandae eaque labore quisquam.</p>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+
+        <script>
+        $(function(){
+            // teste en console si jquery est chargé
+            console.log('jquerry bien chargé');
+            // ici on va selectionner la balise article avec le selecteur CSS : article
+            $('article').on('click', function(){
+                // tout ce qu'on veut faire 
+                $(this).css("background-color", "indianred");
+                $(".resultat").css('background-color', "pink");
+                $(".resultat").css("font-size", "2em");
+            })
+            $('.resultat').on('click', function(){
+                // tout ce qu'on veut faire                 
+                $(this).css('background-color', "purple");
+                $(this).css({                     
+                 "font-size": "2em",
+                 "transform": "rotate(.25turn)"
+                 
+                                 } );
+                  
+                // $(".resultat").css("color", "white");
+            })
+
+        })//Fin de scope jquery
+        </script>
+</body>
+</html>

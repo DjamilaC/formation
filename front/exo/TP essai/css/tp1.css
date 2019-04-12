@@ -1,0 +1,48 @@
+
+body{
+    
+    height: 900px;
+    width: 900px;
+    margin: 0 ;
+    background: aqua;
+   
+}
+header{
+    width: 800px;
+    height: 70px;
+    background: oldlace;
+}
+}
+nav ul{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    display:block;
+      
+ 
+}
+nav li{
+    display: inline-block;
+   
+    
+}
+.contenu{
+    background: ivory;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.zone de gauche{
+    width: 400px;
+    height: 400px;
+    background: url("http://img.over-blog.com/400x300/1/58/17/66/Bretagne/Carte-Bretagne.jpg")
+    
+}
+.zone de droite{
+    width: 400px;
+    height: 400px;
+}
+.clear{
+    clear: both;
+
+}

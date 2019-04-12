@@ -1,0 +1,101 @@
+body{
+    margin: 0 auto;
+    background-color: lightgray
+}
+div{
+    width: 75%;
+    margin: 0 auto;
+    background-color: mistyrose;
+ }
+.boite{
+    height: 5em;
+    width: 5em;
+    padding: 5vh;
+    border: 1px solid rgb(12, 11, 12);
+    margin: 1vh;
+    float: left;
+    background-color: rgb(102, 165, 247);
+    border-radius: 50%; 
+}
+.clear{
+    clear: both; 
+ }
+.boiteV{
+    background-color:rgb(9, 97, 9);
+    height: 5em;
+    width: 5em;
+    padding: 5vh;
+    margin: 2vh;
+    float: left;
+    background-color: rgb(31, 126, 63);
+    border-radius: 20%; 
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 30%;
+    border-top-left-radius:10% ;
+    border-top-right-radius: 20%  ;     
+    
+ }
+ .boiteB{
+    background-color:rgb(9, 97, 9);
+    height: 5em;
+    width: 5em;
+    padding: 5vh;
+    margin: 2vh;
+    float: left;
+    background-color:rgb(165, 233, 245);
+    border-radius: 10%;    
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 40%;
+    border-top-left-radius:40% ;
+    border-top-right-radius: 0%  ;
+
+ }
+ .boiteA{
+    background-color:rgb(166, 241, 166);
+    width: 5em;
+    height: 5em;
+    padding: 5vh;
+    margin: 2vh;
+    float: left;
+    background-color:rgb(197, 241, 177);
+    border-radius: 50%; 
+       
+ }
+ .boiteM{
+    border-color: 2px solid black;
+    height: 5em;
+    width: 5em;
+    padding: 5vh;
+    margin: 2vh;
+    float: left;
+    background-color: rgb(204, 113, 113);
+    border-radius: 20%;    
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 20%;
+    border-top-left-radius:20% ;
+    border-top-right-radius: 40%  ;
+ }
+ .boiteR{
+    border-color: 2px solid black;
+    height: 5em;
+    width: 5em;
+    padding: 5vh;
+    margin: 2vh;
+    float: left;
+    background-color: red;
+    border-radius: 20%;    
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 20%;
+    border-top-left-radius:20% ;
+    border-top-right-radius: 40%  ;
+ }
+ .boiteW{
+    height: 5em;
+    width: 5em;
+    padding: 5vh;
+    border: 1px solid mistyrose;
+    margin: 1vh;
+    float: left;
+    background-color: mistyrose;
+    border-radius: 50%; 
+ }
