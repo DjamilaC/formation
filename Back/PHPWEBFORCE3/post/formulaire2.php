@@ -132,13 +132,13 @@ if($_POST){
     <label for="ville">Ville</label>
     <input type="text" class="form-control" id="ville" aria-describedby="" placeholder="Enter ville" name="ville">    
   </div>
+
   <div class="form-group">
     <label for="codepostal">Code_Postal</label>
     <input type="text" class="form-control" id="codepostal" aria-describedby="" placeholder="Enter code postal" name="codepostal">
     
   </div>
- 
-  
+   
   <div class="form-group">
     <label for="sexe">Sexe</label>
     <select class="form-control" id="sexe">
@@ -147,10 +147,12 @@ if($_POST){
       <option>Masculin</option>      
     </select>
   </div>
+
   <div class="form-group">
     <label for="tel">Telephone</label>
     <input type="text" class="form-control" id="tel" placeholder="telephone" name="tel">
   </div>
+  
   <button type="submit" class="btn btn-danger">Submit</button>
 </form>
 

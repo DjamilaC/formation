@@ -3,6 +3,10 @@
 require_once("include/init.php");
 
 extract($_POST); // $_POST['pseudo'] ---> $pseudo
+if(internauteEstConnecte())// si l'internaute est connecté, il n'a rien à faire sur la page 
+{
+    header("Location: profil.php"); 
+}
 // Exo 2 : 
 echo '<pre>'; print_r($_POST); echo'</pre>';
 
@@ -24,6 +28,11 @@ if($_POST)
     }
 
 // Exo: si l'internaute a bien rempli le formulaire, cela veut dire qu'il n'est passé dans aucune des conditions IF donc la variable $error est vide, nous pouvons donc executer le traitemebnt de l'insertion requete préparée
+if (!$error){
+
+
+// $_POST['mdp'] = password_hash($mdp, PASSWORD_DEFAULT); // on ne conseve jamais en clair les mots de passes dans la BDD, password_hash permet de creer une clé de hachage.
+
 $data_insert = $bdd->prepare("INSERT into membre (pseudo, mdp ,nom, prenom, email, adresse, ville, code_postal, civilite) VALUES (:pseudo, :mdp ,:nom, :prenom, :email, :adresse, :ville, :code_postal, :civilite)");
 // $data_insert->bindValue(':pseudo', $pseudo, PDO::PARAM_STR);
 foreach($_POST as $key =>$value)
@@ -40,6 +49,7 @@ $data_insert->execute();
 header("Location: connexion.php?action=validate");
 // redirige vers le fichier connexion, une fois validé
 // header est une fonction prédéfinie, qui permet d' effectuer une redirection de page/ URL
+}
 }
 require_once("include/header.php");
 
