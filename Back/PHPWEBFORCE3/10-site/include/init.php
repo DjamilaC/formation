@@ -8,7 +8,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=site', 'root', '', array(PDO::ATTR_E
 session_start();
 
 //------------------------CHEMIN
-define("RACINE_SITE", $_SERVER['DOCUMENT_ROOT'].'/Back/PHPWEBFORCE3/10-site/');
+define("RACINE_SITE", $_SERVER['DOCUMENT_ROOT'].'/formation/Back/PHPWEBFORCE3/10-site/');
 // echo RACINE_SITE;
 
 // $_SERVER['DOCUMENT_ROOT]---> c:/xampp/htdocs

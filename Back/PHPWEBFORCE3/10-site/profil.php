@@ -46,3 +46,6 @@ else // on tombe dans le else si le statut est à 0, donc si on est membre class
 <?php
 require_once("include/footer.php");
 ?>
+
+
+   
