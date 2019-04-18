@@ -125,15 +125,19 @@ if(isset($_post));
 
                    <!-- FORMULAIRE MEMBRE -->
     <?php
-    $msg ='<div class="com-md-4 offset-md-4 alert alert-danger text-center text-dark"> Le pseudo n\'est pas valide!! </div>'; 
-    if($_POST)
-    {
-        if(strlen($_POST['pseudo'] < 3 || strlen($_POST['pseudo'] >10))
+    if(isset($_POST));
+    echo '<pre>'; print_r($_POST); echo '</pre>';
+
+    $msg = '<div class="com-md-4 offset-md-2 alert alert-danger text-center text-dark">Le pseudo doit contenir entre 3 et 10 caractères!! </div>';
+     if($_POST){
+       if(strlen($_POST['pseudo']) < 3 || strlen($_POST['pseudo']) >10)
         {
-            echo  $msg; 
+            echo $msg; 
         }
-    }
-    // echo '<pre>'; print_r($_POST); echo'</pre>';
+     }
+      
+    
+
 
 
 
