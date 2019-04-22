@@ -79,40 +79,52 @@
                     <img src="img/caraibes_martinique_boucaniers.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-outline-primary col-md-12">Reserver maintenant</a>
                     </div>
                 </div>
                 <div class="card col-md-3 offset-md-1" style="width: 18rem;">
                     <img src="img/sicile_kamarina.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-outline-primary col-md-12">Reserver maintenant</a>
                     </div>
                 </div>
                 <div class="card col-md-3 offset-md-1" style="width: 18rem;">
                     <img src="img/maldives_fino.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-outline-primary col-md-12">Reserver maintenant</a>
                     </div>
                 </div>
             </div>
+            <br>
 
-                <div class="card" style="width: 18rem;">
+            <div class="row col-md-12">
+                <div class="card col-md-3 offset-md-1" style="width: 18rem;">
                     <img src="img/maurice_albion.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-outline-primary col-md-12">Reserver maintenant</a>
                     </div>
                 </div>
-                <div class="card" style="width: 18rem;">
+                <div class="card col-md-3 offset-md-1" style="width: 18rem;">
                     <img src="img/maldives_kani.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-outline-primary col-md-12">Reserver maintenant</a>
                     </div>
                 </div>
-                <div class="card" style="width: 18rem;">
+                <div class="card col-md-3 offset-md-1" style="width: 18rem;">
                     <img src="img/grece_gregolimano.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-outline-primary col-md-12">Reserver maintenant</a>
                     </div>
                 </div>
+            </div>
+            <br>
+
+                
         </section>
         <!-- footer avec navigation -->
 

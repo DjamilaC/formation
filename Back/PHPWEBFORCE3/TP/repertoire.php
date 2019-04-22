@@ -14,11 +14,11 @@
 <?php  
    extract($_POST);
     $bdd = new PDO('mysql:host=localhost;dbname=repertoire', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
-    echo '<pre>'; print_r($_POST); echo '</pre>';
+    // echo '<pre>'; print_r($_POST); echo '</pre>';
 
-    if($_POST)
-    {
-        $data_insert = $bdd->prepare("INSERT into annuaire (nom, prenom, telephone, profession, ville, codepostal, adresse, date_de_naissance, sexe, description) VALUES (:nom, :prenom, :telephone, :profession, :ville, :codepostal, :adresse, :date_de_naissance, :sexe, :description)");
+    // if($_POST)
+    // {
+        // $data_insert = $bdd->prepare("INSERT into annuaire (nom, prenom, telephone, profession, ville, codepostal, adresse, date_de_naissance, sexe, description) VALUES (:nom, :prenom, :telephone, :profession, :ville, :codepostal, :adresse, :date_de_naissance, :sexe, :description)");
 
         // 1ère façon 
        
@@ -35,13 +35,34 @@
 
         // 2ème façon
 
-        foreach($_POST as $key =>$value)
-        {                 
-            $data_insert->bindValue(":$key", $value, PDO::PARAM_STR);    
-        }
+        // foreach($_POST as $key =>$value)
+        // {                 
+        //     $data_insert->bindValue(":$key", $value, PDO::PARAM_STR);    
+        // }
             
-        $data_insert->execute();
-    }
+        // $data_insert->execute();
+
+        // $resultat = $bdd->prepare("SELECT * FROM annuaire");
+        // $resultat->execute();
+        // while($inscrits = $resultat->fetch(PDO::FETCH_ASSOC))
+        // {
+        //    echo '<pre>'; print_r($inscrits); echo '</pre>' ; 
+        // }
+        // 
+
+        // foreach($inscrits as $key => $tab)
+        // {
+        //     echo'<div class="col-md-3 offset-md-5 alert alert-success text-dark mx-auto text-center">';
+        //     foreach($tab as $key2 => $value)
+        //         {
+        //         echo "$key2 : $value<br>";  
+        //         }
+        //      echo '</div>';                     
+        //  }
+        //  echo '<hr>';
+
+
+    // }// fin ($_POST)
  
  
 
@@ -50,7 +71,7 @@
 
 <h1 class="col-md-6 offset-md-4" >REPERTOIRE</h1>
 
- <form class="col-md-4 offset-md-4" method="post" action="">
+ <form class="col-md-4 offset-md-4" method="post" action="affichage_repertoire.php">
 
         <div class="form-group">
             <label for="nom">Nom</label>
