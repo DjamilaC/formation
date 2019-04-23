@@ -11,7 +11,9 @@
 <body>
     
 <?php
-if(isset($_GET['submit']))
+
+// faire une requete de selection pour afficher les données contenues dans la base de données
+if(isset($_['submit']))
 {
    echo '<pre'; print_r($_POST); echo '</pre>'; 
 //  echo '<hr>';

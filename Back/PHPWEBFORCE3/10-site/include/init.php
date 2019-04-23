@@ -30,9 +30,9 @@ $content = ''; // permettra de placer du contenu où l'on souhaite
 
 // POST
 foreach($_POST as $key => $value)
-{
+    {
     $_POST[$key] = strip_tags(trim($value));
-}
+    }
 
 // GET
 foreach($_GET as $key => $value)

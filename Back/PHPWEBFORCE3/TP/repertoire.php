@@ -50,16 +50,16 @@
         // }
         // 
 
-        // foreach($inscrits as $key => $tab)
-        // {
-        //     echo'<div class="col-md-3 offset-md-5 alert alert-success text-dark mx-auto text-center">';
-        //     foreach($tab as $key2 => $value)
-        //         {
-        //         echo "$key2 : $value<br>";  
-        //         }
-        //      echo '</div>';                     
-        //  }
-        //  echo '<hr>';
+        foreach($inscrits as $key => $tab)
+        {
+            echo'<div class="col-md-3 offset-md-5 alert alert-success text-dark mx-auto text-center">';
+            foreach($tab as $key2 => $value)
+                {
+                echo "$key2 : $value<br>";  
+                }
+             echo '</div>';                     
+         }
+         echo '<hr>';
 
 
     // }// fin ($_POST)
