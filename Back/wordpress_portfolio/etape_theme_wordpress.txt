@@ -1,0 +1,3 @@
+1. Istallation wordpress
+2. créer un dossier 'portfolio' dans wp-content->thèmes
+3. Créer un fichier SCREENSHOT(extension png, jpg, jpeg..) et l'enregistrer à la racine du dossier portfolio, ce sera l'aperçu dans le back office de wordpress->apparence->thèmes

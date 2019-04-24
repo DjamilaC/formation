@@ -1,0 +1,37 @@
+ /* 
+Theme Name: Portfolio
+Theme URI: http://localhost/formation/Back/wordpress_portfolio/wp-content/themes/portfolio
+Description: Portfolio developpeur WEB
+Author: Djamila CHABANE
+Author URI: https://localhost/formation/Back/wordpress_portfolio
+Version:1.0
+*/
+body{
+    background: rgb(245, 230, 203);
+}
+a{
+    text-decoration: none !important;
+}
+.hauteur{
+    min-height: 220px;
+    /* background: rgb(245, 230, 203); */
+     margin-top: 20px;
+}
+.h-entetes{
+    min-height: 200px; 
+}
+.ma-section{
+    min-height: 600px;
+   
+}
+.menu_header ul li{
+    display: inline-block;    
+    margin-right: 20px;
+}
+
+ul li a{
+    color: white;
+}
+h1{
+    font-family: 'Marcellus', serif;
+}
