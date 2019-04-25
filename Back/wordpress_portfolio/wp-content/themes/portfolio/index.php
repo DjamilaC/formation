@@ -12,7 +12,7 @@
  <!-- Affiche le corps (Content) de l'Article dans un bloc div. -->
  <div class="container">
  <!-- Affiche la Date. -->
-    <small><?php the_time('F jS, Y'); ?></small>
+    <small><?php the_time('F jS, Y'); ?></small> <hr>
     <?php the_content(); ?>
     </div>
 

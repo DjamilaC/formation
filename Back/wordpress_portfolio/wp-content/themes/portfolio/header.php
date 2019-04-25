@@ -17,6 +17,8 @@
     <!-- Link google font -->
     <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Marcellus|Monoton" rel="stylesheet">
+      <!-- link googlefonts -->
+      <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
     
     <title><?php bloginfo('name');?></title>
     <?php wp_head(); //wp_head() charge des fichiers indispensables à wordpress(fichierjs, css, stc...) et permet de recuperer la sidebar noire en haut de la page ?>
@@ -67,7 +69,7 @@
   </div>
 </nav>
 
-    <div class="col-md-12 px-0 bg-danger h-entetes">
+    <div class="col-md-12 px-0 h-entetes">
             <?php dynamic_sidebar('haut-longue')?>
     </div>
 

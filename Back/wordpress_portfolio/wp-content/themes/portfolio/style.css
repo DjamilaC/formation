@@ -11,14 +11,16 @@ body{
 }
 a{
     text-decoration: none !important;
+    color: rgb(68, 59, 59);
 }
 .hauteur{
-    min-height: 220px;
-    /* background: rgb(245, 230, 203); */
-     margin-top: 20px;
+    min-height: 220px;    
+     padding-top: 30px;
+     border-left: solid 2px white;  
+    
 }
 .h-entetes{
-    min-height: 200px; 
+    min-height: 100px; 
 }
 .ma-section{
     min-height: 600px;
@@ -32,6 +34,42 @@ a{
 ul li a{
     color: white;
 }
-h1{
+h1, h2{
     font-family: 'Marcellus', serif;
+    color: rgb(83, 58, 58);
+    text-shadow: 2px 2px 2px;
+}
+h3{
+    color: rgb(83, 58, 58);
+    /* font-family: 'Satisfy';  */
+    text-shadow: 2px 2px 2px;
+    margin-bottom: 10px;
+
+}
+
+.rs{
+    text-align: center;
+    margin-top: 20px;
+    float: right;
+}
+footer{
+    background: rgb(112, 101, 81);
+    min-height: 100px; 
+}
+.mes-competences3 i{
+    font-size: 70px;
+    color: rgb(83, 58, 58);
+}
+
+.mes-competences2{
+    font-family: 'Marcellus', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+small{
+    font-size: 1rem;
+    font-family: 'Marcellus', serif;
+}
+.maps{
+    box-shadow: 6px -6px 6px -6px rgba(68, 34, 34, 0.596);
 }
