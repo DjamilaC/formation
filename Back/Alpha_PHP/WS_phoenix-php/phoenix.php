@@ -71,72 +71,159 @@
             </div>
             
         </main>
-        <section>
+        <hr>
+        <section class="container">
             <!-- slider -->
                <!-- les cards -->
-            <div class="row col-md-12">
-                <div class="card col-md-3 offset-md-1" style="width: 18rem;">
+            <div class="row mx-auto">
+                <div class="card col-md-3 offset-md-1 " style="width: 18rem;">
                     <img src="img/caraibes_martinique_boucaniers.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-outline-primary col-md-12">Reserver maintenant</a>
+                        <h5>Les Boucaniers</h5>
+                        <p class="card-text">Après les eaux
+                            calmes, partez à la découverte des spectaculaires cascades des gorges de la Falaise, à Trinité</p>
+                        <a href="#" class="btn btn-outline-info text-info col-md-12">Reserver maintenant</a>
                     </div>
                 </div>
                 <div class="card col-md-3 offset-md-1" style="width: 18rem;">
                     <img src="img/sicile_kamarina.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-outline-primary col-md-12">Reserver maintenant</a>
+                        <h5>Kamarina</h5>
+                        <p class="card-text">Bienvenue au pays
+                            de l'Etna où ruelles escarpées et places en fleurs s'ouvrent sur la Méditerranée !.</p>
+                        <a href="#" class="btn btn-outline-info text-info col-md-12">Reserver maintenant</a>
                     </div>
                 </div>
                 <div class="card col-md-3 offset-md-1" style="width: 18rem;">
                     <img src="img/maldives_fino.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-outline-primary col-md-12">Reserver maintenant</a>
+                        <h5> Finohlu</h5>
+                        <p class="card-text">Instants inoubliables sur
+                            une île privative où luxe et charme naturel des Maldives s'équilibrent à merveille.</p>
+                        <a href="#" class="btn btn-outline-info text-info col-md-12">Reserver maintenant</a>
                     </div>
                 </div>
             </div>
             <br>
 
-            <div class="row col-md-12">
+            <div class="row mx-auto">
                 <div class="card col-md-3 offset-md-1" style="width: 18rem;">
                     <img src="img/maurice_albion.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-outline-primary col-md-12">Reserver maintenant</a>
+                        <h5>Albion sauvage</h5>
+                        <p class="card-text">Au cœur de
+                            l’Ile, un swing au golf, l’adrénaline du trapèze volant ou la beauté des fonds marins ... que choisir ?.</p>
+                        <a href="#" class="btn btn-outline-info text-info col-md-12">Reserver maintenant</a>
                     </div>
                 </div>
                 <div class="card col-md-3 offset-md-1" style="width: 18rem;">
                     <img src="img/maldives_kani.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-outline-primary col-md-12">Reserver maintenant</a>
+                        <h5>Kani</h5>
+                        <p class="card-text">Ile
+                            -jardin posée sur des eaux turquoises, découvrez le paradis au cœur de l'archipel des Maldives..</p>
+                        <a href="#" class="btn btn-outline-info text-info col-md-12">Reserver maintenant</a>
                     </div>
                 </div>
                 <div class="card col-md-3 offset-md-1" style="width: 18rem;">
                     <img src="img/grece_gregolimano.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-outline-primary col-md-12">Reserver maintenant</a>
+                    <h5>Gregolimano</h5>
+                        <p class="card-text">L’île d’Eubée est un oasis entre mer et oliviers ... plongez dans les eaux azures de la mer Egée ... en ski nautique.</p>
+                        <a href="#" class="btn btn-outline-info text-info col-md-12">Reserver maintenant</a>
                     </div>
                 </div>
             </div>
-            <br>
-
-                
+            <br>                
         </section>
+        <hr>
+        <section class="container">
+
+            <div class="row mx-auto">
+                    <div class="card-deck col-md-3 offse-md-1">
+                        <div class="card border-info">
+                                <img src="img/caraibes_martinique_boucaniers.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Les Boucaniers</h5>                            
+                                </div>
+                                <div class="card-footer bg-info">
+                                    <small class="text-muted">1semaine / personne : 750€</small>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="card border-info col-md-9">
+                        <div class="card-header text-center bg-info">Je complète mes informations de réservation &nbsp; <i class="fab fa-phoenix-framework"></i></div>
+                            <div class="card-body">                            
+                                <form>
+                                    <div class="form-group">                                
+                                        <input type="email" class="form-control" id="email" aria-describedby="" placeholder="Email de confirmation">                                
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-6">                                
+                                            <input type="text" class="form-control" id="nb_semaine" placeholder="Je pars combien de semaines?">
+                                        </div>
+                                        <div class="form-group col-md-6">                            
+                                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nombre de vacanciers">
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-info col-md-12">Confirmer ma réservation</button>
+                                </form> 
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="row">
+                <div class="card-deck">
+
+                        <div class="card">
+                            <img src="img/caraibes.jpg" class="card-img-top" alt="...">
+                            
+                        </div>
+
+                        <div class="card">
+                            <img src="img/caraibes_martinique_boucaniers.jpg" class="card-img-top" alt="...">
+                            
+                        </div>
+
+                        <div class="card">
+                            <img src="img/grece_gregolimano.jpg" class="card-img-top" alt="...">
+                            
+                        </div>
+                        <div class="card">
+                            <img src="img/maldives.jpg" class="card-img-top" alt="...">
+                            
+                        </div>
+
+                        <div class="card">
+                            <img src="img/maurice.jpg" class="card-img-top" alt="...">
+                            
+                        </div>
+                        
+                        <div class="card">
+                            <img src="img/sicile_kamarina.jpg" class="card-img-top" alt="...">
+                            
+                        </div>
+
+
+                    </div>
+               
+                
+
+            </div>
+        </section>
+        <hr>
+
         <!-- footer avec navigation -->
 
         <footer>
         <div class="container color-dark">
-                <div class="row mb-4 pt-3 pb-3">
-                    <a href="" class="text-secondary"> <i class="fas fa-umbrella-beach"></i> Vos vacances de reve ...</a>
-                    <a href="" class="text-secondary"> <i class="fas fa-sun"></i>Plage ...</a>
-                    <a href="" class="text-secondary"> <i class="fas fa-city"></i>Urbaine ...</a>
-                    <a href="" class="text-secondary"><i class="fas fa-ship"></i>Croisière ...</a>
-                    <a href="" class="text-secondary" > <i class="fas fa-mountain"></i>Montagne ...</a>
-                    <a href="" class="text-secondary"><i class="fas fa-euro-sign"></i>A prix tout doux ...</a>
+                <div class="row mb-4 pt-3 pb-3 text-center">
+                    <a href="" class="footer text-secondary"> <i class="fas fa-umbrella-beach"></i> Vos vacances de reve ...</a>
+                    <a href="" class="footer text-secondary"> <i class="fas fa-sun"></i>Plage ...</a>
+                    <a href="" class="footer text-secondary"> <i class="fas fa-city"></i>Urbaine ...</a>
+                    <a href="" class="footer text-secondary"><i class="fas fa-ship"></i>Croisière ...</a>
+                    <a href="" class="footer text-secondary" > <i class="fas fa-mountain"></i>Montagne ...</a>
+                    <a href="" class="footer text-secondary"><i class="fas fa-euro-sign"></i>A prix tout doux ...</a>
                 </div>
             </div>
         

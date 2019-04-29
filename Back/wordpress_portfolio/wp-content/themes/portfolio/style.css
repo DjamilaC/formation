@@ -15,8 +15,8 @@ a{
 }
 .hauteur{
     min-height: 220px;    
-     padding-top: 30px;
-     border-left: solid 2px white;  
+    padding-top: 30px;      
+    box-shadow: 5px 0 5px rgb(153, 107, 107);    
     
 }
 .h-entetes{
