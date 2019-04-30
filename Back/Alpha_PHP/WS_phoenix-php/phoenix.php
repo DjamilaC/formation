@@ -137,6 +137,7 @@
                                 </div>
                                 <br>                
                             </section>
+                            <br>
                             <hr>
                                       <!--Information de reservation-->
                             <section>
@@ -153,7 +154,7 @@
                                                     </div>
                                             </div>
                                         </div>
-                                        <div class="card border-info col-md-9">
+                                        <div class="card border-info col-md-9 ml-1">
                                             <div class="card-header text-center bg-info">Je complète mes informations de réservation &nbsp; <i class="fab fa-phoenix-framework"></i></div>
                                                 <div class="card-body">                            
                                                     <form>
@@ -174,16 +175,17 @@
                                             </div>
                                         </div>
                                 </div>
+                                <br>
                                 <hr>
                                                 <!-- petites images -->
-                                <div class="row mx-auto"> 
-                                        <div class="col-md-1 offset-md-1">
+                                <div class="row"> 
+                                        <div class="col-md-1 image2">
                                             <img src="img/caraibes.jpg"alt="..."> 
                                         </div>                                                                               
-                                        <div class="col-md-1 offset-md-1">
+                                        <div class="col-md-1">
                                             <img src="img/caraibes_martinique_boucaniers.jpg" class="image1" alt="...">
                                         </div>                                                                               
-                                        <div class="col-md-1 offset-md-1">
+                                        <div class="col-md-1">
                                             <img src="img/grece_gregolimano.jpg" class="image1" alt="...">
                                         </div>                                                                               
                                         <div class="col-md-1">
