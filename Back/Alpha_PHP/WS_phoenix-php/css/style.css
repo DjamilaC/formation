@@ -25,3 +25,9 @@ a:hover{
 .image{
     width: 25%;
 }
+.image1{
+    padding: 0;
+    margin: 0;
+    border: .5px solid rgb(75, 71, 71);
+    box-shadow: 2px 2px 2px rgba(51, 49, 49, 0.883);
+} 
