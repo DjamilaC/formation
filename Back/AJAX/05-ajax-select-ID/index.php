@@ -63,25 +63,25 @@
         </form>
             
             <div id="resultat">
-                <!-- 2. Réaliser le script php permettant d'afficher l'ensemble de la table employés -->
+                        <!-- 2. Réaliser le script php permettant d'afficher l'ensemble de la table employés -->
 
-            <?php $result = $bdd->query("SELECT * FROM employes"); ?>
-            <table class="table table-bordered text-center">
-            <?php for($i = 0; $i < $result->columnCount(); $i++):
-            $colonne = $result->getColumnMeta($i);
-                ?>
-                    <th><?= $colonne['name'] ?></th>
+                    <?php $result = $bdd->query("SELECT * FROM employes"); ?>
+                    <table class="table table-bordered text-center">
+                    <?php for($i = 0; $i < $result->columnCount(); $i++):
+                    $colonne = $result->getColumnMeta($i);
+                        ?>
+                            <th><?= $colonne['name'] ?></th>
 
-                <?php endfor; ?>
-                </tr>
-                <?php while($employes = $result->fetch(PDO::FETCH_ASSOC)): ?>
-                <tr>
-                <?php foreach($employes as $value):?>
-                <td><?=$value?></td>
-                <?php endforeach ?>
-                </tr>
-            <?php endwhile; ?>
-            </table>      
+                        <?php endfor; ?>
+                        </tr>
+                        <?php while($employes = $result->fetch(PDO::FETCH_ASSOC)): ?>
+                        <tr>
+                        <?php foreach($employes as $value):?>
+                        <td><?=$value?></td>
+                        <?php endforeach ?>
+                        </tr>
+                    <?php endwhile; ?>
+                    </table>   
             
              </div>                 
 </div>
