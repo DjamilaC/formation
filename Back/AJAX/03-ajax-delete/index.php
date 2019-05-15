@@ -35,8 +35,10 @@
                         echo'</select>';
                         ?>
                 </div>
+                 
                 <input type="submit" value="supprimer" id="submit" class="col-md-6 offset-md-3 btn btn-dark">
         </form>
+       <div id="message"></div>
        
     </div>
 

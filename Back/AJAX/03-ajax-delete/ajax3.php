@@ -19,5 +19,9 @@ while($employes = $result->fetch(PDO::FETCH_ASSOC))
 }   
 $tab['resultat'].= '</select>';
 $tab['resultat'].= '</div>';
+
+$tab['message'] = "<div class='col-md-6 offset-md-3 mt-3 alert alert-success text-center'>Lemployé <strong>$id</strong> a bien été supprimé</div>";// on cree un nouvel indice dans le tableau array pour stocker un message de validation
+
 echo json_encode($tab);
+
 ?>
