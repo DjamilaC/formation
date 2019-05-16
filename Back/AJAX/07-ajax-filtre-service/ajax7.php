@@ -11,13 +11,13 @@ $tab = array();
       $colonne = $result->getColumnMeta($i);
       $tab['resultat'] .= "<th>$colonne[name]</th>";
   }          
-  $tab['resultat'] .= '</tr>';
+  $tab['resultat'] .= "</tr>";
      while($employes = $result->fetch(PDO::FETCH_ASSOC)){
-        $tab['resultat'] .='<tr>';
+        $tab['resultat'] .= "<tr>";
         foreach($employes as $value){
             $tab['resultat'] .="<td>$value</td>"; 
         }
-        $tab['resultat'] .='</tr>';
+        $tab['resultat'] .="</tr>";
      }
        
  $tab['resultat'] .='</table>';

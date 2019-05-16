@@ -27,8 +27,8 @@
                         require_once('init.php');            
                         $result = $bdd->query("SELECT DISTINCT service FROM employes");
                         echo '<select class="col-md-6 offset-md-3 mb-4 mt-4" id="service" name="service">' ;
-                        while($employes = $result->fetch(PDO::FETCH_ASSOC)){
-                        echo "<option>$service[service] </option>";
+                        while($service = $result->fetch(PDO::FETCH_ASSOC)){
+                        echo "<option value = '$service[service]'> $service[service]</option>";
                                                 
                         }
                         echo'</select>';
@@ -62,7 +62,7 @@
                 </div>                 
         
                    
-            <div id="message"></div>
+            
 
       
         
