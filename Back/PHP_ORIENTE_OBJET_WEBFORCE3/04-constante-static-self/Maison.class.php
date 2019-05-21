@@ -33,12 +33,16 @@ echo "Nombre de pieces de la maison : <strong>".Maison::getNbPiece() . "</strong
 echo "L'espace terrain de la maison : <strong>".Maison::getEspaceTerrain() . "</strong><hr>";
 
 // 3 - afficher la hauteur de la maison
-echo "La hauteur de la maison : <strong>".Maison::getHauteur() . "</strong><hr>";
+echo "La hauteur de la maison : <strong>".Maison::getHauteur() . "</strong><hr>";// PDO::FETCH_ASSOC
 
 // 4 - afficher la couleur de la maison
 $maison = new Maison;
 echo "La couleur de la maison : <strong>" .$maison->couleur. "</strong><hr>";
 
 // 5 - afficher le nombre de portes de la maison
-echo "Le nombre de porte de la maison : <strong>".$maison::getNbPorte() . "</strong><hr>";
-echo $maison::$espaceTerrain . '<hr>';
+echo "Le nombre de porte de la maison : <strong>".$maison->getNbPorte() . "</strong><hr>";
+// devrait donner une erreur, on ne doit pas appeler une propriete static, 
+// echo $maison::$espaceTerrain . '<hr>';
+// echo $maison->espaceTerrain.'<hr>';
+// echo $maison->getNbPiece(). '<hr>';
+echo Maison::$couleur;
