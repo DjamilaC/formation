@@ -13,7 +13,7 @@
   <!-- lien de notre fichier js -->
   <script src="ajax2.js"></script>
 
-  <title>01 AJAX INSERT</title>
+  <title>02 AJAX INSERT</title>
 </head>
 <body>
     <div class="container">
