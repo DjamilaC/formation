@@ -19,14 +19,15 @@ class Etudiant
 
     public function setPrenom($prenom)
     {
-        if(is_string($prenom))
+        if(iconv_strlen($prenom) < 5 || iconv_strlen($prenom) >30)
         {
-            $this->prenom = $prenom;            
+           $this->error = '<p>le prenom doit contenie entre 5 et 30 caractères max !</p>';
+           return $this->error;             
         }
         else
         {
-            return "ce n'est pas un string !!";
-             
+            $this->prenom = $prenom; 
+            return $this;            
         }
     }
     public function getPrenom() // un getteur ne reçoit jamais d'argument
@@ -36,13 +37,14 @@ class Etudiant
 //-------------------NOM----------------------
     public function setNom($nom)
     {
-        if(is_string($nom))
+        if(iconv_strlen($nom) < 5 || iconv_strlen($nom) >30)
         {
-            $this->nom = $nom;            
+            $this->error = '<p>le nom doit contenir entre 5 et 30 caractères max !</p>';
+            return $this->error;            
         }
         else
         {
-            return "ce n'est pas un string !!";
+            $this->nom = $nom;
              
         }
     }
@@ -54,14 +56,14 @@ class Etudiant
     //-------------------EMAIL----------------------
     public function setEmail($email)
     {
-        if(is_string($email))
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL ))
         {
-            $this->email = $email;            
+            $this->error = '<p> le mail n\'est pas valide </p>' ; 
+            return $this->error;
         }
         else
-        {
-            return "ce n'est pas un string !!";
-             
+        {            
+              $this->email = $email;   
         }
     }
     public function getEmail() 
@@ -72,20 +74,30 @@ class Etudiant
     //-------------------NOM----------------------
     public function setTelephone($telephone)
     {
-        if(is_numeric($telephone))
+        if(!preg_match('#^[0-9]{10}+$#', $telephone))
         {
-            $this->telephone = $telephone;            
+            $this->error = '<p> le téléphone n\'est pas valide </p>' ; 
+            return $this->error;            
         }
         else
         {
-            return "ce n'est pas un string !!";
-             
+            $this->telephone = $telephone;
+            return $this;
         }
     }
     public function getTelephone() 
     {
         return $this->telephone;
     }
+    // ------------------getInfo-----------------
+    // public function getInfos()
+    // {
+    //     $info['prenom'] = $this->getPrenom();
+    //     $info['nom'] = $this->getNom();
+    //     $info['email'] = $this->getEmail();
+    //     $info['telephone'] = $this->getTelephone();
+    //     return $info;
+    // }
 
 }
 
