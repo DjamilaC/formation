@@ -1,0 +1,294 @@
+
+			---------
+			SYMFONY :
+			---------
+SOMMAIRE : 
+INTRO : Qu'est-ce que Symfony
+ETAPE 1 : Installation de SF 3.4
+ETAPE 2 : Les bundles
+ETAPE 3 : Les routes et les controllers
+ETAPE 4 : Créer la Boutique sur SF 
+ETAPE 5 : TWIG (moteur de template)
+ETAPE 6 : Les assets 
+ETAPE 7 : Entités 
+ETAPE 8 : DOCTRINE 
+ETAPE 9 : Les formulaires 
+ETAPE 10 : Validation des données 
+ETAPE 11 : Association Mapping
+ETAPE 12 : Sécurité et Utilisateurs 
+ETAPE 13 : Installation et boutique sur SF 4.3
+BONUS : Mise en prod
+BONUS : Formulaire de contact 
+
+
+
+
+--------------------------------------
+INTRO : Qu'est-ce que Symfony
+---------------------------------------
+
+1/ Quel intérêt d'utiliser un Framework
+	
+	A. Une organisation optimisée
+	B. Fonctionnalités communes à tous les projets
+	C. Services disponibles (Routing, Sécurité, BDD, Moteur de template, formulaire...)
+	D/ Communauté
+
+
+2/ Choix du Framework 
+	A. Propre Framework (pédagogie)
+	B. Les frameworks fullstack (Symfony, Zend, Laravel, cake...)
+	C. Les minis Frameworks (Silex, Slim, CodeIgniter, Lumen...)
+
+
+3/ Symfony
+	
+	-> Framework Français créé par sensiolabs 
+	-> versions :
+		LTS (Long Time Support): 
+			v2.8
+			v3.4 : 2.8 plus souple (moins rigide), avec des fonctionnalités
+			v4.4 : 3.4 BundleLess, Flex, Encore (webpack), Maker, PHP7.1
+				
+				
+----------------------------------
+ETAPE 1 : Installation de SF 3.4			
+Sommaire : 
+1/ Installer Composer
+2/ Installer SF3.4
+3/ Arborescence des dossiers et fichiers
+4/ Lancement de l'application
+------------------------------------
+
+1/ Installer Composer
+
+Composer est un outils de dépendance. Il permet de télécharger et de mettre à jour tous les outils (services, composants, dépendances) dont on a besoin. 
+
+	- Télécharger : https://getcomposer.org/download/
+	composer-Setup.exe
+	
+	- Installer : Suivre les étapes. 
+    ----------------------------------------------
+    ETAPE 4 : Créer la Boutique sur SF 3.4
+
+Sommaire :
+1/ Création du projet
+2/ Réorganiser le AppBundle
+3/ Création des première route
+
+1/ Création du projet
+
+    - Dans le dossier Symfony
+    <cmd>
+    composer create-project symfony/framework-standard-edition Boutiques3
+    cd Boutique3
+    php bin/console server:run
+    
+    Test : localhost:8000
+
+
+
+2/ Installer SF3.4
+	
+	- Dans le dossier Symfony 
+	- MAJ + clic-droit : Ouvrir une fenêtre powershell ici
+
+	<cmd>
+	composer create-project symfony/framework-standard-edition test
+
+	==> A ce stade un dossier test a été créé. C'est un nouveau projet SF. 
+
+3/ Arborescence des dossiers et fichiers
+
+	- app/  : contient toute la configuration de l'app (BDD, sécurité, routes...)
+	- bin/  : Les éxécutables de l'app (de SF)
+	- src/  : Le dossier dans lequel nous allons coder notre MVC
+ 	- var/  : Les fichiers écrits par SF au fur et à mesure (cache, logs)
+	- tests/ : Les tests unitaires. 
+	- web/  : repertoire WEB (app.php ou app_dev.php, img/css/js/fonts)
+	- vendor/ : Le coeur de SF (les fichiers codés par les sensio Labs)
+	
+	- composer.json : Contient la liste de toutes les dépendances dont on a besoin.
+
+
+4/ Lancement de l'application			
+			
+	- Méthode 1 : 
+	localhost/Symfony/test/web/app.php
+	localhost/Symfony/test/web/app_dev.php
+
+
+	- Méthode 2 : 
+	On va dans le dossier test/
+	<cmd>
+	php bin/console server:run
+	
+	localhost:8000
+	
+
+	- Différence entre mode prod et dev : 
+	
+	localhost/Symfony/test/web/toto
+	localhost:8000/toto
+	
+	===> A ce stade notre application affiche la page de bienvenue. Cela signifie que tout va bien. 
+	
+
+-----------------------
+ETAPE 2 : Les bundles
+Sommaire : 
+1/ Le concept des Bundles
+2/ Création de notre premier Bundle
+-----------------------
+
+1/ Le concept des Bundles
+	
+	- Les bundles sont des briques de notre applications. 
+	
+	UserBundle : 
+		UserController  (C)
+		UserModel (M)
+		View : inscription/connexion/profil...
+
+	Avec la nouvelle version de SF (4), on considère qu'il est préférable de créé un seul Bundle (AppBundle). 
+
+
+2/ Création de notre premier Bundle
+
+	On va créer un Bundle : POLES/TestBundle
+	
+	<cmd>
+	php bin/console generate:bundle 
+	
+	-> Yes
+	-> POLES/TestBundle
+	-> POLESTestBundle
+	-> src/
+	-> annotation
+	
+	==> Notre Bundle a été créé, mais il faut l'enregistrer.
+	
+	<code>composer.json
+	"psr-4": {
+            "AppBundle\\": "src/AppBundle",
+			"POLES\\": "src/POLES"
+        },
+
+	- Mise à jour de l'app
+	<cmd>
+	composer update
+	
+	
+	===> Notre Bundle existe dans src/POLES/TestBundle
+	Il est composé de 4 dossiers : 
+		- Controller : les controllers du bundle 
+		- DependencyInjection : Injection de dépendances.
+		- Resources : Vues et Routes (YML) et enventuellement JS
+		- Test : Test liés aux fonctionnalité du Bundle. 
+		
+		
+	===> A ce stade le Bundle est fonctionnel, mais il y a une petite erreur qu'on va corriger. 
+	
+	- test/src/POLES/TestBundle/Controller/DefaultController.php 
+	<code>
+	return $this->render('POLESTestBundle:Default:index.html.twig');
+    Devient : 
+	return $this->render('@POLESTest/Default/index.html.twig');	
+	
+	
+	===> A ce stade la page d'accueil affiche "Hello World". 
+	
+--------------------------
+ETAPE 3 : Les routes et les controllers
+Sommaire : 
+1/ création de routes
+2/ L'objet Request 
+3/ L'objet Response
+4/ Redirection
+5/ Message
+--------------------------
+1/ création de routes
+	("/") -> route simple homepage
+    ("/bonjour/") -> route echo (erreur)
+    ("/bonjour2/") -> route response
+    ("/hello/{prenom}") -> route response + param URL
+    ("/hola/{prenom}") -> route render de vue (html.twig) + param URL
+    ("/ciao/{prenom}/{age}") -> route render de vue + 2 params URL
+    ("/redirect/") -> route avec redirection (RedirectResponse)
+    ("/redirect2/") -> route avec redirection (redirectToRoute())
+    ("/message/") -> route avec redirect et message en session
+
+
+2/ L'objet Request 
+	<code>
+	use Symfony\Component\HttpFoundation\Request;
+
+	Correspond à la partie requete de la requête HTTP. 
+
+	<code>
+	$session = $request -> getSession(); 
+	-> récupère la session ($_SESSION)
+
+	Autres exemples : 
+	<code>
+	$session -> set('prenom', 'Yakine');
+	echo $session -> get('prenom'); 
+
+	Autre méthode :
+	<code>
+	$request -> session -> set('prenom', 'Yakine'); 
+
+	
+	Autres utilités de $request : 
+	<code>
+	$request -> query -> get('argument_url');
+	$request -> request -> get('champs_form');
+	$request -> cookies -> get('cookie');
+	$request -> server -> get('server');
+	
+3/ L'objet Response
+
+	- Correspond à la partie réponse d'une requête HTTP. 
+	
+	<code>
+	use Symfony\Component\HttpFoundation\Response;
+	
+	- Toute action (fonction) doit avec une réponse. 
+	
+	<code>
+	return new Response('toto');
+	
+	- Même la fonction render est une réponse. 
+	
+	<code>
+	return $this -> render();
+	return $this -> getTemplating() -> renderResponse(); 
+	
+	
+4/ Redirection
+
+	<code>premiere méthode : 
+	use Symfony\Component\HttpFoundation\RedirectResponse;
+	
+	cf route "/redirect/" et "/redirect2"
+	
+	/!\ A ce stade toutes nos routes doivent avoir un name
+	
+5/ Message
+	
+	<code>
+	$session -> getFlashBag() -> add();
+
+	-> permet d'enregistrer des messages qui seront disponibles dans d'autres pages (messages de félicitations, ou d'erreur).
+	
+	-> app.session : Qui nous permet en Twig de récupérer les infos en session. 
+	-> app.user : Qui nous permet en Twig de récupérer les infos de l'utilisateur actuellement connecté
+	---------------------------------------------------
+	ETAPE 4 : Créer la boutique sur sf 3.4
+	1/ Création du projet
+	2/ Réorganiser le AppBundle 
+	3/ Création des premieres route 
+	--------------------------------------------
+	--------------------------------------------
+
+
