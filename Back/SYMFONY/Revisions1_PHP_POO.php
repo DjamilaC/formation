@@ -290,5 +290,163 @@ Sommaire :
 	3/ Création des premieres route 
 	--------------------------------------------
 	--------------------------------------------
+	1 / Création du projet
+    - Dans le dossier Symfony
+    <cmd>
+    composer create-project symfony/framework-standard-edition Boutiques3
+    cd Boutique3
+    php bin/console server:run
+    
+    Test : localhost:8000
+
+2 / Réorganiser le AppBundle
+     localhost/              -> index.html.twig
+     localhost/categorie/pull-> index.html.twig
+     localhost/produit/12    ->show.html.twig
+
+1/ Réorganiser le AppBundle
+		-> Création de nos controleurs: 
+			-AdminController 
+			-MembreController
+			-CommandeController
+			-ProduitController
+
+		-> Création de nos vues: 
+			-Admin/ (list_produit, form_produit etc...)
+			-Membre/ (connexion, deconnexion, inscription, profil...)
+			-Commande/ (panier, transport, livraison, paiement...)
+			-Produit/ (home, categorie, boutique, fiche_produit...)
+
+3/ Création des premières routes 
+		-> ProduitController : "/", "/produit/{id}/" etc... 
+		->AdminController : "/admin/produit/", "/admin/membre/" etc... 
+
+-------------------------------------
+ETAPE 5 : TWIG(moteur de template)
+Sommaire 
+1/ Création du layout
+2/ L'héritage twig
+3/ Modification de nos vues 
+4/ Documentation Twig
+---------------------------------------
+TWIG est le moteur de template de Symfony. Un moteur de template (tpl, smarty, twig, blade.....) permet d'afficher du php dans les fichiers HTML de manière plus simple 
+exemple: 
+<?= $membre['prenom']?>
+{{ membre.prenom }}
+
+1/ Création du layout
+	Chemin : Boutique3/app/Ressources/views/layout.html.twig
+	Un layout est une structure de page, dans laquelle on peut rajouter des elements/du contenu.
+	le concept des layout permet d'avoir plusieurs structures de pages dans notre site (ex: front vs backoffice).
+	
+2/ L'héritage twig
+		Avec Twig on parle d'heritage. Cela signifie que nos vues héritent (extends) d'un layout, et peuvent contenir de l'HTML à l'interieur des blocks disponibles (créés dans le layout).
+		======> e manière générale, il faut voir le fonctionnement de Twig et de la méthode render comme un chargement du contenu "empilée" (analogie de la poupée russe). Render temporise (mémoire tompon) le contenu, affiche au meme temps le layout , la vue et les paramètres.
+
+3/ Modification de nos vues
+		<code> 
+		{% extende 'layout.html.twig' %}
+		{% block content %}
+		contenu HTML de la page
+		{% endblock %}
+		/!\ ATTENTION : quand on utilise l'heritage Twig, nos vues ne peuvent contenir de l'HTML qu'à l'interieur des blocks prévus pour.
+4/ Documentation Twig
+https://twig.symfony.com/doc/2.x/
+======> A ce stade notre app permet d'afficher les pages accueil, connexion, inscription, profil, boutique, produit, categorie, gestion membre; gestion produit, gestion commande
+======> Par contre nous ne sommes pas en mesured'echanger avec la BDD (ajouter un contenu, recuperer un contenu), il faut voir les entity et Doctrine
 
 
+-------------------------------------
+ETAPE 6 : Les assets
+Sommaire 
+1/ Création du layout
+2/ L'héritage twig
+3/ Modification de nos vues 
+4/ Documentation Twig
+---------------------------------------
+
+-------------------------------------
+ETAPE 7 : Les Entitées
+Sommaire 
+1/ Doctrine ORM et le code des Entités (Entity)
+2/ Créer Entités Produit
+3/ Annotation  
+4/ Mattre à jour
+5/ Générer les Entités en ligne de Commande 
+6/ Générer la BDD via les Entités 
+Générer les entités depuis la BDD 
+----------------------------------
+
+1/ Doctrine ORM et le code des Entités (Entity)
+	- D'une certaine manière, les entités correspondent à la partie MODEL de notre MVC. c'est la relation avec la BDD, mais en PHP et non en SQL.
+	- Théoriquement, nous n'avons plus besoin du SQL
+	- ORM: Object Relation Mapping nous allons creer nos entity sous forme de classes PHP ( Plain old PHP Objest), qui vont permettre à doctrine de conprendre notre base de données et de la manipuler.
+
+	Par exemple: pour faire INSERT INTO Produit 
+
+	 $produit = new Produit;
+	 persist($produit);
+	 remove($produit);
+	 createForm($produit);
+	 ===> Pour que cela soit possible, il faut expliquer à Doctrine quel est la relation entre la BDD et nos entités
+
+2/ Créer Entités Produit
+	A. Créer le dossier src/AppBundle/Entity/
+	B. Créer le fichier produit.php
+	C. Créer notre class Produit et nos proprietés et les getteurs et les setteurs 
+
+3/ Annotation 
+	
+4/ Mattre à jour
+5/ Générer les Entités en ligne de Commande 
+6/ Générer la BDD via les Entités 
+Générer les entités depuis la BDD 
+
+
+
+
+
+-------------------------------------
+ETAPE 8 : Doctrine
+Sommaire 
+1/ Création du layout
+2/ L'héritage twig
+3/ Modification de nos vues 
+4/ Documentation Twig
+---------------------------------------
+
+-------------------------------------
+ETAPE 9 : Les formulaire
+Sommaire 
+1/ Création du layout
+2/ L'héritage twig
+3/ Modification de nos vues 
+4/ Documentation Twig
+---------------------------------------
+
+-------------------------------------
+ETAPE 10 : 
+Sommaire 
+1/ Création du layout
+2/ L'héritage twig
+3/ Modification de nos vues 
+4/ Documentation Twig
+---------------------------------------
+
+-------------------------------------
+ETAPE 11 : 
+Sommaire 
+1/ Création du layout
+2/ L'héritage twig
+3/ Modification de nos vues 
+4/ Documentation Twig
+---------------------------------------
+
+-------------------------------------
+ETAPE 12 : 
+Sommaire 
+1/ Création du layout
+2/ L'héritage twig
+3/ Modification de nos vues 
+4/ Documentation Twig
+---------------------------------------

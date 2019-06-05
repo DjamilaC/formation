@@ -8,10 +8,8 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class CommandeController extends Controller
 {
-    /**
-     * @Route("/", name="homepage")
-     */
-    public function indexAction(Request $request)
+    
+    public function indexAction()
     {
         
     }
