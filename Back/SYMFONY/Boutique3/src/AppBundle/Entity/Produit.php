@@ -21,16 +21,67 @@ class Produit
      * @ORM\Id  
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-	private $id;
-	private $reference; 
-	private $categorie; 
-	private $titre; 
-	private $description; 
-	private $couleur; 
-	private $taille; 
-	private $public; 
-	private $photo;
-	private $prix;
+    private $id;
+    
+    /** 
+     * 
+     * @ORM\Column(name="reference", type="string", length=20, nullable=false)
+     */
+    private $reference; 
+    
+    /** 
+     * 
+     * @ORM\Column(name="categorie", type="string", length=20, nullable=false)
+     */
+    private $categorie;
+    
+    /** 
+     * 
+     * @ORM\Column(name="titre", type="string", length=100, nullable=false)
+     */
+    
+    private $titre; 
+    
+    /** 
+     * 
+     * @ORM\Column(name="description", type="string", length=20, nullable=false)
+     */
+    private $description; 
+    
+    /** 
+     * 
+     * @ORM\Column(name="couleur", type="string", length=20, nullable=false)
+     */    
+    private $couleur;
+    
+    /** 
+     * 
+     * @ORM\Column(name="taille", type="string", length=5, nullable=false)
+     */
+    private $taille; 
+    
+    /** 
+     * 
+     * @ORM\Column(name="public", type="string", length=5, nullable=false)
+     */
+    private $public; 
+    
+    /** 
+     * 
+     * @ORM\Column(name="photo", type="string", length=255, nullable=false)
+     */
+    private $photo;
+    
+    /** 
+     * 
+     * @ORM\Column(name="prix", type="float", nullable=false)
+     */
+    private $prix;
+    
+    /** 
+     * 
+     * @ORM\Column(name="stock", type="integer", nullable=false)
+     */
 	private $stock; 
 	
 	
@@ -123,6 +174,10 @@ class Produit
 
     public function getPublic()
     {
+        if($public == 'm' || $public == 'f' || $public == 'mixte')
+        {
+            $this->public;
+        }
         return $this->public;
     }
 
