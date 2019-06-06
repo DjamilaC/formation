@@ -55,7 +55,7 @@ class ProduitController extends Controller
     public function categorieAction($cat)
     {
         $repo = $this ->getDoctrine() -> getRepository(Produit::class);
-        $produits = $repo -> finfBy(array('categorie' => $cat));
+        $produits = $repo -> findBy(array('categorie' => $cat));
 
         // 2 : afficher la vue
         $params = array(
