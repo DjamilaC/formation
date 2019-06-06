@@ -1,0 +1,48 @@
+<?php
+
+namespace AppBundle\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\Annotation\Route;
+
+class MembreController extends Controller
+{
+
+    //-------------------INSCRIPTION----------------------------
+
+/** 
+ * @Route("/inscription/", name="inscription")
+ * 
+ */
+public function inscriptionAction()
+    {
+        $params = array();
+        return $this -> render('@App/Membre/inscription.html.twig', $params);
+    }
+
+    //-------------------CONNEXION----------------------------
+    
+    /** 
+     * @Route("/connexion/", name="connexion")
+     * 
+     */
+    public function connexionAction()
+    {
+        $params = array();
+        return $this -> render('@App/Membre/connexion.html.twig', $params);
+    }
+
+      //-------------------PROFIL----------------------------
+    
+/** 
+ * @Route("/profil/", name="profil")
+ * 
+ */
+public function profilAction()
+{
+    $params = array();
+    return $this -> render('@App/Membre/profil.html.twig', $params);
+}  
+
+}
