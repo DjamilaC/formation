@@ -6,24 +6,44 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
+use AppBundle\Entity\Produit;
 class ProduitController extends Controller
 {
     /**
      * @Route("/", name="homepage")
      */
-    public function indexAction(Request $request)
+    public function indexAction()
     {
-        $params = array();
+        //1: Recuperer les données
+        $repo = $this -> getDoctrine() -> getRepository(Produit::class);
+        $produits = $repo-> findAll();
+
+        //2: Retourner une vue
+        $params = array(
+            'produits' => $produits
+        );
         return $this -> render('@App/Produit/index.html.twig', $params);
     }
+
+
     /**
      * @Route("/produit/{id}", name="produit")
      * www.maboutique.com/produit/12
      */
     public function produitAction($id)
     {
+        // Méthode 1 : Repository
+        // $repo = $this -> getDoctrine() -> getRepository(Produit::class);
+        // $produit = $repo -> find($id);
+
+        // Méthode 2 : EntityManager
+        $em = $this -> getDoctrine() -> getManager();
+        $produit = $em -> find(Produit::class, $id);
+
+
         $params = array(
-            'id' => $id
+            'id' => $id,
+            'produit' => $produit
         );
         return $this -> render('@App/Produit/show.html.twig', $params);
     }
@@ -34,7 +54,13 @@ class ProduitController extends Controller
      */ 
     public function categorieAction($cat)
     {
-        $params = array();
+        $repo = $this ->getDoctrine() -> getRepository(Produit::class);
+        $produits = $repo -> finfBy(array('categorie' => $cat));
+
+        // 2 : afficher la vue
+        $params = array(
+            'produits' => $produits
+        );
         return $this -> render('@App/Produit/index.html.twig', $params);
     } 
     

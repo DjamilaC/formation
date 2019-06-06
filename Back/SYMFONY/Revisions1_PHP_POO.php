@@ -395,12 +395,58 @@ Générer les entités depuis la BDD
 	B. Créer le fichier produit.php
 	C. Créer notre class Produit et nos proprietés et les getteurs et les setteurs 
 
-3/ Annotation 
+3/ Annotation (mapping) 
+	- Avec Doctrine ORM, on paramètre le mapping via les annotations.
+	use Doctrine\ORM\Mapping as ORM
+	--> Voir le Fichier Entity/Produit.php 
+	/!\ ATTENTION: les annotations pour L'ID (primary key ) sont plus longues. 
+	Liens : 
+	Basic mapping
+	https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/basic-mapping.html
+
+	Association Mapping
 	
 4/ Mattre à jour
+<cmd> 
+php bin/console doctrine:schema:update --dump-sql
+--> voir la requete 
+
+php bin/console doctrine:schema:update --force 
+--> executer les modifs en BDD 
+==> Permet aussi de créer une BDD à partir de nos entités
+
 5/ Générer les Entités en ligne de Commande 
+
+A. on doit connecter notre App à la BDD 
+	- app//config/parameters.yml
+	- php bin/console doctrine:generate:entity
+	AppBundle:Membre 
+	-> on suit les etapes. 
+	====> cela a créé le fichier Entity/Membre.php en quelques lignes de commandes.
+
 6/ Générer la BDD via les Entités 
-Générer les entités depuis la BDD 
+
+	-on peut crée la BDD, depuis les entités déja codées 
+	<cmd> 
+	php bin/condole Doctrine:schema:update --force 
+	---> créer les tables dans la BDD . par contre il faut que la BDD existe déja
+
+7/ Générer les entités depuis la BDD 
+	-on peut crée la BDD, depuis les entités depuis la BDD 
+	<cmd>
+	php bin/condole doctrine:mapping:import AppBundle\Entity annotation --path=src/AppBundle/Entity 
+
+	===> Cette commande nous a permis de generer les Entités depuis les tables de la BDD . 
+		- Par contre celan'a ni généré les repository, ni les getteurs ni les setteurs . 
+		<code> 
+		@ORM\Entity(repositoryClass="AppBundle\Repository\ProduitRepository")
+		@ORM\Entity(repositoryClass="AppBundle\Repository\CommandeRepository")
+		@ORM\Entity(repositoryClass="AppBundle\Repository\MembreRepository")
+		@ORM\Entity(repositoryClass="AppBundle\Repository\DetailsCommandeRepository") 
+
+	<cmd> 
+	php bin/condole doctrine:generate:entities AppBundle 
+	==> cela nous crée nos getter et nos setter et génére les repository 
 
 
 
@@ -409,11 +455,58 @@ Générer les entités depuis la BDD
 -------------------------------------
 ETAPE 8 : Doctrine
 Sommaire 
-1/ Création du layout
-2/ L'héritage twig
-3/ Modification de nos vues 
-4/ Documentation Twig
+1/ LE SERVICE dOCTRINE
+2/ Acceder au service doctrine depuis les controllers
+3/ Requets select * FROM....
+4/ Requets select * FROM....WHERE id =
+5/ Requets select * FROM....WHRE .... =...... 
+6/ Requete INSERT / UPDATE 
+7/ REQUETE DELETE
+8/ Create query et query builder
 ---------------------------------------
+
+1/ Le service doctrine 
+	Doctrine fait 2 choses
+	1/ Doctrine ORM (Objet Relation Mapping) : 
+	il permet de lier les tables de notre BDD à nos entitées, grace à ca on ne va plus manipuler la BDD mais des objets (la table Produit ---> Entity Produit)
+	
+	Doctrine DBAL (DataBase Abstract Layer)
+	le DBAL c'est une couche qui passe au-dessus de PDO. A partir de maintenant on ne fait plus de requête SQL, mais on va manipuler du PHP. 
+	- En résumé le DBAL va nous permettre de faire des SELECT, INSERT, UPDATE, DELETE, non pas via du SQL mais via des fonctions PHP . On parle de DQL (Doctrine Query Language)
+
+	----> NOUS NE FERONS PLUS DE SQL (OU PRESQUE)
+	2/ Acceder au service doctrine depuis les controllers
+	A. il faut pouvoir manipuler les entités dont on a besoin 
+
+	<code> 
+	use AppBundle\Entity\Produit;
+	B. Acceder au repository dans un controller : 
+	<code> 
+	$repo = $this-> getDoctrine -> getRepository(Produit::class);
+	C. Acceder au manager (qui peut faire des requetes sur toutes les tables)
+	$em = $this ->getDoctrine -> getManager();
+
+	3/ Requets select * FROM....
+
+		Depuis le repository 
+		<code> 
+		$repo = $this-> getDoctrine -> getRepository(Produit::class);
+		$produits = $repo -< findAll();
+
+	4/ Requets select * FROM....WHERE id =
+		
+		Depuis le repository 
+		<code> 
+		$repo = $this-> getDoctrine -> getRepository(Produit::class);
+		$produits = $repo -> find(id);
+
+		depuis le manager: 
+		<code> 
+		$em = $this ->getDoctrine -> getManager();
+		$produits = $repo -> find(Produit::class, $id);
+	
+
+	
 
 -------------------------------------
 ETAPE 9 : Les formulaire
