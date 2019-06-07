@@ -18,9 +18,29 @@ class ProduitController extends Controller
         $repo = $this -> getDoctrine() -> getRepository(Produit::class);
         $produits = $repo-> findAll();
 
+        // 1.2: Récuperer les catégorie : 
+        $em = $this -> getDoctrine() -> getManager();
+        
+        // Create Query : 
+        $query = $em -> createQuery("SELECT DISTINCT(p.categorie) FROM AppBundle\Entity\Produit p ORDER BY p.categorie ASC");
+        $categories = $query -> getResult();
+
+
+        // Query Builder
+        $query = $em -> createQueryBuilder();
+        $query 
+            -> select('p.categorie')
+            -> distinct(true)
+            -> from(Produit::class, 'p')
+            -> orderBy('p.categorie','ASC');
+            // SELECT DISTINCT(categorie) FROM produit ORDER BY categorie ASC
+            $categories = $query -> getQuery() -> getResult();
+            
+
         //2: Retourner une vue
         $params = array(
-            'produits' => $produits
+            'produits' => $produits,
+            'categories' => $categories
         );
         return $this -> render('@App/Produit/index.html.twig', $params);
     }
@@ -54,12 +74,16 @@ class ProduitController extends Controller
      */ 
     public function categorieAction($cat)
     {
+        // recuperer les infos
         $repo = $this ->getDoctrine() -> getRepository(Produit::class);
         $produits = $repo -> findBy(array('categorie' => $cat));
 
+        $categories = $repo -> getAllCategories();
+
         // 2 : afficher la vue
         $params = array(
-            'produits' => $produits
+            'produits' => $produits,
+            'categories' => $categories
         );
         return $this -> render('@App/Produit/index.html.twig', $params);
     } 

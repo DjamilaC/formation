@@ -6,6 +6,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
+use AppBundle\Entity\Produit;
+use AppBundle\Entity\DetailsCommande;
+use AppBundle\Entity\Commande;
+use AppBundle\Entity\Membre;
+
 class AdminController extends Controller
 {
     /**
@@ -14,7 +19,12 @@ class AdminController extends Controller
      */
     public function adminProduitAction()
     {
-        $params = array();
+        $repo = $this ->getDoctrine() -> getRepository(Produit::class);
+        $produit = $repo -> findAll();
+
+        $params = array(
+            'produits' => $produit
+        );
         return $this -> render('@App/Admin/list_produit.html.twig', $params);
     }
 
@@ -26,9 +36,30 @@ class AdminController extends Controller
      */
     public function adminProduitAddAction()
     {
+
+        $produit = new Produit;
+        // on cree un objet produit de l'entité produit (vide)
+
+        $produit -> setReference('XXX');
+        $produit -> setCategorie('pull');
+        $produit -> setPublic('m');
+        $produit -> setPrix('25.99');
+        $produit -> setStock('150');
+        $produit -> setTitre('pull maniniere');
+        $produit -> setPhoto('marinière.jpg');
+        $produit -> setDescription('Super pull façon bretonne');
+        $produit -> setTaille('l');
+        $produit -> setCouleur('blanc et bleu');
+
+        $em = $this ->getDoctrine() -> getManager(); // on recup le manager
+        $em -> persist($produit); // on enregistre dans le système l'objet
+        $em -> flush();// vider la chasse enregistrer dans la base de données
+
+
         $params = array();
         return $this -> render('@App/Admin/form_produit.html.twig', $params);
     }
+
 
 //***********************---------UPDATE-----------*************************
 
@@ -38,20 +69,42 @@ class AdminController extends Controller
      */
     public function adminProduitUpdateAction($id)
     {
+        $em = $this -> getDoctrine() -> getManager();
+
+        // je recupere le produit à modifier
+        $produit = $em -> find(Produit::class, $id);
+
+        // je le modifie
+        $produit -> setPrix('1000');
+
+        // je l'enregistre: 
+        $em -> persist($produit);
+        $em -> flush();
+
         $params = array(
             'id' => $id
         );
         return $this -> render('@App/Admin/form_produit.html.twig', $params);
     }
+    // localhost:8000/admin/produit/update
 
     //*********************-----------DELETE-------------********************
+
 
     /**
      * @Route("/admin/produit/delete/{id}/", name="admin_produit_delete" )
      */
     public function adminProduitDeleteAction($id, Request $request)
     {
-        $params = array();
+        $em = $this -> getDoctrine() -> getManager();
+        // on récupère l'objet produit
+        
+        $produit = $em -> find(Produit::class, $id);
+
+        // je supprime le produit
+        $em -> remove($produit);
+        $em -> flush();
+       
         $request -> getSession() -> getFlashBag() -> add('success', 'le produit n° ' . $id . ' a bien été supprimé');
         return $this -> redirectToRoute('admin_produit'); 
     }

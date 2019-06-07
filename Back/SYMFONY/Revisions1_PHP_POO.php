@@ -359,11 +359,59 @@ https://twig.symfony.com/doc/2.x/
 -------------------------------------
 ETAPE 6 : Les assets
 Sommaire 
-1/ Création du layout
-2/ L'héritage twig
-3/ Modification de nos vues 
-4/ Documentation Twig
+1/ Modification du fichier composer.json
+2/ Mise à jour de l'app
+3/ Dossier Web/ (photo, css/js....)  
+4/ Modification des vues 
 ---------------------------------------
+	- Le composant Asset de SF nous permet de gérer les ressources (photo, img, js, fonts, css...) et de les gerer de manière absolue.
+
+1/ Modification du fichier composer.json
+
+	<code> composer.json 
+	"require":{
+		"symfony/asset": "^3.4"
+	}
+
+2/ Mise à jour de l'app
+	<cmd> 
+	compser update 
+
+3/ Dossier Web/ (photo, css/js....) 
+
+	Boutique3/web/
+	photo/
+	css/
+	js/
+4/ Modification des vues.
+
+	href="../css/style.css"
+	-> href="{{ asset('css/styles.css') }}" 
+	href="inscription.php"
+	href="{{ path('inscription') }}"
+	la fonction asset() de TWIG nous permet de charger une ressource (photo, css, js, fonts)
+	la fonction path() de TWIG nous permet de créer un lien vers une page (route). 
+
+	// Liens dynamiques : 
+	src="../../photo/<?= $pdt['photo']?>"
+	src="{{ asset('photo/' ~ pdt.photo) }}"
+
+	href="fiche_produit.php?id=<?=$pdt['id'] ?>"
+	href="{{ path('produit', {'id': pdt.id }) }}"
+	@Route("/produit/{id}", name="produit")
+
+	explication: 
+		produit======>nom de la route 
+		id===========>paramètre dynamique de la route 
+		pdt.id=======>valeur du paramètre dynamique 
+   ---------------------------------
+		href="boutique.php?categorie=<?=$pdt['categorie'] ?>"
+		href="{{ path('categorie', {'cat': cat.categorie }) }}"
+		@Route("/categorie/{cat}", name="categorie")
+
+
+
+
 
 -------------------------------------
 ETAPE 7 : Les Entitées
@@ -504,9 +552,76 @@ Sommaire
 		<code> 
 		$em = $this ->getDoctrine -> getManager();
 		$produits = $repo -> find(Produit::class, $id);
-	
+	5/ Requetes SELECT * FROM ... WHERE ... = ...
+
+		La fonction findBy () va nous permettre de récupérer des données de manière plis ciblée.
+		<code>
+		$repo = $^this ->getDoctrine() ->getRepositoryProduit::Class;
+		$produit = $repo ->findBy(array('categorie') => $cat));
+		$produit = $repo -> findBy(array('taille' => 'l'));
+
+		$produit = $repo -> findBy(array(
+			'categorie' => 'tee-shirt',
+			'taille' => 'l'
+		));
+		SELECT $ FROM produit WHERE taille = 'l' AND categorie = 'tee-shirt'
+
+		$produit = $repo  -> findBy(['couleur' => 'rouge'], ['prix' => 'DESC'], 0, 10)
+		SELECT * FROM produit WHERE couleur = 'rouge' ORDER BY prix DESC LIMIT 0, 10
+
+		$produit = $repo -> findOneBy(array('taille' => 'l'));
+		SELECT * FROM produit WHERE taille = 'l', LIMIT 0, 1
+
+	6/ Requete INSERT / UPDATE 	
+		avec doctrine on manipule des entités des objet 
+		-> enregistrement: 
+		- on cree un objet vide 
+		- on hydrate l'objet 
+		- on persiste et on flush 
+
+		<code> 
+		$produit = new Produit;
+		$produit -> setTitre('hjhjghj') 
+		$produit -> setReference('ghhgd')
+		... 
+		$em -> persist($produit) ;
+		$em -> flush();
+		
+		-> Modification: 
+		pour update une entréé c'est la meme chose que pour ADD, à ceci près que l'objet n'est pas vide à la base 
+
+	7/ REQUETE DELETE
+		- Avec doctrine on manipule des objets (Entités) donc on va récuperer d'abord l'objet à supprimer avec la fonction find().
+
+		<code> 
+		$em->remove();
+		$em->flush();
 
 	
+		SELECT DISTINCT(categorie) FROM produit
+
+ 8/ Create query et query builder
+		Pour effectuer des requêtes spécifiques, nous avons 2 possibilités : 
+		- Create Query (SQL)
+		- Query Builder (PHP) 
+
+		==> VOIR Produit Repository 
+	/!\ Dans l'objectif de "factoriser" notre code nous créons nos requetes spécifiques dans le repository, afin de les utiliser de manière simple dans les controller 
+	==> Voir le ProduitController, route "/categorie/" et la fonction GetAllCategories() déclarées dans le ProduitRepository.
+
+
+
+	*************
+	A faire
+	*************
+	la gestion des produits 
+	AdminController 
+		Affichage des produits : 
+		-> /admin/produit/ 
+		$produits qui va recuperer tous les produits du site 
+		-> list_produit.html.twig 
+		-> tableau avec tous les infos des produits 
+		-> action : modifier / supprimer
 
 -------------------------------------
 ETAPE 9 : Les formulaire
