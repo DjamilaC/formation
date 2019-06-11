@@ -626,35 +626,112 @@ Sommaire
 -------------------------------------
 ETAPE 9 : Les formulaire
 Sommaire 
-1/ Création du layout
-2/ L'héritage twig
-3/ Modification de nos vues 
-4/ Documentation Twig
+1/ Le fonctionnement des formulaires
+2/ Généréer des formulaires 
+3/ Recuperer les donnees du formulaire 
+4/ Persollaliser le formulaire avec bootstrap
+5/ update un enregistrement
+6/ validation des données 
+7/ Champs file
 ---------------------------------------
+1/ Le fonctionnement des formulaires
+			De la meme manière qu'on ne manipule pas des enregistrements en BDD, mais bies des objets (Entity), chaque foemulaire va être lié à une entité 
+			- Ainsi un formulaire est lié à un objet.. 
+			Inscription---------------> objet Membre
+			Ajout de produit----------> objet Produit
+			Modif de produit----------> objet Produit
+	Un formulaire est généré grâce à une classe (Type--> ProduitType) chaque champs d'un formulaire correspond à une classe, service de SF. Cela permet de générer tout les controles sur les foemulaires.
+	<cmd> 
+	php bin/console generate:doctrine:form AppBundle:Produit
+===> cela créé un dossier form dans notre bundlle, et un fichier ProduitType.php, qui contient la construction du formulaire. 
+3/ Recuperer les donnees du formulaire 
+ A. Générer le form dans la route 
+	<code> 
+	use AppBundle\Form\ProduitType 
+	$form = $this -> createForm(ProduitType::class, $produit);
+
+ B. Afficher le formulaire dans la vue 
+   - on envoie le formuliare à la vue via les params
+	<code> 
+	$params = array('produitForm' => $form -> CreateView())
+	- On affiche le formulaire : 
+	<code>
+	{{form(produitForm) }} -->affiche tout le formulaire 
+	---
+	{{ form_row(produitForm.reference) }} --> affiche un champs  (label, champs, errors)
+	----
+	{{ form_label(produitForm.reference) }} --> affiche le label
+	{{ form_widget(produitForm.reference) }} --> affiche le champs
+	{{ form_errors(produitForm.reference) }} --> affiche les erreurs 
+
+	/!\ Si on affiche les champs un par un , il ne faut pas oublier : 
+		{{ form_start (produitForm )}}
+		{{ form_end (produitForm )}}-
+
+	C. Recuperer les données saisies
+	<code>
+	$form -< handleRequest($request); 
+	/!\ cette ligne est importante pour pouvoir récuperer les données en POST !! 
+
+	D. Checker la validite du form et traiter les données (enregistrement) 
+
+	<code> 
+	if($form -> isSubmitted() && $form -> is valid())
+	{
+		//persist
+		//flush
+		//message
+		//redirection
+	} 
+
+4/ Personaliser le formulaire avec bootstrap
+	<code> app/Congif/config.yml
+	twig: 
+		form_themes: 
+		    - 'bootstrap_4_layout.html.twig'
+
+
+5/ Update un enregistrement
+pour update un produit avec e système des formulaires sur SF, rien de plus simple. Lorsqu'on crée le formulaire dans la route, on precise un objet déja existant (cf route admin/produit/update/{id}).
+
+
+Exercice
+
+A faire: Inscription (page inscription)
+
+1/ Entity Membre
+2/ Controller : MembreController ----> Route "/inscription"
+3/ Formulaire (MembreType) --> console 
+4/ Route : Créer le formulaire et sa vue 
+5/ La vue : Afficher le formulaire 
+6/ Route : Récupérer les infos du formulaire et enregistrer le membre .
+
+Attention : Etant donnée que le champs Statut existe dans notre BDD, le formulaire va être créer avec un champs Statut, hors ce n'est pas au membre de choisir son statut 
+
 
 -------------------------------------
 ETAPE 10 : 
 Sommaire 
-1/ Création du layout
-2/ L'héritage twig
-3/ Modification de nos vues 
-4/ Documentation Twig
+1/ 
+2/ 
+3/  
+4/ 
 ---------------------------------------
 
 -------------------------------------
 ETAPE 11 : 
 Sommaire 
-1/ Création du layout
-2/ L'héritage twig
-3/ Modification de nos vues 
-4/ Documentation Twig
+1/ 
+2/ 
+3/  
+4/ 
 ---------------------------------------
 
 -------------------------------------
 ETAPE 12 : 
 Sommaire 
-1/ Création du layout
-2/ L'héritage twig
-3/ Modification de nos vues 
-4/ Documentation Twig
+1/ 
+2/ 
+3/    
+4/ 
 ---------------------------------------

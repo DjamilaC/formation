@@ -1,1 +1,13 @@
-je suis dans le formulaire d'ajout de produit
+{% extends 'layout.html.twig' %}
+{% block title %} Boutique - gestion Produit {% endblock %}
+
+{% block content %}
+<h1>  {{ title}}</h1><br>
+
+{# {{ form(produitForm) }} #}
+{{ form(produitForm) }}
+
+
+{% endblock %}
+
+

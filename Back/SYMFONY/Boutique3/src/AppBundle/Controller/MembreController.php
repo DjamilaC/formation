@@ -5,6 +5,8 @@ namespace AppBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use AppBundle\Entity\Membre;
+use AppBundle\Form\MembreType;
 
 class MembreController extends Controller
 {
@@ -15,9 +17,28 @@ class MembreController extends Controller
  * @Route("/inscription/", name="inscription")
  * 
  */
-public function inscriptionAction()
+public function inscriptionAction(Request $request)
     {
-        $params = array();
+        $membre = new Membre;
+
+        $form = $this -> createForm(MembreType::class, $membre);
+
+        $form -> handleRequest($request);
+
+        if($form -> isSubmitted() && $form -> isValid())
+        {       
+            $em = $this ->getDoctrine() -> getManager(); 
+            $em -> persist($membre); 
+            $membre -> setStatut('0');
+
+            $request -> getSession() -> getFlashBag() -> add('success', 'votre inscription est validée !!');
+            return $this -> redirectToRoute('inscription');
+        }
+
+        $params = array(
+            'membreForm' => $form -> createView(),
+            'title' => 'INSCRIPTION '
+        );
         return $this -> render('@App/Membre/inscription.html.twig', $params);
     }
 
