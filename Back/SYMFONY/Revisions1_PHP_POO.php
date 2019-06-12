@@ -693,6 +693,7 @@ Sommaire
 
 5/ Update un enregistrement
 pour update un produit avec e système des formulaires sur SF, rien de plus simple. Lorsqu'on crée le formulaire dans la route, on precise un objet déja existant (cf route admin/produit/update/{id}).
+-----> on dit qu'on hydrate le formulaire
 
 
 Exercice
@@ -708,25 +709,65 @@ A faire: Inscription (page inscription)
 
 Attention : Etant donnée que le champs Statut existe dans notre BDD, le formulaire va être créer avec un champs Statut, hors ce n'est pas au membre de choisir son statut 
 
+6/ validation des données 
+- De base le formulaire est généré par SF de manière basique. Pour gérér nous memes les contraintes, et la securité cela se passe dans le fichier ProduitType.php, et on utilise constraints pour definir les contraintes liées au formulaire
+ -> cf ProduitType.php
+
+7/ Champs file 
+	Pour la gestion des photos il faut: 
+	1/. Enregistrer le nom de la photo dans la BDD
+	2/. Enregistrer la photo (data) sur le server. 
+
+	==> CF fonction uploadFile dans l'entity Produit.
+	/!\ dans notre formulaire d'ajout de produits , il n'est plus necessaire d'avoir un champs photo (TEXT), mais un champs file (FILE) qui va recuperer les infos de la photo uploadée.
+
+Pour aller plus loin avec les formulaires st symfony 
+https://symfony.com/doc/current/reference/forms/types.html
 
 -------------------------------------
-ETAPE 10 : 
-Sommaire 
-1/ 
-2/ 
-3/  
-4/ 
+ETAPE 10 :  Validation des données (Assert)
+
 ---------------------------------------
+ETAPE 11 : Association mapping
 
 -------------------------------------
-ETAPE 11 : 
+
+ETAPE 12 : Sécurité et Utilisateurs  
 Sommaire 
-1/ 
-2/ 
-3/  
-4/ 
+1/ Niveau de securite
+2/ Fichier de securite 
+3/ Creation des routes 
+4/ Classe Membre (extends UserInterface)
+5/ Layout
+
 ---------------------------------------
 
+1/ Niveau de securite
+
+De base SF va considerer un visiteur lambda comme un anonyme.
+- ensuite on va définir des niveaus de securité de l'utilisateur connecté: 
+	- ROLE_USER (user connecté)
+	- ROLE_ADMIN
+	- ROLE_SUPER_ ADMIN
+
+- SF a un système de parefeu :
+	- On definit les routes que les ROLE peuvent emprunter.
+	-> si un user anonyme --> hemepage = ok 
+	-> si un user anonyme --> profil = pas ok -> connexion -> profil 
+	-> si un user connecté --> profil =  ok -> connexion -> profil 
+	-> si un user connecté --> admin/produit = pas ok -> page erreur(404) 
+	En fonction du visiteur et de la ressource demandée on peut paramétrer une réaction 
+	
+
+
+
+
+
+
+2/ Fichier de securite 
+3/ Creation des routes 
+4/ Classe Membre (extends UserInterface)
+5/ Layout
 -------------------------------------
 ETAPE 12 : 
 Sommaire 

@@ -2,9 +2,11 @@
 {% block title %} Boutique - gestion Produit {% endblock %}
 
 {% block content %}
-<h1>  {{ title}}</h1><br>
+<h1>  {{ title}} &nbsp &nbsp &nbsp</h1><br>
 
-{# {{ form(produitForm) }} #}
+{% if photo is defined %}
+<img src="{{ asset('photo/' ~ photo) }}" height="150"/>
+{% endif %}
 {{ form(produitForm) }}
 
 

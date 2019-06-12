@@ -2,5 +2,18 @@
 {% block title %} Boutique - Connexion {% endblock %}
 
 {% block content %}
-<h2>je suis dans la page Connexion </h2>
+<h1 class="col-md-12 text text-center mt-4">Je suis dans la page CONNEXION </h1>
+
+<form class="p-5 col-md-12" method="post" action="{{ path('connexion_check') }}">
+    <div class="form-group">
+        <input type="text" class="form-control" name="_username" placeholder="Pseudo" value="{{ lastUserName }}"/>
+    </div>
+    <div class="form-group">
+        <input type="password" class="form-control" name="_password" placeholder="password"/>
+    </div>
+    <div class="form-group">
+        <input type="submit" class="offset-md-4 col-md-4 btn btn-danger" value="Connexion"/>
+    </div>
+
+</form>
 {% endblock %}

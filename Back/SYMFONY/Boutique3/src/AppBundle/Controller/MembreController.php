@@ -21,7 +21,7 @@ public function inscriptionAction(Request $request)
     {
         $membre = new Membre;
 
-        $form = $this -> createForm(MembreType::class, $membre);
+        $form = $this -> createForm(MembreType::class, $membre); 
 
         $form -> handleRequest($request);
 
@@ -44,16 +44,7 @@ public function inscriptionAction(Request $request)
 
     //-------------------CONNEXION----------------------------
     
-    /** 
-     * @Route("/connexion/", name="connexion")
-     * 
-     */
-    public function connexionAction()
-    {
-        $params = array();
-        return $this -> render('@App/Membre/connexion.html.twig', $params);
-    }
-
+   
       //-------------------PROFIL----------------------------
     
 /** 

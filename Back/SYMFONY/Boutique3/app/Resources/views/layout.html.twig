@@ -25,6 +25,9 @@
     <div class="collapse navbar-collapse" id="navbarsExample04">
         <ul class="navbar-nav mr-auto">
 
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        {# si le visiteur est connecté peu importe le niveau de role#}
+
         <li class="nav-item">
             <a class="nav-link" href="{{ path('homepage') }}">Boutique</a>
         </li>
@@ -38,6 +41,8 @@
             <a class="nav-link" href="">Deconnexion</a>
         </li>
 
+        {% else %}
+
         <li class="nav-item">
             <a class="nav-link" href="">Boutique</a>
         </li>
@@ -50,6 +55,11 @@
         <li class="nav-item">
             <a class="nav-link" href="">Panier</a>
         </li>
+
+        {% endif %}
+
+        {% if is_granted('ROLE_ADMIN') %}
+        
         	<li class="dropdown">	
 			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				Admin
@@ -60,6 +70,7 @@
 				<li><a class="dropdown-item" href="{{ path('admin_commande')}}"><i class="fas fa-shopping-cart"></i>&nbsp;Gestion Commande</a></li>
 			</ul>
 		</li> 
+         {% endif %}
        
 
         </ul>

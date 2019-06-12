@@ -51,7 +51,11 @@ class AdminController extends Controller
         if($form -> isSubmitted() && $form -> isValid())
         {       
             $em = $this ->getDoctrine() -> getManager(); // on recup le manager
+
             $em -> persist($produit); // on enregistre dans le système l'objet
+
+            $produit -> uploadPhoto();
+
             $em -> flush();   // vider la chasse enregistrer dans la base de données
 
             $request -> getSession() -> getFlashBag() -> add('success', 'Le produit'. $produit -> getId() . ' a bien été ajouté !!');
@@ -90,6 +94,7 @@ class AdminController extends Controller
         {
                 // je l'enregistre: 
             $em -> persist($produit);
+            $produit -> uploadPhoto();
             $em -> flush();
             $request -> getSession() -> getFlashBag() -> add('success', 'Le produit ' .$produit -> getTitre(). ' a bien été modifié !!') ;
             return $this -> redirectToRoute('admin_produit');
@@ -100,7 +105,8 @@ class AdminController extends Controller
         $params = array(
             'id' => $id,
             'produitForm' => $form -> createView(),
-            'title' => 'Modifier produit ' . $produit -> getTitre()
+            'title' => 'Modifier produit ' . $produit -> getTitre(),
+            'photo' => $produit -> getPhoto()
         );
         return $this -> render('@App/Admin/form_produit.html.twig', $params);
     }
@@ -120,6 +126,7 @@ class AdminController extends Controller
         $produit = $em -> find(Produit::class, $id);
 
         // je supprime le produit
+        $produit -> removePhoto();
         $em -> remove($produit);
         $em -> flush();
        

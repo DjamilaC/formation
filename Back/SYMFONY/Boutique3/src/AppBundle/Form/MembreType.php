@@ -44,7 +44,9 @@ class MembreType extends AbstractType
                 'Admin'  => '1'
             )
         ))
-        ->add('Inscription', SubmitType::class);;
+        ->add('Inscription
+        
+        ', SubmitType::class);;
         
     }/**
      * {@inheritdoc}

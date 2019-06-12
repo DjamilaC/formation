@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
  * Produit
@@ -75,7 +76,77 @@ class Produit
      *
      * @ORM\Column(name="photo", type="string", length=255, nullable=false)
      */
-    private $photo;
+    private $photo = 'default.jpg';
+
+    // on ne mappe pas cette proprieté car elle n'est pas liée à la base de donnée, elle va simplement nous permettre de manipuler la ou les photos d'un produit afin de l'enregistrer
+    
+    private $file;
+    /** 
+     * set file
+     * @param objet UploadedFile
+     * 
+     * @return Produit
+     * 
+     * L'objet UploadedFile de symfony, nous permet de gérer tout ce qui est lié à un fichier uploadé ($_FILES==> nom, taille, type, code erreur, emplacement temporaire)
+     */
+        
+    public function setFile(UploadedFile $file = null)
+    {
+        $this->file = $file;
+
+        return $this;
+    }
+    /** 
+     * Get file
+     * 
+     * @return objet UploadedFile
+     */
+
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+    public function uploadPhoto()
+    {
+        // s'il n ya pa de fichier chargé dans l'objet on sort de la fonction
+        if(!$this -> file)
+        {
+            return;
+        }
+        // on récupère le nom original de la photo pour la renomer.
+        $name = $this -> renameFile($this -> file -> getClientOriginalName());        
+        // $name = $renameFile('avatar.jpg')
+
+        // on enregistre en BDD le nouveau nom de la photo: 
+        $this ->photo = $name;
+
+        //Enfin il faut déplacer la photo dans son dossier définitif .
+        $this ->file -> move($this -> photoDir(), $name);
+
+    }
+    public function renameFile($nom)
+    {
+        //avatar.jpg
+        // file_15000000_4568_avatar.jpg 
+        return 'file_'.time().'_'.rand(1, 9999). $nom;
+    }
+    public function photoDir()
+    {
+        return __DIR__ .'/../../../web/photo';
+    }
+    public function removePhoto()
+    {
+        if(file_exists($this -> photoDir() . '/'. $this ->photo))
+        {
+            unlink($this -> photoDir() . '/'. $this ->photo );
+        }
+        // si le fichier existe alors on le supprime
+    }
+
+        
+
+
 
     /**
      * @var float
