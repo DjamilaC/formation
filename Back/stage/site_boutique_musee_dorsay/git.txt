@@ -1,0 +1,9 @@
+travailler à plusieurs sur le meme projet:
+- créer une branch :
+$ git branch
+creer un branch debug:
+$ git brunch debug (sur la ligne de commande, on peut aussi le crer sur la plateforme ou site github)
+pour fusionner le travail:
+sortir de la brabch sur lequel en travailler
+$git chekout master 
+$git merge debug
