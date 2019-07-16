@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css?family=Righteous");
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+@import url("https://fonts.googleapi.com/css?family=Indie+Flower");
+.page-id-367 #colophon,.page-id-367 #masthead,.page-id-367 .entry-sub-title{display:none}#colophon .widget_text{margin-top:0}.page-id-367 .page-header{margin-bottom:0}
+body{
+	font-family: indie flower;
+}
+body a{
+	font-size: 1.5rem;
+}
+h1{
+	font-family: indie flower;
+}
+h2{
+	font-family: indie flower;
+}
+h3{
+	font-family: indie flower;
+}
+.image_with_link{
+	box-shadow: 5px 5px 10px darkslategray;
+	border: 2px solid darkgoldenrod;
+}
+.big-slider{
+	box-shadow: 5px 5px 10px darkslategray;
+	border: 2px solid darkgoldenrod;
+	margin-top: 1rem;
+}
+.slider-collection-img{
+	box-shadow: 5px 5px 10px darkslategray;
+	border: 2px solid darkgoldenrod;
+	margin-bottom: 1rem !important;
+}
+.collection-thumb-hover{
+	background-color: transparent !important;
+}
+.out-of-stock{
+	color: white !important;
+	font-size: 2rem !important;
+	background-color: red;
+	text-align: center;
+}

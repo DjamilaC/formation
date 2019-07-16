@@ -1,0 +1,37 @@
+.container{
+    margin-top: 2rem ;
+    padding-top: 1rem;
+    background-image: url(https://st.depositphotos.com/1280399/2162/i/950/depositphotos_21626689-stock-photo-old-white-paper-background-subtle.jpg);
+    
+    padding-left: 0;
+    padding-right: 0;
+
+}
+h1{
+    font-family: 'ZCOOL XiaoWei', serif;
+    
+    text-align: center;
+    color: brown;
+    margin-top: 2rem;
+}
+img{
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    display: block;
+
+}
+h2{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+.slider{
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+.slider2{
+    float: left;
+}
+main{
+    display: flex;
+    justify-content: flex-between;
+}
