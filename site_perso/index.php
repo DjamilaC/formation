@@ -24,24 +24,24 @@
 
             <div class="row">
 
-                <div class="col-md-1">
+                <div class="col-md-1 bg-light">
                     <img class="logo" src="images/logo_R1.png" alt="">
                 </div>
 
                <!-- la barre de navigation -->
-                <nav class="navbar navbar-expand-lg col-md-7 navbar-light bg-light">
+                <nav class="navbar navbar-expand-lg col-md-11 navbar-light bg-light">
                     <a class="navbar-brand" href="#"></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"             data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
-                            <a class="nav-item nav-link active" href="#"> <i class="fas fa-home"></i> Accueil <span class="sr-only">(current)</span></a>
-                            <a class="nav-item nav-link" href="#">Nos Appartements</a>
-                            <a class="nav-item nav-link" href="#">Nos Villas</a>
-                            <a class="nav-item nav-link" href="#">Nos Campings</a>
-                            <a class="nav-item nav-link" href="#">Inscription</a>
-                            <a class="nav-item nav-link" href="#">Connexion</a>
+                            <a class="nav-item nav-link active" href="index.php"> <i class="fas fa-home"></i> Accueil <span class="sr-only">(current)</span></a>
+                            <a class="nav-item nav-link" href="nos_appartements.php">Nos Appartements</a>
+                            <a class="nav-item nav-link" href="nos_villas.php">Nos Villas</a>
+                            <a class="nav-item nav-link" href="nos_campings.php">Nos Campings</a>
+                            <a class="nav-item nav-link" href="inscription.php">Inscription</a>
+                            <a class="nav-item nav-link" href="connexion.php">Connexion</a>
                             <a class="nav-item nav-link disabled" href="#" tabindex="-1"            aria-disabled="false"></a>
                         </div>
                     </div>
@@ -201,13 +201,6 @@
         
         
         </footer>
-
-
-
-
-
-
-
 
 
 
