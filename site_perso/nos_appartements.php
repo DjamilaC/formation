@@ -50,6 +50,87 @@
     </div>
             
 </header>
+            <!---------Le Main----------->
+
+        <main>
+
+            <h1>Bienvenue dans nos appartementss</h1>
+            <div class="container-fluid card-tile">
+            <div class="tile-wrap">
+            <a href="detail_villa.php">
+            <img src="images/appart_card1.jpg" alt="" class="tile-image"/>
+            <div class="tile-text">
+            <h2 class="tile-title">Earl Hines</h2>
+            <p class="tile-description">Earl Kenneth Hines, universally known as Earl "Fatha" Hines, was an American jazz pianist and bandleader.</p>
+            </div>
+            </a>
+            </div>
+            <div class="tile-wrap">
+            <a href="detail_villa.php">
+            <img src="images/appart_card2.jpg" alt="" class="tile-image"/>
+            <div class="tile-text">
+            <h2 class="tile-title">Ella Fitzgerald</h2>
+            <p class="tile-description">Ella Jane Fitzgerald was an American jazz singer often referred to as the First Lady of Song, Queen of Jazz and Lady Ella.</p>
+            </div>
+            </a>
+            </div>
+            <div class="tile-wrap">
+            <a href="detail_villa.php">
+            <img src="images/appart_card3.jpg" alt="" class="tile-image"/>
+            <div class="tile-text">
+            <h2 class="tile-title">Nat King Cole</h2>
+            <p class="tile-description">Nathaniel Adams Coles, known professionally as Nat King Cole, was an American singer who first came to prominence as a leading jazz pianist.</p>
+            </div>
+            </a>
+            </div>
+            <div class="tile-wrap">
+            <a href="detail_villa.php">
+            <img src="images/appart_card4.jpg" alt="" class="tile-image"/>
+            <div class="tile-text">
+            <h2 class="tile-title">Oscar Peterson</h2>
+            <p class="tile-description">Oscar Emmanuel Peterson, CC, CQ, OOnt was a Canadian jazz pianist and composer.</p>
+            </div>
+            </a>
+            </div>
+            <div class="tile-wrap">
+            <a href="detail_villa.php">
+            <img src="images/appart_card5.jpg" alt="" class="tile-image"/>
+            <div class="tile-text">
+            <h2 class="tile-title">Billie Holiday</h2>
+            <p class="tile-description">Eleanora Fagan, professionally known as Billie Holiday, was an American jazz musician and singer-songwriter.</p>
+            </div>
+            </a>
+            </div>
+            <div class="tile-wrap">
+            <a href="detail_villa.php">
+            <img src="images/appart_card6.jpeg" alt="" class="tile-image"/>
+            <div class="tile-text">
+            <h2 class="tile-title">Erroll Garner</h2>
+            <p class="tile-description">Erroll Louis Garner was an American jazz pianist and composer known for his swing playing and ballads.</p>
+            </div>
+            </a>
+            </div>
+            <div class="tile-wrap">
+            <a href="detail_villa.php">
+            <img src="images/appart_card7.jpg" alt="" class="tile-image"/>
+            <div class="tile-text">
+            <h2 class="tile-title">Dizzy Gillespie</h2>
+            <p class="tile-description">John Birks "Dizzy" Gillespie was an American jazz trumpeter, bandleader, composer and occasional singer.</p>
+            </div>
+            </a>
+            </div>
+            <div class="tile-wrap">
+            <a href="detail_villa.php">
+            <img src="images/appart_card8.jpg" alt="" class="tile-image"/>
+            <div class="tile-text">
+            <h2 class="tile-title">Bud Powell</h2>
+            <p class="tile-description">Earl Rudolph "Bud" Powell was a jazz pianist, born and raised in Harlem, New York City.</p>
+            </div>
+            </a>
+            </div>
+            </div>
+
+        </main>
 
 
     </div> <!--fin du container-->

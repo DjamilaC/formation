@@ -50,7 +50,7 @@
                                                              
             </div>
                      
-
+                            <!--Image du header -->
             <div class="row">
                 
                     <img class="image_header col-md-12" src="images/image_header_R.jpg" alt="">
@@ -70,7 +70,9 @@
         </header>
         <hr>
 
+
         <main>
+                        <!-- la partie en dessous de limage du header -->
             <div class="row">
 
                 <div class="col-md-3 offset-md-1 mt-5 text text-center">
@@ -89,7 +91,7 @@
 
             </div>
 
-            <!-- slider -->
+                                         <!-- slider -->
             <div class="container">
                 <div id="carouselExampleFade" class="carousel slide carousel-fade col-md-12 mx-auto" data-ride="carousel">
                     <div class="carousel-inner">
@@ -112,7 +114,9 @@
                         <span class="sr-only">Next</span>
                     </a>
                     </div>
-            </div> <!--fin du slider-->
+            </div>
+            
+                                        <!--fin du slider-->
             <hr>
              <!-- debut des cards -->
             <div class="row">

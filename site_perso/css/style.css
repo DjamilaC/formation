@@ -124,3 +124,19 @@ footer{
   .tile-wrap:hover .tile-description {
     transform: none;
   }
+
+  /* slider 3D */
+  .connexion{    
+    background: url(../images/image_header.jpg);   
+    background-size: cover;
+    height: 90vh;
+    padding-top: 5rem
+        
+  }
+  .btn{
+    background: rgb(255, 145, 0);
+    border:rgb(172, 99, 5);
+    box-shadow: 2px 2px 5px grey; 
+  }
+
+  

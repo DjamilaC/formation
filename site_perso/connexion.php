@@ -17,7 +17,8 @@
     </head>
     
     <body>
-    <div class="container-fluid">
+
+    <div class="container-fluid">  <!--Debut container-->
 
 <header>
 
@@ -29,9 +30,9 @@
         </div>
 
        <!-- la barre de navigation -->
-        <nav class="navbar navbar-expand-lg col-md-11 navbar-light">
+        <nav class="navbar navbar-expand-lg col-md-11 navbar-light bg-light">
             <a class="navbar-brand" href="#"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse"             data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"         aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"         aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -42,7 +43,7 @@
                     <a class="nav-item nav-link" href="nos_campings.php">Nos Campings</a>
                     <a class="nav-item nav-link" href="inscription.php">Inscription</a>
                     <a class="nav-item nav-link" href="connexion.php">Connexion</a>
-                    <a class="nav-item nav-link disabled" href="#" tabindex="-1"            aria-disabled="false"></a>
+                    <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="false"></a>
                 </div>
             </div>
         </nav>
@@ -51,8 +52,32 @@
     </div>
             
 </header>
+                    <!-- Main -->
+                    <main class="connexion col-md-12 mx-auto">
+                     <h2 class="titre-connexion text text-center">Connexion</h2>
+                    <form method="post" action="" class="col-md-4 offset-md-4">
+                        
+                        <div class="form-group text text-center mt-5">
+                            <label for="email_pseudo">Email / Pseudo</label>
+                            <input type="text" class="form-control" id="email_pseudo" placeholder="email ou pseudo" name="email_pseudo">
+                        </div> 
 
-    </div> <!--fin du container-->
+                        <div class="form-group text text-center">
+                            <label for="mdp">Mot de passe</label>
+                            <input type="text" class="form-control" id="mdp" placeholder="Mot de passe" name="mdp">
+                        </div>             
+                        
+                        <button type="submit" class="col-md-4 offset-md-4 btn btn-secondary" >Connexion</button>
+
+                    </form>   
+                    </main>
+                    
+
+
+
+ 
+        
+</div> <!--fin du container-->
 
 
     <!-- Bibliothèque jquery de Bootstrap -->

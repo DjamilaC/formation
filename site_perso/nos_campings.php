@@ -28,7 +28,7 @@
         </div>
 
        <!-- la barre de navigation -->
-        <nav class="navbar navbar-expand-lg col-md-7 navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg col-md-11 navbar-light bg-light">
             <a class="navbar-brand" href="#"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"             data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"         aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -44,8 +44,7 @@
                     <a class="nav-item nav-link disabled" href="#" tabindex="-1"            aria-disabled="false"></a>
                 </div>
             </div>
-        </nav>
-        
+        </nav> 
                                                      
     </div>
             
@@ -58,7 +57,7 @@
                 <h1>Bienvenue dans nos campings</h1>
                 <div class="container-fluid card-tile">
                 <div class="tile-wrap">
-                <a href="detail_villa.php">
+                <a href="detail_camping.php">
                 <img src="images/camping_card1.jpg" alt="" class="tile-image"/>
                 <div class="tile-text">
                 <h2 class="tile-title">Earl Hines</h2>
@@ -67,7 +66,7 @@
                 </a>
                 </div>
                 <div class="tile-wrap">
-                <a href="detail_villa.php">
+                <a href="detail_camping.php">
                 <img src="images/camping_card2.jpg" alt="" class="tile-image"/>
                 <div class="tile-text">
                 <h2 class="tile-title">Ella Fitzgerald</h2>
@@ -76,7 +75,7 @@
                 </a>
                 </div>
                 <div class="tile-wrap">
-                <a href="detail_villa.php">
+                <a href="detail_camping.php">
                 <img src="images/camping_card3.jpg" alt="" class="tile-image"/>
                 <div class="tile-text">
                 <h2 class="tile-title">Nat King Cole</h2>
@@ -85,7 +84,7 @@
                 </a>
                 </div>
                 <div class="tile-wrap">
-                <a href="detail_villa.php">
+                <a href="detail_camping.php">
                 <img src="images/camping_card4.jpg" alt="" class="tile-image"/>
                 <div class="tile-text">
                 <h2 class="tile-title">Oscar Peterson</h2>
@@ -94,7 +93,7 @@
                 </a>
                 </div>
                 <div class="tile-wrap">
-                <a href="detail_villa.php">
+                <a href="detail_camping.php">
                 <img src="images/camping_card5.jpg" alt="" class="tile-image"/>
                 <div class="tile-text">
                 <h2 class="tile-title">Billie Holiday</h2>
@@ -103,7 +102,7 @@
                 </a>
                 </div>
                 <div class="tile-wrap">
-                <a href="detail_villa.php">
+                <a href="detail_camping.php">
                 <img src="images/camping_card6jpg.jpg" alt="" class="tile-image"/>
                 <div class="tile-text">
                 <h2 class="tile-title">Erroll Garner</h2>
@@ -112,7 +111,7 @@
                 </a>
                 </div>
                 <div class="tile-wrap">
-                <a href="detail_villa.php">
+                <a href="detail_camping.php">
                 <img src="images/camping_card7.jpg" alt="" class="tile-image"/>
                 <div class="tile-text">
                 <h2 class="tile-title">Dizzy Gillespie</h2>
@@ -121,7 +120,7 @@
                 </a>
                 </div>
                 <div class="tile-wrap">
-                <a href="detail_villa.php">
+                <a href="detail_camping.php">
                 <img src="images/camping_card8.jpg" alt="" class="tile-image"/>
                 <div class="tile-text">
                 <h2 class="tile-title">Bud Powell</h2>
@@ -137,6 +136,7 @@
 
 
     <!-- Bibliothèque jquery de Bootstrap -->
+  
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
