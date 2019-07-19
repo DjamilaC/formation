@@ -38,12 +38,20 @@
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
                             <a class="nav-item nav-link active" href="index.php"> <i class="fas fa-home"></i> Accueil <span class="sr-only">(current)</span></a>
+
                             <a class="nav-item nav-link" href="nos_appartements.php">Nos Appartements</a>
+
                             <a class="nav-item nav-link" href="nos_villas.php">Nos Villas</a>
+
                             <a class="nav-item nav-link" href="nos_campings.php">Nos Campings</a>
+
                             <a class="nav-item nav-link" href="inscription.php">Inscription</a>
+
                             <a class="nav-item nav-link" href="connexion.php">Connexion</a>
-                            <a class="nav-item nav-link disabled" href="#" tabindex="-1"            aria-disabled="false"></a>
+
+                            <a class="nav-item nav-link" href="mon_panier.php" tabindex="-1"><i class="fas fa-shopping-cart"></i> Mon panier</a>
+                            
+                            <a class="nav-item nav-link" href="contact.php" tabindex="-1"><i class="fas fa-envelope"></i> Nous contacter</a>
                         </div>
                     </div>
                 </nav>   
@@ -57,7 +65,7 @@
 
        <main>
 
-           <h1>Bienvenue dans nos villas</h1>
+           <h1 class="text text-center mt-3 mb-3">Bienvenue dans nos villas</h1>
            <div class="container-fluid card-tile">
  <div class="tile-wrap">
   <a href="detail_villa.php">
@@ -134,6 +142,35 @@
 </div>
            
        </main>
+       <footer>
+            <div class="row col-md-12 mt-5 pt-5">
+                <div class="col-md-3">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ad! Ullam eveniet est laboriosam.</p> 
+                </div>
+                <div class="col-md-3">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ad! Ullam eveniet est laboriosam.</p> 
+                </div>     
+                <div class="col-md-3">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ad! Ullam eveniet est laboriosam.</p> 
+                </div>     
+                <div class="col-md-3">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ad! Ullam eveniet est laboriosam.</p> 
+                </div>     
+            </div>
+            <div class="row">
+                <p class="col-md-4 mx-auto offset-4">Suivez-nous</p>                
+            </div>
+            <div class="row">
+                <div class="col-md-4 offset-5">
+                <i class="fab fa-facebook-square"></i> &nbsp <i class="fab fa-twitter-square"></i> &nbsp <i class="fab fa-instagram"></i>                     
+                </div>
+                
+                
+
+            </div>
+        
+        
+        </footer>
 
 
     </div> <!--fin du container-->

@@ -43,7 +43,9 @@
                             <a class="nav-item nav-link" href="nos_campings.php">Nos Campings</a>
                             <a class="nav-item nav-link" href="inscription.php">Inscription</a>
                             <a class="nav-item nav-link" href="connexion.php">Connexion</a>
-                            <a class="nav-item nav-link disabled" href="#" tabindex="-1"            aria-disabled="false"></a>
+                            <a class="nav-item nav-link" href="mon_panier.php" tabindex="-1"><i class="fas fa-shopping-cart"></i> Mon panier</a>
+                            
+                            <a class="nav-item nav-link" href="contact.php" tabindex="-1"><i class="fas fa-envelope"></i> Nous contacter</a>
                         </div>
                     </div>
                 </nav>   
@@ -53,7 +55,7 @@
         </header>
                            <!--Le Main  -->
        <main>
-           <h1>Bienvenue dans nos villas</h1>
+           <h1 class="text text-center mt-5 mb-5">Bienvenue dans nos villas</h1>
            <div class="row"> <!--Debut du slider-->
                <div class="col-md-8">
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -86,9 +88,40 @@
                                 </a>
                             </div>
                </div>
-               <div class="col"></div>
+               <div class="col-md-3">
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2629.976044306682!2d2.400797815921941!3d48.763253779278216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67462be05e0cd%3A0xee10b7d221f3ffec!2s27+Avenue+Gambetta%2C+94600+Choisy-le-Roi!5e0!3m2!1sfr!2sfr!4v1563532149129!5m2!1sfr!2sfr" width="600" height="550" frameborder="0" style="border:0" allowfullscreen></iframe>
+               </div>
            </div> <!--Fin du slider-->
        </main>
+       <footer>
+            <div class="row col-md-12 mt-5 pt-5">
+                <div class="col-md-3">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ad! Ullam eveniet est laboriosam.</p> 
+                </div>
+                <div class="col-md-3">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ad! Ullam eveniet est laboriosam.</p> 
+                </div>     
+                <div class="col-md-3">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ad! Ullam eveniet est laboriosam.</p> 
+                </div>     
+                <div class="col-md-3">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ad! Ullam eveniet est laboriosam.</p> 
+                </div>     
+            </div>
+            <div class="row">
+                <p class="col-md-4 mx-auto offset-4">Suivez-nous</p>                
+            </div>
+            <div class="row">
+                <div class="col-md-4 offset-5">
+                <i class="fab fa-facebook-square"></i> &nbsp <i class="fab fa-twitter-square"></i> &nbsp <i class="fab fa-instagram"></i>                     
+                </div>
+                
+                
+
+            </div>
+        
+        
+        </footer>
 
 
     </div> <!--fin du container-->

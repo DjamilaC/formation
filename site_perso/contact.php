@@ -13,7 +13,7 @@
 
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
-        <title>Nos Villas</title>
+        <title>Inscription</title>
     </head>
     
     <body>
@@ -23,10 +23,9 @@
 
             <div class="row">
 
-                    <!-- le logo -->
-
                 <div class="col-md-1 bg-light">
-                    <a href="index.php"><img class="logo" src="images/logo_R1.png" alt=""></a>          
+                <a href="index.php"><img class="logo" src="images/logo_R1.png" alt=""></a>
+                    
                 </div>
 
             <!-- la barre de navigation -->
@@ -48,79 +47,45 @@
                             <a class="nav-item nav-link" href="contact.php" tabindex="-1"><i class="fas fa-envelope"></i> Nous contacter</a>
                         </div>
                     </div>
-                </nav>   
+                </nav>
+                
                                                             
-            </div> 
-                      
+            </div>
+                    
         </header>
-                           <!--Le Main  -->
-       <main>
-           <h1>Bienvenue dans nos villas</h1>
-           <div class="row"> <!--Debut du slider-->
-               <div class="col-md-8">
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
+        <main>
+            <h1 class="text text-center mt-3 mb-3">Ma page Contact</h1>
+        </main>
+ 
+        <footer>
+                    <div class="row col-md-12 mt-5 pt-5">
+                        <div class="col-md-3">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ad! Ullam eveniet est laboriosam.</p> 
+                        </div>
+                        <div class="col-md-3">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ad! Ullam eveniet est laboriosam.</p> 
+                        </div>     
+                        <div class="col-md-3">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ad! Ullam eveniet est laboriosam.</p> 
+                        </div>     
+                        <div class="col-md-3">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ad! Ullam eveniet est laboriosam.</p> 
+                        </div>     
+                    </div>
+                    <div class="row">
+                        <p class="col-md-4 mx-auto offset-4">Suivez-nous</p>                
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 offset-5">
+                        <i class="fab fa-facebook-square"></i> &nbsp <i class="fab fa-twitter-square"></i> &nbsp <i class="fab fa-instagram"></i>                     
+                        </div>
+                        
+                        
 
-                            <div class="carousel-item active">
-                                <img src="images/villa_slider1.jpg" class="d-block w-100" alt="...">
-                            </div>
-
-                            <div class="carousel-item">
-                                <img src="images/villa_slider2.jpg" class="d-block w-100" alt="...">
-                            </div>
-
-                            <div class="carousel-item">
-                                <img src="images/villa_slider3.jpg" class="d-block w-100" alt="...">
-                            </div>
-
-                            <div class="carousel-item">
-                                <img src="images/villa_slider4.jpeg" class="d-block w-100" alt="...">
-                            </div>
-
-                            </div>
-                                <a class="carousel-control-prev" href="#carouselExampleControls"                 role="button" data-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" href="#carouselExampleControls" role="button"      data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                                </a>
-                            </div>
-               </div>
-               <div class="col"></div>
-           </div> <!--Fin du slider-->
-       </main>
-       <footer>
-            <div class="row col-md-12 mt-5 pt-5">
-                <div class="col-md-3">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ad! Ullam eveniet est laboriosam.</p> 
-                </div>
-                <div class="col-md-3">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ad! Ullam eveniet est laboriosam.</p> 
-                </div>     
-                <div class="col-md-3">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ad! Ullam eveniet est laboriosam.</p> 
-                </div>     
-                <div class="col-md-3">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ad! Ullam eveniet est laboriosam.</p> 
-                </div>     
-            </div>
-            <div class="row">
-                <p class="col-md-4 mx-auto offset-4">Suivez-nous</p>                
-            </div>
-            <div class="row">
-                <div class="col-md-4 offset-5">
-                <i class="fab fa-facebook-square"></i> &nbsp <i class="fab fa-twitter-square"></i> &nbsp <i class="fab fa-instagram"></i>                     
-                </div>
+                    </div>
                 
                 
-
-            </div>
-        
-        
         </footer>
-
 
     </div> <!--fin du container-->
 
